@@ -4,10 +4,312 @@
 <head>
 	<meta charset = "utf-8">
 	<title>Main page</title>
+
+	<script src = "js/main_script.js"></script>
+
+	<style type="text/css">
+
+		#menu0 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+
+		#menu1 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+
+		#menu2 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+
+		#menu3 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+		
+		#menu4 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+
+		#menu5 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+
+		#menu6 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+
+		#menu7 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+
+		#menu11 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+
+		#menu14 {
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: all .5s linear;
+			-webkit-transition: all .5s linear;
+			-o-transition: all .5s linear;
+			transition: all .5s linear;
+		}
+
+		.border {
+			list-style: none;
+			padding: 0;
+		}
+		.border li {
+			width: 33%;
+			font-family: "Trebuchet MS", "Lucida Sans";
+			padding: 7px 20px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border-left: 10px solid #f05d22; 
+			box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+			-2px -2px 5px 0 rgba(0,0,0,.1),
+			2px 2px 5px 0 rgba(0,0,0,.1),
+			-2px 2px 5px 0 rgba(0,0,0,.1);
+			font-size: 20px;
+			letter-spacing: 2px;
+			background:white;
+			transition: 0.3s all linear;
+		}
+		.border.level0 li {
+			margin-left: 0px;
+		}
+		.border.level1 li {
+			margin-left: 20px;
+		}
+		.border.level2 li {
+			margin-left: 40px;
+		}
+		.border.level3 li {
+			margin-left: 60px;
+		}
+		.border.level4 li {
+			margin-left: 80px;
+		}
+		.border li:nth-child(2){border-color: #8bc63e;}
+		.border li:nth-child(3){border-color: #fcba30;}
+		.border li:nth-child(4){border-color: #1ccfc9;}
+		.border li:nth-child(5){border-color: #493224;}
+		.border li:hover {
+			border-left: 10px solid transparent;
+		}
+		.border li:nth-child(1):hover {
+			border-right: 10px solid #f05d22;
+		}
+		.border li:nth-child(2):hover {
+			border-right: 10px solid #8bc63e;
+		}
+		.border li:nth-child(3):hover {
+			border-right: 10px solid #fcba30;
+		}
+		.border li:nth-child(4):hover {
+			border-right: 10px solid #1ccfc9;
+		}
+		.border li:nth-child(5):hover {
+			border-right: 10px solid #493224;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			var collapse0 = false;
+			document.getElementById("button0").onclick = function() {
+				if(collapse0 == false) {
+					document.getElementById("menu0").style.height = "1300px";
+				} else {
+					document.getElementById("menu0").style.height = "0px";
+				}
+				collapse0 = !collapse0;
+			}
+			var collapse1 = false;
+			document.getElementById("button1").onclick = function() {
+				if(collapse1 == false) {
+					document.getElementById("menu1").style.height = "48px";
+				} else {
+					document.getElementById("menu1").style.height = "0px";
+				}
+				collapse1 = !collapse1;
+			}
+			var collapse3 = false;
+			document.getElementById("button3").onclick = function() {
+				if(collapse3 == false) {
+					document.getElementById("menu1").style.height = "190px";
+					document.getElementById("menu3").style.height = "190px";
+				} else {
+					document.getElementById("menu3").style.height = "0px";
+					document.getElementById("menu1").style.height = "48px";
+				}
+				collapse3 = !collapse3;
+			}
+			var collapse2 = false;
+			document.getElementById("button2").onclick = function() {
+				if(collapse2 == false) {
+					document.getElementById("menu2").style.height = "1300px";
+				} else {
+					document.getElementById("menu2").style.height = "0px";
+				}
+				collapse2 = !collapse2;
+			}
+
+			var collapse4 = false;
+			document.getElementById("button4").onclick = function() {
+				if(collapse4 == false) {
+					document.getElementById("menu4").style.height = "120px";
+				} else {
+					document.getElementById("menu4").style.height = "0px";
+				}
+				collapse4 = !collapse4;
+			}
+			var collapse5 = false;
+			document.getElementById("button5").onclick = function() {
+				if(collapse5 == false) {
+					document.getElementById("menu5").style.height = "94px";
+				} else {
+					document.getElementById("menu5").style.height = "0px";
+				}
+				collapse5 = !collapse5;
+			}
+			var collapse6 = false;
+			document.getElementById("button6").onclick = function() {
+				if(collapse6 == false) {
+					document.getElementById("menu6").style.height = "500px";
+				} else {
+					document.getElementById("menu6").style.height = "0px";
+				}
+				collapse6 = !collapse6;
+			}
+
+			var collapse7 = false;
+			document.getElementById("button7").onclick = function() {
+				if(collapse7 == false) {
+					document.getElementById("menu7").style.height = "300px";
+				} else {
+					document.getElementById("menu7").style.height = "0px";
+				}
+				collapse7 = !collapse7;
+			}
+			var collapse11 = false;
+			document.getElementById("button11").onclick = function() {
+				if(collapse11 == false) {
+					document.getElementById("menu11").style.height = "400px";
+				} else {
+					document.getElementById("menu11").style.height = "0px";
+				}
+				collapse11 = !collapse11;
+			}
+			var collapse14 = false;
+			document.getElementById("button14").onclick = function() {
+				if(collapse14 == false) {
+					document.getElementById("menu14").style.height = "200px";
+				} else {
+					document.getElementById("menu14").style.height = "0px";
+				}
+				collapse14 = !collapse14;
+			}
+		}
+	</script>
 </head>
 
 <body style = "background-color: #F5FFFA">
-	<a href="sandbox.html">sandbox</a>
+	<a href="sandbox.html">sandbox</a><br><br><br>
+	TODO: сделать меняющуюся от кнопки картинку справа
+	<ul class = "border level0">
+		<li class = "main" id = "button0">
+			Чрезвычайные ситуации
+		</li>
+		<div id = "menu0"><ul class="border level1">
+				<li id = "button1">Военного времени</li>
+				<div id = "menu1"><ul class="border level2">
+					<li id = "button3">Национальная безопасность</li>
+					<div id = "menu3"><ul class="border level3">
+							<li id = "button8">Военные угрозы</li>
+							<li id = "button9">Вооруженные силы РФ</li>
+							<li id = "button10">Гражданская оборона</li>
+					</ul></div>
+				</ul></div>
+				<li id = "button2">Мирного времени</li>
+				<div id = "menu2"><ul class="border level2">
+					<li id = "button4">Природного характера</li>
+					<div id = "menu4"><ul class="border level3">
+						<li id = "button7">Стихийные бедствия х Опасные явления природы</li>
+						<div id = "menu7"><ul class="border level4">
+								<li id = "button17">Землятрясения</li>
+								<li id = "button18">Ураганы</li>
+								<li id = "button19">Пожары</li>
+								<li id = "button20">Наводнения</li>
+						</ul></div>
+						<li id = "button14">Выживание в природе</li>
+						<div id = "menu14"><ul class="border level4">
+								<li id = "button15">Автономное существование в природе</li>
+								<li id = "button16">Акклиматизация</li>
+						</ul></div>
+					</ul></div>
+					<li id = "button5">Социального характера</li>
+					<div id = "menu5"><ul class="border level3">
+							<li id = "button12">Основы медицинских знаний</li>
+							<li id = "button13">Здоровый образ жизни</li>
+					</ul></div>
+					<li id = "button6">Техногенного характера</li>
+					<div id = "menu6"><ul class="border level3">
+						<li id = "button11">Аварии и катастрофы</li>
+						<div id = "menu11"><ul class="border level4">
+								<li id = "button21">Пожары и взрывы</li>
+								<li id = "button22">С выбросом аварийно химически опасных веществ</li>
+								<li id = "button23">С выбросом радиоактивных веществ</li>
+								<li id = "button24">Гидродинамические</li>
+								<li id = "button25">Экологический</li>
+						</ul></div>
+					</ul></div>
+				</ul></div>
+		</ul></div>
+	</ul>
 </body>
 
 </html>

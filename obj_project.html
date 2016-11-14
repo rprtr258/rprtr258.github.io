@@ -3,11 +3,12 @@
 
 <head>
 	<meta charset = "utf-8">
-	<title>Общая классификаций ЧС</title>
+	<title>Main page</title>
 
 	<script src = "js/main_script.js"></script>
 
 	<style type="text/css">
+
 		#menu0 {
 			height: 0px;
 			overflow: hidden;
@@ -16,6 +17,7 @@
 			-o-transition: all .5s linear;
 			transition: all .5s linear;
 		}
+
 		#menu1 {
 			height: 0px;
 			overflow: hidden;
@@ -24,6 +26,7 @@
 			-o-transition: all .5s linear;
 			transition: all .5s linear;
 		}
+
 		#menu2 {
 			height: 0px;
 			overflow: hidden;
@@ -32,6 +35,7 @@
 			-o-transition: all .5s linear;
 			transition: all .5s linear;
 		}
+
 		#menu3 {
 			height: 0px;
 			overflow: hidden;
@@ -49,6 +53,7 @@
 			-o-transition: all .5s linear;
 			transition: all .5s linear;
 		}
+
 		#menu5 {
 			height: 0px;
 			overflow: hidden;
@@ -57,6 +62,7 @@
 			-o-transition: all .5s linear;
 			transition: all .5s linear;
 		}
+
 		#menu6 {
 			height: 0px;
 			overflow: hidden;
@@ -65,6 +71,7 @@
 			-o-transition: all .5s linear;
 			transition: all .5s linear;
 		}
+
 		#menu7 {
 			height: 0px;
 			overflow: hidden;
@@ -73,6 +80,7 @@
 			-o-transition: all .5s linear;
 			transition: all .5s linear;
 		}
+
 		#menu11 {
 			height: 0px;
 			overflow: hidden;
@@ -81,6 +89,7 @@
 			-o-transition: all .5s linear;
 			transition: all .5s linear;
 		}
+
 		#menu14 {
 			height: 0px;
 			overflow: hidden;
@@ -89,6 +98,7 @@
 			-o-transition: all .5s linear;
 			transition: all .5s linear;
 		}
+
 		.border {
 			list-style: none;
 			padding: 0;
@@ -146,108 +156,412 @@
 		.border li:nth-child(5):hover {
 			border-right: 10px solid #493224;
 		}
+
+		blockquote {
+			background: #f7f7f7;
+			border-left:5px solid #FF7F00;
+			font-style: italic;
+			margin: 1.5em 10px;
+			padding: 0.5em 10px;
+		}
+		blockquote:before {
+			color: #bbb;
+			content: "\201C"; /* Непечатаемый символ слева */
+			font-size: 3em;
+			line-height: 0.1em;
+			margin-right: 0.2em;
+			vertical-align: -.4em;
+		}
+		blockquote:after {
+			color: #bbb;
+			content: "\201D"; /* Непечатаемый символ справа */
+			font-size: 3em;
+			line-height: 0.1em;
+			vertical-align: -.45em;
+		}
+		blockquote > p:first-child {
+			display: inline;
+		}
 	</style>
 	<script type="text/javascript">
+		var collapse0 = false;
+		var collapse1 = false;
+		var collapse3 = false;
+		var collapse2 = false;
+		var collapse4 = false;
+		var collapse5 = false;
+		var collapse6 = false;
+		var collapse7 = false;
+		var collapse11 = false;
+		var collapse14 = false;
+
+		function open0() {
+			collapse0 = true;
+			document.getElementById("menu0").style.height = "90px";
+		}
+		function open1() {
+			collapse1 = true;
+			close2();
+			document.getElementById("menu0").style.height = "150px";
+			document.getElementById("menu1").style.height = "50px";
+		}
+		function open2() {
+			collapse2 = true;
+			close1();
+			document.getElementById("menu0").style.height = "230px";
+			document.getElementById("menu2").style.height = "1300px";
+		}
+		function open3() {
+			collapse3 = true;
+			document.getElementById("menu0").style.height = "290px";
+			document.getElementById("menu1").style.height = "190px";
+			document.getElementById("menu3").style.height = "140px";
+		}
+		function open4() {
+			collapse4 = true;
+			close5();
+			close6();
+			document.getElementById("menu0").style.height = "350px";
+			document.getElementById("menu2").style.height = "500px";
+			document.getElementById("menu4").style.height = "120px";
+		}
+		function open5() {
+			collapse5 = true;
+			close4();
+			close6();
+			document.getElementById("menu0").style.height = "340px";
+			document.getElementById("menu2").style.height = "900px";
+			document.getElementById("menu5").style.height = "94px";
+		}
+		function open6() {
+			collapse6 = true;
+			close4();
+			close5();
+			document.getElementById("menu0").style.height = "280px";
+			document.getElementById("menu2").style.height = "900px";
+			document.getElementById("menu6").style.height = "500px";
+		}
+		function open7() {
+			collapse7 = true;
+			close14();
+			document.getElementById("menu0").style.height = "550px";
+			document.getElementById("menu2").style.height = "700px";
+			document.getElementById("menu4").style.height = "310px";
+			document.getElementById("menu7").style.height = "190px";
+		}
+		function open11() {
+			collapse11 = true;
+			document.getElementById("menu0").style.height = "540px";
+			document.getElementById("menu2").style.height = "900px";
+			document.getElementById("menu6").style.height = "900px";
+			document.getElementById("menu11").style.height = "400px";
+		}
+		function open14() {
+			collapse14 = true;
+			close7();
+			document.getElementById("menu0").style.height = "550px";
+			document.getElementById("menu2").style.height = "700px";
+			document.getElementById("menu4").style.height = "240px";
+			document.getElementById("menu14").style.height = "120px";
+		}
+
+		function close0() {
+			collapse0 = false;
+			close1();
+			close2();
+			document.getElementById("menu0").style.height = "0px";
+		}
+		function close1() {
+			collapse1 = false;
+			close3();
+			document.getElementById("menu0").style.height = "90px";
+			document.getElementById("menu1").style.height = "0px";
+		}
+		function close2() {
+			collapse2 = false;
+			close4();
+			close5();
+			close6();
+			document.getElementById("menu0").style.height = "90px";
+			document.getElementById("menu2").style.height = "0px";
+		}
+		function close3() {
+			collapse3 = false;
+			document.getElementById("menu0").style.height = "150px";
+			document.getElementById("menu1").style.height = "50px";
+			document.getElementById("menu3").style.height = "0px";
+		}
+		function close4() {
+			collapse4 = false;
+			close7();
+			close14();
+			document.getElementById("menu0").style.height = "230px";
+			document.getElementById("menu2").style.height = "1300px";
+			document.getElementById("menu4").style.height = "0px";
+		}
+		function close5() {
+			collapse5 = false;
+			document.getElementById("menu0").style.height = "230px";
+			document.getElementById("menu2").style.height = "1300px";
+			document.getElementById("menu5").style.height = "0px";
+		}
+		function close6() {
+			collapse6 = false;
+			close11();
+			document.getElementById("menu0").style.height = "230px";
+			document.getElementById("menu2").style.height = "1300px";
+			document.getElementById("menu6").style.height = "0px";
+		}
+		function close7() {
+			collapse7 = false;
+			document.getElementById("menu0").style.height = "350px";
+			document.getElementById("menu2").style.height = "500px";
+			document.getElementById("menu4").style.height = "120px";
+			document.getElementById("menu7").style.height = "0px";
+		}
+		function close11() {
+			collapse11 = false;
+			document.getElementById("menu0").style.height = "280px";
+			document.getElementById("menu2").style.height = "900px";
+			document.getElementById("menu6").style.height = "500px";
+			document.getElementById("menu11").style.height = "0px";
+		}
+		function close14() {
+			collapse14 = false;
+			document.getElementById("menu0").style.height = "350px";
+			document.getElementById("menu2").style.height = "500px";
+			document.getElementById("menu4").style.height = "120px";
+			document.getElementById("menu14").style.height = "0px";
+		}
+
 		window.onload = function() {
-			var collapse0 = false;
 			document.getElementById("button0").onclick = function() {
 				if(collapse0 == false) {
-					document.getElementById("menu0").style.height = "1300px";
+					open0();
 				} else {
-					document.getElementById("menu0").style.height = "0px";
+					close0();
 				}
-				collapse0 = !collapse0;
 			}
-			var collapse1 = false;
 			document.getElementById("button1").onclick = function() {
 				if(collapse1 == false) {
-					document.getElementById("menu1").style.height = "48px";
+					open1();
 				} else {
-					document.getElementById("menu1").style.height = "0px";
+					close1();
 				}
-				collapse1 = !collapse1;
 			}
-			var collapse3 = false;
 			document.getElementById("button3").onclick = function() {
 				if(collapse3 == false) {
-					document.getElementById("menu1").style.height = "190px";
-					document.getElementById("menu3").style.height = "190px";
+					open3();
 				} else {
-					document.getElementById("menu3").style.height = "0px";
-					document.getElementById("menu1").style.height = "48px";
+					close3();
 				}
-				collapse3 = !collapse3;
 			}
-			var collapse2 = false;
 			document.getElementById("button2").onclick = function() {
 				if(collapse2 == false) {
-					document.getElementById("menu2").style.height = "1300px";
+					open2();
 				} else {
-					document.getElementById("menu2").style.height = "0px";
+					close2();
 				}
-				collapse2 = !collapse2;
 			}
-			var collapse4 = false;
+
 			document.getElementById("button4").onclick = function() {
 				if(collapse4 == false) {
-					document.getElementById("menu4").style.height = "120px";
+					open4();
 				} else {
-					document.getElementById("menu4").style.height = "0px";
+					close4();
 				}
-				collapse4 = !collapse4;
 			}
-			var collapse5 = false;
 			document.getElementById("button5").onclick = function() {
 				if(collapse5 == false) {
-					document.getElementById("menu5").style.height = "94px";
+					open5();
 				} else {
-					document.getElementById("menu5").style.height = "0px";
+					close5();
 				}
-				collapse5 = !collapse5;
 			}
-			var collapse6 = false;
 			document.getElementById("button6").onclick = function() {
 				if(collapse6 == false) {
-					document.getElementById("menu6").style.height = "500px";
+					open6();
 				} else {
-					document.getElementById("menu6").style.height = "0px";
+					close6();
 				}
-				collapse6 = !collapse6;
 			}
-			var collapse7 = false;
+
 			document.getElementById("button7").onclick = function() {
 				if(collapse7 == false) {
-					document.getElementById("menu7").style.height = "300px";
+					open7();
 				} else {
-					document.getElementById("menu7").style.height = "0px";
+					close7();
 				}
-				collapse7 = !collapse7;
 			}
-			var collapse11 = false;
 			document.getElementById("button11").onclick = function() {
 				if(collapse11 == false) {
-					document.getElementById("menu11").style.height = "400px";
+					open11();
 				} else {
-					document.getElementById("menu11").style.height = "0px";
+					close11();
 				}
-				collapse11 = !collapse11;
 			}
-			var collapse14 = false;
 			document.getElementById("button14").onclick = function() {
 				if(collapse14 == false) {
-					document.getElementById("menu14").style.height = "200px";
+					open14();
 				} else {
-					document.getElementById("menu14").style.height = "0px";
+					close14();
 				}
-				collapse14 = !collapse14;
+			}
+
+
+
+			var showed8 = false;
+			var showed9 = false;
+			var showed10 = false;
+			var showed12 = false;
+			var showed13 = false;
+			var showed15 = false;
+			var showed16 = false;
+			var showed17 = false;
+			var showed18 = false;
+			var showed19 = false;
+			var showed20 = false;
+			var showed21 = false;
+			var showed22 = false;
+			var showed23 = false;
+			var showed24 = false;
+			var showed25 = false;
+			document.getElementById("button8").onclick = function() {
+				if(showed8 == false) {
+					document.getElementById("text").innerHTML = "8 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed8 = !showed8;
+			}
+			document.getElementById("button9").onclick = function() {
+				if(showed9 == false) {
+					document.getElementById("text").innerHTML = "9 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed9 = !showed9;
+			}
+			document.getElementById("button10").onclick = function() {
+				if(showed10 == false) {
+					document.getElementById("text").innerHTML = "10 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed10 = !showed10;
+			}
+			document.getElementById("button17").onclick = function() {
+				if(showed17 == false) {
+					document.getElementById("text").innerHTML = "17 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed17 = !showed17;
+			}
+			document.getElementById("button18").onclick = function() {
+				if(showed18 == false) {
+					document.getElementById("text").innerHTML = "18 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed18 = !showed18;
+			}
+			document.getElementById("button19").onclick = function() {
+				if(showed19 == false) {
+					document.getElementById("text").innerHTML = "19 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed19 = !showed19;
+			}
+			document.getElementById("button20").onclick = function() {
+				if(showed20 == false) {
+					document.getElementById("text").innerHTML = "20 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed20 = !showed20;
+			}
+			document.getElementById("button15").onclick = function() {
+				if(showed15 == false) {
+					document.getElementById("text").innerHTML = "15 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed15 = !showed15;
+			}
+			document.getElementById("button16").onclick = function() {
+				if(showed16 == false) {
+					document.getElementById("text").innerHTML = "16 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed16 = !showed16;
+			}
+			document.getElementById("button12").onclick = function() {
+				if(showed12 == false) {
+					document.getElementById("text").innerHTML = "12 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed12 = !showed12;
+			}
+			document.getElementById("button13").onclick = function() {
+				if(showed13 == false) {
+					document.getElementById("text").innerHTML = "13 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed13 = !showed13;
+			}
+			document.getElementById("button21").onclick = function() {
+				if(showed21 == false) {
+					document.getElementById("text").innerHTML = "21 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed21 = !showed21;
+			}
+			document.getElementById("button22").onclick = function() {
+				if(showed22 == false) {
+					document.getElementById("text").innerHTML = "22 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed22 = !showed22;
+			}
+			document.getElementById("button23").onclick = function() {
+				if(showed23 == false) {
+					document.getElementById("text").innerHTML = "23 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed23 = !showed23;
+			}
+			document.getElementById("button24").onclick = function() {
+				if(showed24 == false) {
+					document.getElementById("text").innerHTML = "24 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed24 = !showed24;
+			}
+			document.getElementById("button25").onclick = function() {
+				if(showed25 == false) {
+					document.getElementById("text").innerHTML = "25 text";
+				} else {
+					document.getElementById("text").innerHTML = "";
+				}
+				showed25 = !showed25;
 			}
 		}
 	</script>
 </head>
 
 <body style = "background-color: #F5FFFA">
-	<a href="index.html">На главуню</a><br><br><br>
-	TODO: сделать меняющуюся от кнопки картинку справа
+	<a href="sandbox.html">sandbox</a><br><br><br>
+	TODO: сделать меняющуюся от кнопки картинку справа<br>
+	TODO: сделать все тексты<br>
 	<ul class = "border level0">
 		<li class = "main" id = "button0">
 			Чрезвычайные ситуации
@@ -298,6 +612,7 @@
 				</ul></div>
 		</ul></div>
 	</ul>
+	<blockquote class = "text" id = "text"></blockquote>
 </body>
 
 </html>

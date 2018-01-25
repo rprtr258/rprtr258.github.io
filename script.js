@@ -1,9 +1,6 @@
-"use strict"
+var message = prompt("Type message:", "Kappa 123");
 
-var message = prompt("Type message:", "");
-var message = "Kappa 123";
-
-while(message.indexOf("Kappa") != -1) {
+while(message.indexOf("Kappa") !== -1) {
 	message = message.replace("Kappa", "<img src = \"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\">");
 }
 

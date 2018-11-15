@@ -11,3 +11,4 @@
 |[pissed off about functional programming](https://www.perlmonks.org/?node_id=450922)|Разбирается неверность 4 мифов о функциональном программировании|[link](https://rprtr258.github.io/book_descriptions.html#pissed-off)|
 |[10 мелких ошибок в дизайне, которые мы допускаем до сих пор](https://habr.com/company/everydaytools/blog/416115/)|10 советов о том как сделать дизайн приложений/сайтов проще и удобнее для пользователя или как минимум как ставить задачи, чтобы приблизиться к этому|[link](https://rprtr258.github.io/book_descriptions.html#design-advices)|
 |[Сетевой код для бедных](https://habr.com/post/349732/)|Описаны приемы, для того чтобы решить проблемы задержки в сетевых играх|-|
+|[OverTheWire#bandit](http://overthewire.org/wargames/bandit)|Хороший wargame для знакомства с bash, также есть пара примеров уязвимостей в виде злоупотребления suid и выход в bash из vim|-|

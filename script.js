@@ -10,6 +10,5 @@ messageElement.classList.add("alert");
 document.body.insertBefore(messageElement, document.getElementById("qqq"));
 setInterval(function() {
 	messageElement.style = (700 - (parseInt(messageElement.style.width.substring(0, 3)))) + "px";
-	console.log(messageElement.style.width);
 }, 2000);
 messageElement.style = "400px";

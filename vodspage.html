@@ -1,0 +1,232 @@
+<html>
+<head>
+    <title>Vods Page</title>
+    <style>
+        .duration {
+            margin-left: 0.6rem;
+            margin-top: 0.6rem;
+            position: absolute;
+            background-color: rgba(0,0,0,.6);
+            color: #faf9fa;
+            line-height: 1.8;
+            padding: 0 .4rem;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            font-size: 0.8rem;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .viewers {
+            margin-left: 0.6rem;
+            margin-top: 9.4rem;
+            position: absolute;
+            background-color: rgba(0,0,0,.6);
+            color: #faf9fa;
+            line-height: 1.8;
+            padding: 0 .4rem;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            font-size: 0.8rem;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .date {
+            margin-left: 14.5rem;
+            margin-top: 9.4rem;
+            position: absolute;
+            background-color: rgba(0,0,0,.6);
+            color: #faf9fa;
+            line-height: 1.8;
+            padding: 0 .4rem;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            font-size: 0.8rem;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .avatar {
+            margin-top: -1.8rem;
+            margin-left: -3rem;
+            position: absolute;
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+        .title {
+            width: 260px;
+            margin-left: 3rem;
+            margin-top: 12rem;
+            position: absolute;
+            color: #faf9fa;
+            padding: 0 .4rem;
+            font-size: 0.8rem;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .streamer {
+            width: 260px;
+            margin-left: 3rem;
+            margin-top: 14rem;
+            position: absolute;
+            color: #faf9fa;
+            padding: 0 .4rem;
+            font-size: 0.8rem;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    </style>
+    <script>
+        function findGetParameter(parameterName, defaultValue) {
+            let result = defaultValue, tmp = [];
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(function (item) {
+                  tmp = item.split("=");
+                  if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                });
+            return result;
+        }
+        async function getUserVods(userId) {
+            let data = await fetch('https://api.twitch.tv/helix/videos?user_id=' + userId, {
+                method: 'GET',
+                headers: {
+                    'Client-ID': 'p8qy1bavwvu0hg85e1278gvmw1bt7o'
+                }
+            });
+            let res = await data.json();
+            let result = [];
+            for (const vod of res.data) {
+                if (vod.type === 'archive') {
+                    result.push(vod);
+                }
+            }
+            return Promise.resolve(result);
+        }
+        function formatDuration(duration) {
+            if (duration.indexOf('m') === -1)
+                duration = '0m' + duration;
+            if (duration.indexOf('h') === -1)
+                duration = '0h' + duration;
+            let a = duration.split("h");
+            let h = a[0];
+            let b = a[1].split("m");
+            let m = b[0];
+            let s = b[1].substr(0, b[1].length - 1);
+            if (m < 10)
+                m = "0" + m;
+            if (s < 10)
+                s = "0" + s;
+            if (h == 0 && m == 0)
+                return `${s}`;
+            if (h == 0)
+                return `${m}:${s}`;
+            return `${h}:${m}:${s}`;
+        }
+        function formatThumbnail(thumbnail, width, height) {
+            if (thumbnail == "")
+                return "img/vodspage/livestream.png";
+            return thumbnail.replace("%{height}", height).replace("%{width}", width);
+        }
+        async function getAvatars(ids) {
+            // TODO: split ids into blocks of max 100 ids in each
+            let data = await Promise.resolve(fetch('https://api.twitch.tv/helix/users?id=' + ids.join("&id="), {
+                method: 'GET',
+                headers: {
+                    'Client-ID': 'p8qy1bavwvu0hg85e1278gvmw1bt7o'
+                }
+            }));
+            let res = await data.json();
+            let info = await res.data.map(x => [x.id, x.profile_image_url]);
+            let avatarsList = {};
+            for (const user of info) {
+                avatarsList[user[0]] = user[1];
+            }
+            return avatarsList;
+        }
+        function formatHTML(vodJson, avatars) {
+            let duration = formatDuration(vodJson.duration);
+            let thumbnail = formatThumbnail(vodJson.thumbnail_url, "320", "180");
+            let time = vodJson.published_at.substr(0, vodJson.published_at.indexOf('T'));
+            let title = vodJson.title;
+            if (title.length > 70)
+                title = title.substr(0, 63) + "...";
+            let avatar = avatars[vodJson.user_id + []];
+            return `
+            <p class = "date">${time}</p>
+            <p class = "duration">${duration}</p>
+            <p class = "viewers">${vodJson.view_count} views</p>
+            <a class="streamer" href="https://twitch.tv/${vodJson.user_name}/videos">
+                <img class = "avatar" width = "40px" height = "40px" src="${avatar}">
+            </a>
+            <a href = "${vodJson.url}">
+                <h3 class="title">${title}</h3>
+            </a>
+            <a class="streamer" href="https://twitch.tv/${vodJson.user_name}/videos">${vodJson.user_name}</a>
+            <a href = "${vodJson.url}">
+                <img src="${thumbnail}">
+            </a>`;
+        }
+        async function getVods(userIds) {
+            let vodsList = [];
+            let vodsPromises = userIds.map(getUserVods);
+            await Promise.all(vodsPromises);
+            for (const vodPromise of vodsPromises) {
+                let f = await vodPromise;
+                vodsList = vodsList.concat(f);
+            }
+            vodsList.sort((a, b) => Date.parse(b.published_at) - Date.parse(a.published_at));
+            return vodsList;
+        }
+        function addVods(vods, avatars) {
+            const vodsHTML = vods.map(x => formatHTML(x, avatars));
+            document.querySelector(".list").innerHTML += `<tr height="270px"><td>${vodsHTML.join("</td><td>")}</td>`;
+        }
+        async function fillTable(clientID) {
+            let data = await Promise.resolve(fetch('https://api.twitch.tv/helix/users?login=' + username, {
+                method: 'GET',
+                headers: {
+                    'Client-ID': clientID
+                }
+            }));
+            let res = await data.json();
+            let id = await res.data[0].id;
+            let data2 = await Promise.resolve(fetch('https://api.twitch.tv/helix/users/follows?from_id=' + id, {
+                method: 'GET',
+                headers: {
+                    'Client-ID': clientID
+                }
+            }));
+            let res2 = await data2.json();
+            let ids = res2.data.map(x => x.to_id);
+            const avatars = await Promise.resolve(getAvatars(ids));
+            let vods = await getVods(ids);
+            const vodsPerRow = 4;
+            for (r = 0; r * vodsPerRow + vodsPerRow - 1 < vods.length; r += vodsPerRow) {
+                let vodsRow = [];
+                for (k = 0; k < vodsPerRow; k++)
+                    vodsRow.push(vods[r + k]);
+                addVods(vodsRow, avatars);
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #0f0e11;">
+    <script>
+        let username = findGetParameter('username', null);
+        if (!(username === null)) {
+            fillTable('p8qy1bavwvu0hg85e1278gvmw1bt7o');
+        }
+    </script>
+    <form style = "margin-left: 40rem;margin-top: 3rem;">
+        <p style="color: #faf9fa;">
+            Enter user name: <input type = "text" name = "username"></input>
+            <input type = "submit"></input>
+        </p>
+    </form>
+    <table class = "list" style="margin-left: 9rem">
+    </table>
+</body>
+</html>

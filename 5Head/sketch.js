@@ -1,41 +1,73 @@
-let walls = [];
+let walls;
 let ray;
 let population = [];
 let savedParticles = [];
 const TOTAL = 100;
-let slider;
+
+let speedSlider;
+
+let mx = 0;
+let start;
+
+let inside;
+let outside;
+let checkpoints;
+let PATH_WIDTH = 70;
+let zoff = 0;
 
 function generateMap() {
+    walls = [];
+    inside = [];
+    outside = [];
+    checkpoints = [];
+
     let res = []
-    res.push(new Boundary(50, 390, 120, 390));
-    res.push(new Boundary(50, 390, 50, 200));
-    res.push(new Boundary(120, 390, 120, 200));
-    res.push(new Boundary(50, 200, 150, 100));
-    res.push(new Boundary(120, 200, 150, 170));
-    res.push(new Boundary(150, 100, 390, 100));
-    res.push(new Boundary(150, 170, 390, 170));
-    res.push(new Boundary(390, 100, 390, 170));
-    return res;
+
+    let noiseMax = 4;
+    const total = 72;
+    for (let i = 0; i < total; i++) {
+        let a = map(i, 0, total, 0, TWO_PI);
+        let xoff = map(cos(a), -1, 1, 0, noiseMax);
+        let yoff = map(sin(a), -1, 1, 0, noiseMax);
+        let r = map(noise(xoff, yoff, zoff), 0, 1, 100, height / 2);
+        let x1 = width / 2 + (r - PATH_WIDTH) * cos(a);
+        let y1 = height / 2 + (r - PATH_WIDTH) * sin(a);
+        let x2 = width / 2 + (r + PATH_WIDTH) * cos(a);
+        let y2 = height / 2 + (r + PATH_WIDTH) * sin(a);
+        checkpoints.push(new Boundary(x1, y1, x2, y2));
+        inside.push(createVector(x1, y1));
+        outside.push(createVector(x2, y2));
+    }
+    for (let i = 0; i < total; i++) {
+        let ai = inside[i];
+        let bi = inside[(i + 1) % total];
+        res.push(new Boundary(ai.x, ai.y, bi.x, bi.y));
+        let ao = outside[i];
+        let bo = outside[(i + 1) % total];
+        res.push(new Boundary(ao.x, ao.y, bo.x, bo.y));
+    }
+
+    start = checkpoints[0].midpoint();
+    walls = res;
+    zoff += 0.01;
 }
 
 function setup() {
-    slider = createSlider(1, 100, 1);
-    createCanvas(400, 400);
-    walls = generateMap();
-
-    start = createVector(85, 380);
-    end = createVector(380, 135);
-
+    speedSlider = createSlider(1, 100, 1);
+    createCanvas(800, 800);
+    generateMap();
     for (let i = 0; i < TOTAL; i++) {
         population[i] = new Particle();
     }
 }
 
 function draw() {
-    for (let j = 0; j < slider.value(); j++) {
+    background(0);
+    for (let j = 0; j < speedSlider.value(); j++) {
+        generateMap();
         for (let particle of population) {
             particle.look(walls);
-            particle.check(end);
+            particle.check(checkpoints);
             particle.update();
         }
 
@@ -46,17 +78,25 @@ function draw() {
             }
         }
         if (population.length == 0) {
+            for (let i = population.length - 1; i >= 0; i--) {
+                const particle = population[i];
+                savedParticles.push(population.splice(i, 1)[0]);
+            }
             nextGeneration();
+            mx = 0;
         }
     }
 
-    background(0);
     for (let particle of population) {
         particle.show();
     }
+    population[0].show();
+    strokeWeight(2);
     for (let wall of walls) {
         wall.show();
     }
-    fill(255);
-    ellipse(end.x, end.y, 10);
+    for (let particle of population) {
+        mx = max(mx, particle.index);
+    }
+    checkpoints[mx % checkpoints.length].show();
 }

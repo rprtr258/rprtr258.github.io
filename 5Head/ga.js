@@ -1,13 +1,27 @@
 function nextGeneration() {
     console.log("next generation");
-    calculateFitness(end);
-    for (let i = 0; i < TOTAL; i++) {
+    calculateFitness();
+    population[0] = pickBest();
+    for (let i = 1; i < TOTAL; i++) {
         population[i] = pickOne();
     }
     for (let i = 0; i < TOTAL; i++) {
         savedParticles[i].dispose();
     }
     savedParticles = [];
+}
+
+function pickBest() {
+    let index = 0;
+    for (let i = 1; i < savedParticles.length; i++) {
+        if (savedParticles[i].fitness > savedParticles[index].fitness) {
+            index = i;
+        }
+    }
+    let particle = savedParticles[index];
+    let child = new Particle(particle.brain);
+    child.color = "rgba(100%,0%,0%,1)";
+    return child;
 }
 
 function pickOne() {

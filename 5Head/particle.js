@@ -89,7 +89,7 @@ class Particle {
           }
         }
       }
-      if (closest && this.color[10] == '0') {
+      if (closest) {
         stroke(255);
         strokeWeight(1);
         line(this.pos.x, this.pos.y, closest.x, closest.y);

@@ -10,4 +10,3 @@ plt.ylim(min(f["N"]), max(f["N"]))
 fig = plt.gcf() 
 fig.set_size_inches(18.5, 10.5)
 fig.savefig("img/fig.png")
-

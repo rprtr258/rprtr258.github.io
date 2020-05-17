@@ -380,7 +380,7 @@ function send_replay(vars) {
         vars.data = JSON.stringify(Replay.data);
         vars.day = day_of_week;
 
-        $.ajax({url: '/-/mmheroes/api',
+        /*$.ajax({url: '/-/mmheroes/api',
             type: 'post',
             data: {
                 api: 'put',
@@ -389,13 +389,13 @@ function send_replay(vars) {
             },
             success: console.log,
             error: alyarme
-        });
+        });*/
     }
 }
 
 function get_top() {
     if (!Replay.is_on()) {
-        $.ajax({url: '/-/mmheroes/api',
+        /*$.ajax({url: '/-/mmheroes/api',
             data: {
                 api: 'get',
                 nick: get_user_name()
@@ -405,7 +405,7 @@ function get_top() {
                 top_gamers = JSON.parse(data);
             },
             error: alyarme
-        });
+        });*/
     }
 }
 
@@ -1727,7 +1727,7 @@ function invite_from_neighbor() {
             hour_pass();
             let subj = random_from_to(0, 5);
             hero.subject[subj].knowledge -=
-                Random(Math.round(Math.Math.sqrt(hero.subject[subj].knowledge * 2.0)));
+                Random(Math.round(Math.sqrt(hero.subject[subj].knowledge * 2.0)));
 
             // #warning
             if (hero.subject[subj].knowledge < 0) {
@@ -1772,7 +1772,7 @@ function scene_obschaga() {
     TextColor(7);
     GotoXY(1, 8);
 
-    if (23 - idiv(clamp0(0x32 - hero.health), 0xC) < time_of_day || time_of_day < 4) {
+    if (23 - idiv(Math.max(0, 0x32 - hero.health), 0xC) < time_of_day || time_of_day < 4) {
         writeln(aTebqNeumolimoK);
         wait_for_key();
         goto_sleep();
@@ -2971,9 +2971,7 @@ function sub_171C4() {
         write(subjects[current_subject].professor.name);
         write(aZaderjivaetsqE);
         timesheet[day_of_week][current_subject].to = time_of_day + 1;
-
     } else {
-
         write(subjects[current_subject].professor.name);
         write(aUxodit_);
         current_subject = -1;
@@ -3492,7 +3490,6 @@ function scene_exam() {
     var_15 = 0;
     for (var_2 = 0; var_2 <= 0xB; ++var_2) {
         // #warning
-        //[bp+var_2+var_12] = 0;
         var_12.push(0);
     }
     var_14 = 0;
@@ -4079,7 +4076,27 @@ function sub_1A70A() {
     write(aMisa_1);
     TextColor(0x0F);
 
-    write([aAxJalNegdeSigr, aVsegdaSlediZaZ, aMozgiVliqutNaP, aCemBolSeVinosl, aCemBolSeTvoqXa, aVajnostKonkret, aXarizmaPomogae, aCemBolSeXarizm, aCemMenSeVinosl, aCemBolSeMozgiT, aSidenieVInetEI, aEsliTebeNadoel, aXocesXalqviNab, aXocesDobitSqVs, aVMavzoleeVajno, aOtRazdvoeniqLi, aOtLubogoObseni, aGrisaMojetPomo, aPeremeseniqStu][Random(0x13)]);
+    write([
+        aAxJalNegdeSigr,
+        aVsegdaSlediZaZ,
+        aMozgiVliqutNaP,
+        aCemBolSeVinosl,
+        aCemBolSeTvoqXa,
+        aVajnostKonkret,
+        aXarizmaPomogae,
+        aCemBolSeXarizm,
+        aCemMenSeVinosl,
+        aCemBolSeMozgiT,
+        aSidenieVInetEI,
+        aEsliTebeNadoel,
+        aXocesXalqviNab,
+        aXocesDobitSqVs,
+        aVMavzoleeVajno,
+        aOtRazdvoeniqLi,
+        aOtLubogoObseni,
+        aGrisaMojetPomo,
+        aPeremeseniqStu
+    ][Random(0x13)]);
 
     wait_for_key();
     ClrScr();
@@ -4135,54 +4152,33 @@ function sub_1B09A() {
 
         if (Random(hero.charizma) > Random(6) + 2 && hero.subject[Fizra].knowledge < 10) {
             writeln(aQZnauGdeSrezat);
-            hero.subject[Fizra].knowledge += 0x1E;
+            hero.subject[Fizra].knowledge += 30;
         } else {
-            let ax = Random(0x16);
-            if (ax == 0) {
-                writeln(aPomnitsqKogdaT);
-            } else if (ax == 1) {
-                writeln(aQBilBetaTester);
-            } else if (ax == 2) {
-                writeln(aKakZdorovoCtoD);
-            } else if (ax == 3) {
-                writeln(aTiUjePolucilDe);
-            } else if (ax == 4) {
-                writeln(aPoprobuiDlqNac);
-            } else if (ax == 5) {
-                writeln(aTiEseNePolucil);
-            } else if (ax == 6) {
-                writeln(aXocesOtdixatGd);
-            } else if (ax == 7) {
-                writeln(aNeVDenGaxScast);
-            } else if (ax == 8) {
-                writeln(aNaVsemirnoveVs);
-            } else if (ax == 9) {
-                writeln(aVlasenkoDamaVe);
-            } else if (ax == 0xA) {
-                writeln(aInteresnoKogda);
-            } else if (ax == 0xB) {
-                writeln(aZdorovEVKafePo);
-            } else if (ax == 0xC) {
-                writeln(aEsliBiQZnalAdr);
-            } else if (ax == 0xD) {
-                writeln(aStarVremennoNa);
-            } else if (ax == 0xE) {
-                writeln(aQPodozrevauCto);
-            } else if (ax == 0xF) {
-                writeln(aADiamondVseSvo);
-            } else if (ax == 0x10) {
-                writeln(aVSleduusemSeme);
-            } else if (ax == 0x11) {
-                writeln(aDiamondXocetPe);
-            } else if (ax == 0x12) {
-                writeln(aMisaProkonsulT);
-            } else if (ax == 0x13) {
-                writeln(aPogovoriSDiamo);
-            } else if (ax == 0x14) {
-                writeln(aBorisDoKonca);
-            } else if (ax == 0x15) {
-                writeln(aUDubcovaInogda);
-            }
+            let ax = Random(22);
+            writeln([
+                aPomnitsqKogdaT,
+                aQBilBetaTester,
+                aKakZdorovoCtoD,
+                aTiUjePolucilDe,
+                aPoprobuiDlqNac,
+                aTiEseNePolucil,
+                aXocesOtdixatGd,
+                aNeVDenGaxScast,
+                aNaVsemirnoveVs,
+                aVlasenkoDamaVe,
+                aInteresnoKogda,
+                aZdorovEVKafePo,
+                aEsliBiQZnalAdr,
+                aStarVremennoNa,
+                aQPodozrevauCto,
+                aADiamondVseSvo,
+                aVSleduusemSeme,
+                aDiamondXocetPe,
+                aMisaProkonsulT,
+                aPogovoriSDiamo,
+                aBorisDoKonca,
+                aUDubcovaInogda
+            ][ax]);
         }
 
     }
@@ -4310,16 +4306,13 @@ function sub_1B986() {
     show_header_stats();
 
     if (!jnz(current_subject, -1)) {
-
         GotoXY(1, 8);
         TextColor(7);
         writeln(aTiZavodisSNilS);
         TextColor(0x0D);
         writeln(aTebePoploxelo_);
         decrease_health(10, aObsenieSNilOka);
-
     } else {
-
         GotoXY(1, 8);
         TextColor(0x0B);
         writeln(aMaladoiCilavek);
@@ -4396,32 +4389,21 @@ function sub_1BE39() {
     TextColor(7);
     write(aKuzMenko);
     TextColor(0x0F);
-    let ax = Random(0x0C);
-    if (ax == 0) {
-        writeln(a___Otformatiro);
-    } else if (ax == 1) {
-        writeln(aAViNigdeNeVide);
-    } else if (ax == 2) {
-        writeln(a___NapisatVizu);
-    } else if (ax == 3) {
-        writeln(aUVasOlegPlissV);
-    } else if (ax == 4) {
-        writeln(aBillGatesMustD);
-    } else if (ax == 5) {
-        writeln(aViCitaliJurnal);
-    } else if (ax == 6) {
-        writeln(aQSlisalCtoMmhe);
-    } else if (ax == 7) {
-        writeln(aZapisivaitesNa);
-    } else if (ax == 8) {
-        writeln(aNaTretEmKurseQ);
-    } else if (ax == 9) {
-        writeln(aInteresnoKog_0);
-    } else if (ax == 0xA) {
-        writeln(aPoluciteSebeQs);
-    } else if (ax == 0xB) {
-        writeln(aARazveTerexovS);
-    }
+    let ax = Random(12);
+    writeln([
+        a___Otformatiro,
+        aAViNigdeNeVide,
+        a___NapisatVizu,
+        aUVasOlegPlissV,
+        aBillGatesMustD,
+        aViCitaliJurnal,
+        aQSlisalCtoMmhe,
+        aZapisivaitesNa,
+        aNaTretEmKurseQ,
+        aInteresnoKog_0,
+        aPoluciteSebeQs,
+        aARazveTerexovS
+    ][ax]);
 }
 
 let aKuzMenko_0 = 'Кузьменко:';
@@ -4790,32 +4772,21 @@ function sub_1D30D() {
     ClrScr();
 }
 
-function talk_with_classmate(arg_0) {
-    if (arg_0 == 0) {
-        sub_19259();
-    } else if (arg_0 == 2) {
-        sub_19B20();
-    } else if (arg_0 == 3) {
-        sub_1A0A2();
-    } else if (arg_0 == 1) {
-        sub_1B526();
-    } else if (arg_0 == 4) {
-        sub_1A70A();
-    } else if (arg_0 == 5) {
-        sub_1B09A();
-    } else if (arg_0 == 6) {
-        sub_1B6B7();
-    } else if (arg_0 == 7) {
-        sub_1B986();
-    } else if (arg_0 == 8) {
-        sub_1C02B();
-    } else if (arg_0 == 9) {
-        sub_1C1FF();
-    } else if (arg_0 == 0xA) {
-        sub_1CC94();
-    } else if (arg_0 == 0xB) {
-        sub_1D30D();
-    }
+function talk_with_classmate(i) {
+    [
+        sub_19259,
+        sub_1B526,
+        sub_19B20,
+        sub_1A0A2,
+        sub_1A70A,
+        sub_1B09A,
+        sub_1B6B7,
+        sub_1B986,
+        sub_1C02B,
+        sub_1C1FF,
+        sub_1CC94,
+        sub_1D30D
+    ][i]();
 }
 
 let aRozovieSloniki = 'Розовые слоники с блестящими крылышками';
@@ -5078,7 +5049,6 @@ function goto_sleep() {
             is_end = 1;
             death_cause = aVremqVislo_;
         } else {
-            // #warning new code
             send_replay();
         }
     }
@@ -5258,8 +5228,7 @@ function sub_1ECBC() {
     } while (!jnz(bp_var_2[1], 0) && jnz(bp_var_2[0], 0));
 }
 
-function sub_1ED56(/*arg_0*/) {
-    // #warning arg_0, [arg_0 + var_2 + 1]
+function sub_1ED56() {
     let bp_var_2 = [0, 0];
 
     if (time_between_9_and_19()) {
@@ -5334,8 +5303,7 @@ function sub_1EE2C() {
     } while (!jnz(bp_var_2[1], 0) && jnz(bp_var_2[0], 0));
 }
 
-function sub_1EECC(/*arg_0*/) {
-    // #warning arg_0, [arg_0 + var_2 + 0|1]
+function sub_1EECC() {
     let bp_var_2 = [0, 0];
 
     if (time_between_9_and_19()) {

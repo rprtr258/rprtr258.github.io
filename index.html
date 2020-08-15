@@ -1,184 +1,28 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <meta charset = "utf-8">
-    <title>Main page</title>
-    <script type='text/javascript'>
-        var colour = "#666666";
-        var sparkles = 40;
-
-        var x = ox = 400;
-        var y = oy = 300;
-        var swide = 800;
-        var shigh = 600;
-        var sleft = sdown = 0;
-        var tiny = new Array();
-        var star = new Array();
-        var starv = new Array();
-        var starx = new Array();
-        var stary = new Array();
-        var tinyx = new Array();
-        var tinyy = new Array();
-        var tinyv = new Array();
-        window.onload = function() {
-            if (document.getElementById) {
-                var i, rats, rlef, rdow;
-                for (var i = 0; i < sparkles; i++) {
-                    var rats = createDiv(3, 3);
-                    rats.style.visibility = "hidden";
-                    document.body.appendChild(tiny[i] = rats);
-                    starv[i] = 0;
-                    tinyv[i] = 0;
-                    var rats = createDiv(5, 5);
-                    rats.style.backgroundColor = "transparent";
-                    rats.style.visibility = "hidden";
-                    var rlef = createDiv(1, 5);
-                    var rdow = createDiv(5, 1);
-                    rats.appendChild(rlef);
-                    rats.appendChild(rdow);
-                    rlef.style.top = "2px";
-                    rlef.style.left = "0px";
-                    rdow.style.top = "0px";
-                    rdow.style.left = "2px";
-                    document.body.appendChild(star[i] = rats);
-                }
-                set_width();
-                sparkle();
-            }
-        }
-        function sparkle() {
-            var c;
-            if (x != ox || y != oy) {
-                ox = x;
-                oy = y;
-                for (c = 0; c < sparkles; c++)
-                    if (!starv[c]) {
-                        star[c].style.left = (starx[c] = x) + "px";
-                        star[c].style.top = (stary[c] = y) + "px";
-                        star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
-                        star[c].style.visibility = "visible";
-                        starv[c] = 50;
-                        break;
-                    }
-            }
-            for (c = 0; c < sparkles; c++) {
-                if (starv[c])
-                    update_star(c);
-                if (tinyv[c])
-                    update_tiny(c);
-            }
-            setTimeout("sparkle()", 40);
-        }
-        function update_star(i) {
-            if (--starv[i] == 25)
-                star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
-            if (starv[i]) {
-                stary[i] += 1 + Math.random() * 3;
-                if (stary[i] < shigh + sdown) {
-                    star[i].style.top = stary[i] + "px";
-                    starx[i] += (i % 5 - 2) / 5;
-                    star[i].style.left = starx[i] + "px";
-                } else {
-                    star[i].style.visibility = "hidden";
-                    starv[i] = 0;
-                    return;
-                }
-            } else {
-                tinyv[i] = 50;
-                tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
-                tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
-                tiny[i].style.width = "2px";
-                tiny[i].style.height = "2px";
-                star[i].style.visibility = "hidden";
-                tiny[i].style.visibility = "visible"
-            }
-        }
-        function update_tiny(i) {
-            if (--tinyv[i] == 25) {
-                tiny[i].style.width = "1px";
-                tiny[i].style.height = "1px";
-            }
-            if (tinyv[i]) {
-                tinyy[i] += 1 + Math.random() * 3;
-                if (tinyy[i] < shigh + sdown) {
-                    tiny[i].style.top = tinyy[i] + "px";
-                    tinyx[i] += (i % 5 - 2) / 5;
-                    tiny[i].style.left = tinyx[i] + "px";
-                } else {
-                    tiny[i].style.visibility = "hidden";
-                    tinyv[i] = 0;
-                    return;
-                }
-            } else
-                tiny[i].style.visibility = "hidden";
-        }
-        document.onmousemove = mouse;
-        function mouse(e) {
-            set_scroll();
-            y = (e) ? e.pageY : event.y + sdown;
-            x = (e) ? e.pageX : event.x + sleft;
-        }
-        function set_scroll() {
-            if (typeof (self.pageYOffset) == "number") {
-                sdown = self.pageYOffset;
-                sleft = self.pageXOffset;
-            } else if (document.body.scrollTop || document.body.scrollLeft) {
-                sdown = document.body.scrollTop;
-                sleft = document.body.scrollLeft;
-            } else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-                sleft = document.documentElement.scrollLeft;
-                sdown = document.documentElement.scrollTop;
-            } else {
-                sdown = 0;
-                sleft = 0;
-            }
-        }
-        window.onresize = set_width;
-        function set_width() {
-            if (typeof (self.innerWidth) == "number") {
-                swide = self.innerWidth;
-                shigh = self.innerHeight;
-            } else if (document.documentElement && document.documentElement.clientWidth) {
-                swide = document.documentElement.clientWidth;
-                shigh = document.documentElement.clientHeight;
-            } else if (document.body.clientWidth) {
-                swide = document.body.clientWidth;
-                shigh = document.body.clientHeight;
-            }
-        }
-        function createDiv(height, width) {
-            var div = document.createElement("div");
-            div.style.position = "absolute";
-            div.style.height = height + "px";
-            div.style.width = width + "px";
-            div.style.overflow = "hidden";
-            div.style.backgroundColor = colour;
-            return (div);
-        }
-    </script>
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/11417502" />
+    <meta property="og:site_name" content="Батора" />
+    <meta property="og:title" content="ты" />
+    <meta property="og:description" content="некомпетентный" />
+    <title>rprtr258's personal page</title>
 </head>
 <body>
     <a href = "5Head/index.html">Neuroevolution steering behavior</a><br>
     <a href = "book_descriptions.html">Book descriptions related to books.md</a><br>
-    <a href = "dance.html">Dance guide</a><br>
     <a href = "https://github.com/rprtr258/rprtr258.github.io/blob/master/books.md">Прочитанные книги</a><br>
     <a href = "diagram.html">Some diagram #1</a><br>
     <a href = "diagram2.html">Some diagram #2</a><br>
     <a href = "gachi.html">Gasm emotes from twitch</a><br>
     <a href = "mlprojects.html">My machine learning projects</a><br>
-    <a href = "homepage.html">Stylish new tab page</a><br>
-    <a href = "radio.html">Korean voice radio</a><br>
+    <a href = "new_tab.html">Stylish new tab</a><br>
     <a href = "menhera.html">Menhera chan pics</a><br>
     <a href = "random_pasta.html">Random pasta generator</a><br>
     <a href = "sandbox.html">Random javascript and html page</a><br>
     <a href = "sht.html">Weapon modification variations, broken gifs were from terraria</a><br>
-    <a href = "twitch.html">Some of first twitch smiles</a><br>
-    <a href = "vodspage.html">Last vods from channels you follow</a><br>
-    <a href = "k-means.html">K-Means algorithm</a><br>
+    <a href = "watch_list.html">Anime watch list</a><br>
     <h2>Best film</h2>
-    <img src="img/index/VWWDt-vHUrM.jpg">
-    <img src = "https://cdn.shopify.com/s/files/1/0747/3829/products/mL2280_eed2d60e-c081-4582-b078-a52b6ce70954_1024x1024.jpg">
-    <img src = "https://thumbs.dfs.ivi.ru/storage8/contents/c/5/9f6fa08aa4f663373cf618965fd38e.jpg">
     <img src = "https://ih0.redbubble.net/image.761290078.3283/st%2Csmall%2C215x235-pad%2C210x230%2Cf8f8f8.lite-1u10.jpg">
     <img src = "img/index/pixelArt_1.jpg">
     <img src = "img/index/pixelArt_2.png">

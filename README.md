@@ -1,2 +1,2 @@
 # rprtr258.github.io
-My site :O
+Personal site for Viktor Poletansky(Виктор Полетанский)

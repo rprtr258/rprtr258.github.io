@@ -3,5 +3,9 @@ layout: default-nav
 title: Menhera-chan
 ---
 {% for image in site.menhera_chan_pics %}
+    <p>{{ image.name }}</p>
+    <p>{{ image.url }}</p>
+    <p>{{ image.path }}</p>
+    <p>{{ image.extname }}</p>
     <img src="{{ image.url }}" />
 {% endfor %}

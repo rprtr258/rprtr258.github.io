@@ -1,6 +1,6 @@
 <nav>
   {% for item in site.data.navigation %}
-    <a class="{% if page.url == "/" %}current-page{% endif %}" href="{{ item.link }}">
+    <a class="{% if page.url == item.link %}current-page{% endif %}" href="{{ item.link }}">
       {{ item.name }}
     </a>
   {% endfor %}

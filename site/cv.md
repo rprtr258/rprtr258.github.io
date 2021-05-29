@@ -4,23 +4,26 @@
 ## Programmer
 ---
 ### PERSONAL INFORMATION
+
 |||
 |--- |--- |
 |Address|Saint Petersburg|
 |Birth|07.12.1998 Angarsk|
 |Nationality|Russian|
 |Hobbies|Math, Functional programming, Games, Twitch viewing|
+
 ---
 ### SOCIAL PROFILES
-|||
+
 |--- |--- |
 |Github|github.com/rprtr258|
+
 ---
 ### LANGUAGES
-|||
-|--- |--- |
+
 |Russian|Native speaker|
 |English|B2 level|
+
 ---
 ### SKILLS
 ||||

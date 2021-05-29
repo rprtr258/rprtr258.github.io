@@ -2,4 +2,6 @@
 layout: default-nav
 title: Menhera-chan
 ---
-<img src="/assets/img/kawaii-kawaiianime-anime-girl-animegirl-animekawaii-menhera-chan-ok-1156328445749rjgc7qz0.png">
+{% for image in site.menhera_chan_pics %}
+    <img src="{{ image.url }}" />
+{% endfor %}

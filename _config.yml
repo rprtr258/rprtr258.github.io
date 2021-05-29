@@ -1,2 +1,5 @@
 source: site
 destination: build
+collections_dir: collections
+collections:
+  - menhera_chan_pics

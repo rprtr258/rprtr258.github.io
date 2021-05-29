@@ -2,10 +2,6 @@
 layout: default-nav
 title: Menhera-chan
 ---
-{% for staff_member in site.staff_members %}
-  <h2>{{ staff_member.name }} - {{ staff_member.position }}</h2>
-  <p>{{ staff_member.content | markdownify }}</p>
-{% endfor %}
 {% for image in site.menhera_chan_pics %}
     <p>{{ image.name }}</p>
     <p>{{ image.url }}</p>

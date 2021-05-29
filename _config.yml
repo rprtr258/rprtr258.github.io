@@ -1,6 +1,6 @@
 source: site
 destination: build
 collections:
-  - menhera_chan_pics
-  output:
-    true
+  menhera_chan_pics:
+    output:
+      true

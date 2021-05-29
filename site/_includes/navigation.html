@@ -1,5 +1,5 @@
 <nav>
-  <a href="/">Home</a>
-  <a href="/cv.html">CV</a>
-  <a href="/watch_list.html">Watch list</a>
+  <a class="{% if page.url == "/" %}current-page{% endif %}" href="/">Home</a>
+  <a class="{% if page.url == "/cv.html" %}current-page{% endif %}" href="/cv.html">CV</a>
+  <a class="{% if page.url == "/watch_list.html" %}current-page{% endif %}" href="/watch_list.html">Watch list</a>
 </nav>

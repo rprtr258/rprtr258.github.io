@@ -35,6 +35,6 @@ title: Utils
 </p>
 {% for image in site.static_files %}
   {% if image.path contains 'assets/img/utils/' %}
-    <img src="{{ image.path }}">
+    <img src="{{ image.path }}" style="width: 100px; height: 100px;">
   {% endif %}
 {% endfor %}

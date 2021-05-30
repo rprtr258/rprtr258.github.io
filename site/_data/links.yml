@@ -1,15 +1,5 @@
 - name: Twitch
   link: https://www.twitch.tv/rprtr258
-- name: Watch list
-  link: /watch_list.html
-- name: CV
-  link: /cv.html
-- name: Menhera chan
-  link: /menhera.html
-- name: MMHeroes
-  link: /mmheroes.html
-- name: Utils (18+)
-  link: /utils.html
 - name: Github
   link: https://github.com/rprtr258
 - name: Steam

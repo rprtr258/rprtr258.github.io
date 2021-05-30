@@ -3,3 +3,10 @@ layout: default-nav
 title: rprtr258 personal site
 ---
 <h1>{{ "hello, world!" | capitalize }}</h1>
+<h2>rprtr258 here</h2>
+<h3>links to other accounts</h3>
+{% for item in site.data.links %}
+  <p>
+    <a href="{{ item.link }}">{{ item.name }}</a>
+  </p>
+{% endfor %}

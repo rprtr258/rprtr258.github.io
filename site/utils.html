@@ -4,5 +4,9 @@ title: Utils
 ---
 <p>Some notes and saved things</p>
 <div><a href="/utils/new_tab.html">Stylish new tab</a></div>
-<div><a href="/utils/any_case_pasta.html">Паста для споров в интернетах</a> (18+)</div>
-<img src="/assets/img/utils/shortlife.jpg">
+<div><a href="/utils/any_case_pasta.html">Пасты для споров в интернетах</a> (18+)</div>
+{% for image in site.static_files %}
+  {% if image.path contains 'assets/img/utils/' %}
+    <img src="{{ image.path }}">
+  {% endif %}
+{% endfor %}

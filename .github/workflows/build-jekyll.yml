@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          lfs: true
 
       - name: Install Jekyll
         uses: ConorMacBride/install-package@v1.0.0
@@ -22,7 +20,13 @@ jobs:
         run: |
           jekyll build
           mv build /tmp/build
-          git checkout gh-pages
+  
+      - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          
+      - name: aboba
+        run: |
           mv /tmp/build/* .
           git add *
           git commit -am "Autoupdate"

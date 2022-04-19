@@ -27,6 +27,7 @@ jobs:
           
       - name: aboba
         run: |
+          rm -rf *
           mv /tmp/build/* .
           git add *
           git commit -am "Autoupdate"

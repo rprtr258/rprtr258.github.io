@@ -29,9 +29,12 @@ jobs:
         run: |
           rm -rf *
           mv /tmp/build/* .
-          git add *
-          git config --global user.email "actions@github.com"
-          git config --global user.name "Github Actions"
-          git remote set-url origin "https://rprtr258:${{ GH_TOKEN }}@github.com/rprtr258/rprtr258.github.io.git"
-          git commit -am "Autoupdate"
-          git push
+
+      - name: Github commit and push
+        uses: Smart-Transportation/push@v1.3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          message: ABOBUS
+          branch: gh-pages
+          empty: true
+          

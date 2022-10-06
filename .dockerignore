@@ -1,0 +1,8 @@
+.github/
+.gitignore
+.dockerignore
+Dockerfile
+Makefile
+README.md
+site/
+venv/

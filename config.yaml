@@ -1,4 +1,14 @@
 baseURL: 'https://rprtr258.github.io/'
+security:
+  enableInlineShortcodes: false
+  exec:
+    allow: ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
+    osEnv: ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM)$']
+  funcs:
+    getenv: ['^HUGO_']
+  http:
+    methods: ['(?i)GET|POST']
+    urls: ['.*']
 languageCode: 'en-us'
 title: 'rprtr258'
 theme: "PaperMod"

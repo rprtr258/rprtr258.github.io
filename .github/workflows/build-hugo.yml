@@ -19,7 +19,7 @@ jobs:
           hugo-version: '0.91.2'
 
       - name: Install Asciidoc
-        run: apt install asciidoc
+        run: sudo apt install asciidoc
 
       - name: Build
         run: hugo --minify

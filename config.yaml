@@ -82,3 +82,7 @@ menu:
       name: Utils (18+)
       url: /utils/
       weight: 50
+    - identifier: memes
+      name: Memes
+      url: /memes/
+      weight: 60

@@ -103,6 +103,18 @@ Posts
 </h2>
 </header>
 <div class=entry-content>
+<p>Автор начитался eo и придумал следующий бред
+Иммутабельные обьекты это хорошо, но иногда очень хочется иметь мутабельный обьект. Например, в паттерне Builder, чтобы делать что-то подобное: new StringBuilder() .add(“a”) .add(“b”) .add(“c”) или что-нибудь более осмысленное: new Graph() .vertices(10) .edges(edgesList) .directed(false) а так же в принципе Fluent interface, используемый не только для паттерна Builder: ids .map(getUserByID) .map(User.getName) .mapConcat(User.getFriends) .filter(me.isFriend) С мутабельными обьектами все просто. Сделаем пример на основе StringBuilder с одним методом add, для других случаев все аналогично: class StringBuilder { val text = “"; constructor() {} StringBuilder add(String value) { text += value; return this; } } Как сделать это мутабельным?...</p>
+</div>
+<footer class=entry-footer><span title="2021-01-27 01:53:48 +0000 UTC">January 27, 2021</span></footer>
+<a class=entry-link aria-label="post link to Abobus" href=https://rprtr258.github.io/posts/2021-01-27-01-53-48/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Abobus
+</h2>
+</header>
+<div class=entry-content>
 <p>Декоратор это эндоморфизм</p>
 </div>
 <footer class=entry-footer><span title="2021-01-24 11:36:37 +0000 UTC">January 24, 2021</span></footer>
@@ -203,17 +215,6 @@ ExperimentResult = FirstCase Success | SecondCase (Either Success | Or Failure)
 </div>
 <footer class=entry-footer><span title="2021-01-15 13:37:00 +0000 UTC">January 15, 2021</span></footer>
 <a class=entry-link aria-label="post link to Abobus" href=https://rprtr258.github.io/posts/2021-01-15-13-37-00/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Abobus
-</h2>
-</header>
-<div class=entry-content>
-<p>Все мы знаем, что вещественная прямая ℝ изоморфна ( = гомеоморфна) любому конечному (или бесконечному интервалу), например, (-1, 1). Гомоеморфизмом в этом случае будут tan / atan. Как следствие: ℝ^n изоморфно n-мерному кубу. В частности ℝ^2 (плоскость) изоморфна квадрату (-1, 1) x (-1, 1), а значит всю плоскость можно изобразить в ограниченном квадрате. А вместе с ней и любые графики. Статья, откуда я взял идею: https://wordsandbuttons.online/trippy_polynomials_in_arctangent_scale.html Блокнот с картинками: https://github.com/rprtr258/various-scripts/blob/master/notebooks/Arctangent_plane.ipynb Проблемы с этим отображением в том, что в краях все бОльшие части плоскости и для перемасштабирования я использую слишком аггрессивный автоморфизм отрезка (-1, 1), а именно x^(2n+1), который искажает кривые вблизи нуля....</p>
-</div>
-<footer class=entry-footer><span title="2021-01-15 07:32:52 +0000 UTC">January 15, 2021</span></footer>
-<a class=entry-link aria-label="post link to Abobus" href=https://rprtr258.github.io/posts/2021-01-15-07-32-52/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

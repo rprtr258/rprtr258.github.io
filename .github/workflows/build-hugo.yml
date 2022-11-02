@@ -18,11 +18,8 @@ jobs:
         with:
           hugo-version: '0.91.2'
 
-      - name: Install Asciidoc
-        run: sudo apt install asciidoc
-
       - name: Build
-        run: hugo --minify
+        run: sudo apt install asciidoc && hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

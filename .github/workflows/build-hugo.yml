@@ -18,6 +18,11 @@ jobs:
         with:
           hugo-version: '0.91.2'
 
+      - name: Setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
       - name: Install Asciidoc
         uses: reitzig/actions-asciidoctor@v2.0.0
 

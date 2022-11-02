@@ -1,0 +1,155 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Abobus | rprtr258</title>
+<meta name=keywords content>
+<meta name=description content="Самый детальный обзор языка Typescript
+Вы хотели писать на javascript но динамическая типизация путала вам карты и кидала ошибки в рантайме? Typescript идет на помощь! В нем любое javascript значение может быть типом, единственным элементом которого это значение и будет&mldr; Причем получить это значение имея только тип невозможно&mldr; Ну и ладно, нам это не нужно, верно, у нас типы будут иметь более одного значения!
+Путь наш тип это что-нибудь типо let x: string | &lsquo;string&rsquo; | HTMLElement | string[] | HTMLElement[] | undefined Обычный такой тип, казалось бы, что в нем такого.">
+<meta name=author content>
+<link rel=canonical href=https://rprtr258.github.io/posts/2022-09-17-08-23-01/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://rprtr258.github.io/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://rprtr258.github.io/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://rprtr258.github.io/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://rprtr258.github.io/apple-touch-icon.png>
+<link rel=mask-icon href=https://rprtr258.github.io/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><style>.main{max-width:calc(var(--main-width) + var(--gap) * 14)!important}article.first-entry{justify-content:inherit;min-height:auto}</style>
+<script type=text/x-mathjax-config>
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<meta property="og:title" content="Abobus">
+<meta property="og:description" content="Самый детальный обзор языка Typescript
+Вы хотели писать на javascript но динамическая типизация путала вам карты и кидала ошибки в рантайме? Typescript идет на помощь! В нем любое javascript значение может быть типом, единственным элементом которого это значение и будет&mldr; Причем получить это значение имея только тип невозможно&mldr; Ну и ладно, нам это не нужно, верно, у нас типы будут иметь более одного значения!
+Путь наш тип это что-нибудь типо let x: string | &lsquo;string&rsquo; | HTMLElement | string[] | HTMLElement[] | undefined Обычный такой тип, казалось бы, что в нем такого.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rprtr258.github.io/posts/2022-09-17-08-23-01/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-09-17T08:23:01+00:00">
+<meta property="article:modified_time" content="2022-09-17T08:23:01+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Abobus">
+<meta name=twitter:description content="Самый детальный обзор языка Typescript
+Вы хотели писать на javascript но динамическая типизация путала вам карты и кидала ошибки в рантайме? Typescript идет на помощь! В нем любое javascript значение может быть типом, единственным элементом которого это значение и будет&mldr; Причем получить это значение имея только тип невозможно&mldr; Ну и ладно, нам это не нужно, верно, у нас типы будут иметь более одного значения!
+Путь наш тип это что-нибудь типо let x: string | &lsquo;string&rsquo; | HTMLElement | string[] | HTMLElement[] | undefined Обычный такой тип, казалось бы, что в нем такого.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://rprtr258.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Abobus","item":"https://rprtr258.github.io/posts/2022-09-17-08-23-01/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Abobus","name":"Abobus","description":"Самый детальный обзор языка Typescript\nВы хотели писать на javascript но динамическая типизация путала вам карты и кидала ошибки в рантайме? Typescript идет на помощь! В нем любое javascript значение может быть типом, единственным элементом которого это значение и будет\u0026hellip; Причем получить это значение имея только тип невозможно\u0026hellip; Ну и ладно, нам это не нужно, верно, у нас типы будут иметь более одного значения!\nПуть наш тип это что-нибудь типо let x: string | \u0026lsquo;string\u0026rsquo; | HTMLElement | string[] | HTMLElement[] | undefined Обычный такой тип, казалось бы, что в нем такого.","keywords":[],"articleBody":"Самый детальный обзор языка Typescript\nВы хотели писать на javascript но динамическая типизация путала вам карты и кидала ошибки в рантайме? Typescript идет на помощь! В нем любое javascript значение может быть типом, единственным элементом которого это значение и будет… Причем получить это значение имея только тип невозможно… Ну и ладно, нам это не нужно, верно, у нас типы будут иметь более одного значения!\nПуть наш тип это что-нибудь типо let x: string | ‘string’ | HTMLElement | string[] | HTMLElement[] | undefined Обычный такой тип, казалось бы, что в нем такого. Попробуем написать простенькую программу, чтобы вывести тип элемента x: если это строка, то вывести “string”, если ‘string’, то “‘string’”, и тд.\nВ нормальных языках это легко реализуется с помощью конструкции type switch или pattern matching-а. Но у нас typescript, поэтому код будет выглядеть примерно так:\nif (typeof x === “string”) {return “string”} else if (x === “string”) {return “‘string’\"} else if (x instanceof HTMLElement) {return “HTMLElement} else if (Array.isArray(x)) { if (x.length0) {return (typeof x[0] === “string”) ? “string[]” : “HTMLElement[]\"} else {return “either string[] or HTMLElement[], can’t guess til it’s empty”}} else if (x === undefined) {return “undefined”}\nВы можете спросить: а зачем я написал \" | undefined” в обьявлении типа, если все типы и так содержат undefined? Просто, чтобы это было более явно, в реальном коде конечно же не стоит так писать, а просто нужно проверять ВСЕ параметры на undefined.\nНа этом обзор заканчивается, как видите typescript это хорошее продолжение javascript, в котором не смогли ни нормально реализовать типизацию, ни сделать то, для чего бы он мог пригодиться - давать автокомплит, так как типы енфорсятся транспайлером. Проверки типов консистентные и простые. Моя оценка языку typescript 0/10\n \"url\": \"https://sun9-18.userapi.com/impg/g02mlWvQT7TQr9k9N4sGXiY9ZLBFbmWTg860xQ/DCZH9_-84Yg.jpg?size=1200x1200\u0026quality=96\u0026sign=e51206337883348dc6344592eb9ad1b5\u0026c_uniq_tag=n_houyeKelraC_zykHqAFY4WKRTOjP4U1OaX_kb2-QY\u0026type=album\",  ","wordCount":"282","inLanguage":"en","datePublished":"2022-09-17T08:23:01Z","dateModified":"2022-09-17T08:23:01Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://rprtr258.github.io/posts/2022-09-17-08-23-01/"},"publisher":{"@type":"Organization","name":"rprtr258","logo":{"@type":"ImageObject","url":"https://rprtr258.github.io/favicon.ico"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://rprtr258.github.io/ accesskey=h title="rprtr258 (Alt + H)">rprtr258</a>
+<div class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</div>
+</div>
+<ul id=menu>
+<li>
+<a href=https://rprtr258.github.io/watch_list/ title="Watch list">
+<span>Watch list</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/cv/ title=CV>
+<span>CV</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/menhera/ title="Menhera chan">
+<span>Menhera chan</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/mmheroes/ title=MMHeroes>
+<span>MMHeroes</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/utils/ title="Utils (18+)">
+<span>Utils (18+)</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/memes/ title=Memes>
+<span>Memes</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://rprtr258.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://rprtr258.github.io/posts/>Posts</a></div>
+<h1 class=post-title>
+Abobus
+</h1>
+<div class=post-meta><span title="2022-09-17 08:23:01 +0000 UTC">September 17, 2022</span>
+</div>
+</header>
+<div class=post-content><p>Самый детальный обзор языка Typescript</p>
+<p>Вы хотели писать на javascript но динамическая типизация путала вам карты и кидала ошибки в рантайме? Typescript идет на помощь! В нем любое javascript значение может быть типом, единственным элементом которого это значение и будет&mldr; Причем получить это значение имея только тип невозможно&mldr; Ну и ладно, нам это не нужно, верно, у нас типы будут иметь более одного значения!</p>
+<p>Путь наш тип это что-нибудь типо
+let x: string | &lsquo;string&rsquo; | HTMLElement | string[] | HTMLElement[] | undefined
+Обычный такой тип, казалось бы, что в нем такого. Попробуем написать простенькую программу, чтобы вывести тип элемента x: если это строка, то вывести &ldquo;string&rdquo;, если &lsquo;string&rsquo;, то &ldquo;&lsquo;string&rsquo;&rdquo;, и тд.</p>
+<p>В нормальных языках это легко реализуется с помощью конструкции type switch или pattern matching-а. Но у нас typescript, поэтому код будет выглядеть примерно так:</p>
+<p>if (typeof x === &ldquo;string&rdquo;) {return &ldquo;string&rdquo;} else
+if (x === &ldquo;string&rdquo;) {return &ldquo;&lsquo;string&rsquo;"} else
+if (x instanceof HTMLElement) {return &ldquo;HTMLElement} else
+if (Array.isArray(x)) {
+if (x.length>0) {return (typeof x[0] === &ldquo;string&rdquo;) ? &ldquo;string[]&rdquo; : &ldquo;HTMLElement[]"} else
+{return &ldquo;either string[] or HTMLElement[], can&rsquo;t guess til it&rsquo;s empty&rdquo;}} else
+if (x === undefined) {return &ldquo;undefined&rdquo;}</p>
+<p>Вы можете спросить: а зачем я написал " | undefined&rdquo; в обьявлении типа, если все типы и так содержат undefined? Просто, чтобы это было более явно, в реальном коде конечно же не стоит так писать, а просто нужно проверять ВСЕ параметры на undefined.</p>
+<p>На этом обзор заканчивается, как видите typescript это хорошее продолжение javascript, в котором не смогли ни нормально реализовать типизацию, ни сделать то, для чего бы он мог пригодиться - давать автокомплит, так как типы енфорсятся транспайлером. Проверки типов консистентные и простые. Моя оценка языку typescript 0/10</p>
+<pre><code>        &quot;url&quot;: &quot;https://sun9-18.userapi.com/impg/g02mlWvQT7TQr9k9N4sGXiY9ZLBFbmWTg860xQ/DCZH9_-84Yg.jpg?size=1200x1200&amp;quality=96&amp;sign=e51206337883348dc6344592eb9ad1b5&amp;c_uniq_tag=n_houyeKelraC_zykHqAFY4WKRTOjP4U1OaX_kb2-QY&amp;type=album&quot;,
+</code></pre>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+</ul>
+<nav class=paginav>
+<a class=prev href=https://rprtr258.github.io/posts/2022-10-06-13-43-35/>
+<span class=title>« Prev</span>
+<br>
+<span>Abobus</span>
+</a>
+<a class=next href=https://rprtr258.github.io/posts/2022-09-11-23-37-16/>
+<span class=title>Next »</span>
+<br>
+<span>Abobus</span>
+</a>
+</nav>
+</footer>
+</article>
+</main>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

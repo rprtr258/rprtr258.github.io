@@ -1,0 +1,163 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Abobus | rprtr258</title>
+<meta name=keywords content="news,machine learning">
+<meta name=description content="На функане препод таки сформулировал одну из теорем в виде того, что определенная &ldquo;диаграмма коммутирует&rdquo;. Словил каеф
+Сожрали с ним пиццу, заболели животы(???)
+Пытался разобраться в проекте одногруппника, где он хотел застекать
+RPCA -> CNN -> Lasso -> ANN Classifier
+Пытались разобраться, что такое RPCA(что такое PCA я и так узнал недавно из курса, который, надеюсь, когда-нибудь закончится) и какой смысл в SVD. Оказывается SVD(сингулярное разложение матрицы) очень крутая штука, но надо в ней разобраться, чтобы понять ее смысл.">
+<meta name=author content>
+<link rel=canonical href=https://rprtr258.github.io/posts/2019-12-09-21-32-55/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://rprtr258.github.io/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://rprtr258.github.io/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://rprtr258.github.io/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://rprtr258.github.io/apple-touch-icon.png>
+<link rel=mask-icon href=https://rprtr258.github.io/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><style>.main{max-width:calc(var(--main-width) + var(--gap) * 14)!important}article.first-entry{justify-content:inherit;min-height:auto}</style>
+<script type=text/x-mathjax-config>
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<meta property="og:title" content="Abobus">
+<meta property="og:description" content="На функане препод таки сформулировал одну из теорем в виде того, что определенная &ldquo;диаграмма коммутирует&rdquo;. Словил каеф
+Сожрали с ним пиццу, заболели животы(???)
+Пытался разобраться в проекте одногруппника, где он хотел застекать
+RPCA -> CNN -> Lasso -> ANN Classifier
+Пытались разобраться, что такое RPCA(что такое PCA я и так узнал недавно из курса, который, надеюсь, когда-нибудь закончится) и какой смысл в SVD. Оказывается SVD(сингулярное разложение матрицы) очень крутая штука, но надо в ней разобраться, чтобы понять ее смысл.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rprtr258.github.io/posts/2019-12-09-21-32-55/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-12-09T21:32:55+00:00">
+<meta property="article:modified_time" content="2019-12-09T21:32:55+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Abobus">
+<meta name=twitter:description content="На функане препод таки сформулировал одну из теорем в виде того, что определенная &ldquo;диаграмма коммутирует&rdquo;. Словил каеф
+Сожрали с ним пиццу, заболели животы(???)
+Пытался разобраться в проекте одногруппника, где он хотел застекать
+RPCA -> CNN -> Lasso -> ANN Classifier
+Пытались разобраться, что такое RPCA(что такое PCA я и так узнал недавно из курса, который, надеюсь, когда-нибудь закончится) и какой смысл в SVD. Оказывается SVD(сингулярное разложение матрицы) очень крутая штука, но надо в ней разобраться, чтобы понять ее смысл.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://rprtr258.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Abobus","item":"https://rprtr258.github.io/posts/2019-12-09-21-32-55/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Abobus","name":"Abobus","description":"На функане препод таки сформулировал одну из теорем в виде того, что определенная \u0026ldquo;диаграмма коммутирует\u0026rdquo;. Словил каеф\nСожрали с ним пиццу, заболели животы(???)\nПытался разобраться в проекте одногруппника, где он хотел застекать\nRPCA -\u0026gt; CNN -\u0026gt; Lasso -\u0026gt; ANN Classifier\nПытались разобраться, что такое RPCA(что такое PCA я и так узнал недавно из курса, который, надеюсь, когда-нибудь закончится) и какой смысл в SVD. Оказывается SVD(сингулярное разложение матрицы) очень крутая штука, но надо в ней разобраться, чтобы понять ее смысл.","keywords":["news","machine learning"],"articleBody":"На функане препод таки сформулировал одну из теорем в виде того, что определенная “диаграмма коммутирует”. Словил каеф\nСожрали с ним пиццу, заболели животы(???)\nПытался разобраться в проекте одногруппника, где он хотел застекать\nRPCA - CNN - Lasso - ANN Classifier\nПытались разобраться, что такое RPCA(что такое PCA я и так узнал недавно из курса, который, надеюсь, когда-нибудь закончится) и какой смысл в SVD. Оказывается SVD(сингулярное разложение матрицы) очень крутая штука, но надо в ней разобраться, чтобы понять ее смысл.\nЕще я не понял, как обучать такие застеканные модели и стало интересно, буду разбираться. Пока затаривались в ленте, я подумал, что каждый промежуточный шаг можно обучить на самостоятельный classifier, но в CNN отбросить выходной слой, а в Lasso делать логистическую регрессию. Правда все равно Lasso не очень хорошо вписывается, разве что не использовать ее таким образом только для dimensionality reduction(как же запутывается язык пока я говорю первое слово).\nТакже понятия из теорвера(корреляция, ковариация) одногруппник забыл, хотя завтра кр по сути по ним 😒\nЗахотелось даже разобраться с RPCA, которая походу просто более стабильная PCA, и написать статью, но надо еще делать курсовую :-/\nА, еще прочитал на перерыве немного про github actions. Прикольная штука, подумал где ее можно использовать, чтобы потестить. Придумал только взять сервера с цтфок и патчить их, запуская CI на эксплоиты. Пока писал понял, что это слишком замудрено, мб сделаю что-нить попроще.\nХотя казалось бы, корреляция это просто скалярное произведение в пространстве случайных переменных\nЛя, ковариация\nКорреляция это косинус угла между переменными\nВ общем, если мы любим геометрию, то корреляция 0 означает, что с.в. “перпендикулярны” и, по сути, независимы, хотя строго говоря это не всегда так.\nИ тогда “длина” с.в. это корень из дисперсии aka std aka стандартное отклонение aka standard deviation\nНу и корреляция = 1 это “линейно зависимые” с.в., в том смысле, что одна с.в. выражается через другую линейно с положительным коэффициентом, а корреляция = -1 с отрицательным коэффициентом.\n","wordCount":"313","inLanguage":"en","datePublished":"2019-12-09T21:32:55Z","dateModified":"2019-12-09T21:32:55Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://rprtr258.github.io/posts/2019-12-09-21-32-55/"},"publisher":{"@type":"Organization","name":"rprtr258","logo":{"@type":"ImageObject","url":"https://rprtr258.github.io/favicon.ico"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://rprtr258.github.io/ accesskey=h title="rprtr258 (Alt + H)">rprtr258</a>
+<div class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</div>
+</div>
+<ul id=menu>
+<li>
+<a href=https://rprtr258.github.io/watch_list/ title="Watch list">
+<span>Watch list</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/cv/ title=CV>
+<span>CV</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/menhera/ title="Menhera chan">
+<span>Menhera chan</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/mmheroes/ title=MMHeroes>
+<span>MMHeroes</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/utils/ title="Utils (18+)">
+<span>Utils (18+)</span>
+</a>
+</li>
+<li>
+<a href=https://rprtr258.github.io/memes/ title=Memes>
+<span>Memes</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://rprtr258.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://rprtr258.github.io/posts/>Posts</a></div>
+<h1 class=post-title>
+Abobus
+</h1>
+<div class=post-meta><span title="2019-12-09 21:32:55 +0000 UTC">December 9, 2019</span>
+</div>
+</header>
+<div class=post-content><p>На функане препод таки сформулировал одну из теорем в виде того, что определенная &ldquo;диаграмма коммутирует&rdquo;. Словил каеф</p>
+<p>Сожрали с ним пиццу, заболели животы(???)</p>
+<p>Пытался разобраться в проекте одногруппника, где он хотел застекать</p>
+<p>RPCA -> CNN -> Lasso -> ANN Classifier</p>
+<p>Пытались разобраться, что такое RPCA(что такое PCA я и так узнал недавно из курса, который, надеюсь, когда-нибудь закончится) и какой смысл в SVD. Оказывается SVD(сингулярное разложение матрицы) очень крутая штука, но надо в ней разобраться, чтобы понять ее смысл.</p>
+<p>Еще я не понял, как обучать такие застеканные модели и стало интересно, буду разбираться. Пока затаривались в ленте, я подумал, что каждый промежуточный шаг можно обучить на самостоятельный classifier, но в CNN отбросить выходной слой, а в Lasso делать логистическую регрессию. Правда все равно Lasso не очень хорошо вписывается, разве что не использовать ее таким образом <em>только</em> для dimensionality reduction(как же запутывается язык пока я говорю первое слово).</p>
+<p>Также понятия из теорвера(корреляция, ковариация) одногруппник забыл, хотя завтра кр по сути по ним 😒</p>
+<p>Захотелось даже разобраться с RPCA, которая походу просто более стабильная PCA, и написать статью, но надо еще делать курсовую :-/</p>
+<p>А, еще прочитал на перерыве немного про github actions. Прикольная штука, подумал где ее можно использовать, чтобы потестить. Придумал только взять сервера с цтфок и патчить их, запуская CI на эксплоиты. Пока писал понял, что это слишком замудрено, мб сделаю что-нить попроще.</p>
+<p>Хотя казалось бы, корреляция это просто скалярное произведение в пространстве случайных переменных</p>
+<p>Ля, ковариация</p>
+<p>Корреляция это косинус угла между переменными</p>
+<p>В общем, если мы любим геометрию, то корреляция 0 означает, что с.в. &ldquo;перпендикулярны&rdquo; и, по сути, независимы, хотя строго говоря это не всегда так.</p>
+<p>И тогда &ldquo;длина&rdquo; с.в. это корень из дисперсии aka std aka стандартное отклонение aka standard deviation</p>
+<p>Ну и корреляция = 1 это &ldquo;линейно зависимые&rdquo; с.в., в том смысле, что одна с.в. выражается через другую линейно с положительным коэффициентом, а корреляция = -1 с отрицательным коэффициентом.</p>
+<p><img loading=lazy src="https://sun9-22.userapi.com/impg/nJNkFokyZrEs_GIQSobk_vxAWK36-YOoGIrO4g/0g0hP4QKmwo.jpg?size=416x600&quality=96&sign=c9dcf1b73c57b080dd7add7a76f965f6&c_uniq_tag=oyKP_LRqdZa6FSIvsyPxlJdK7gAgV966UOsctfxtWG8&type=album" alt>
+</p>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://rprtr258.github.io/tags/news/>news</a></li>
+<li><a href=https://rprtr258.github.io/tags/machine-learning/>machine learning</a></li>
+</ul>
+<nav class=paginav>
+<a class=prev href=https://rprtr258.github.io/posts/2019-12-10-22-18-52/>
+<span class=title>« Prev</span>
+<br>
+<span>Abobus</span>
+</a>
+<a class=next href=https://rprtr258.github.io/posts/2019-12-08-03-50-02/>
+<span class=title>Next »</span>
+<br>
+<span>Abobus</span>
+</a>
+</nav>
+</footer>
+</article>
+</main>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

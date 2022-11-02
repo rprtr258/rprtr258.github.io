@@ -15,6 +15,7 @@ draft: false
 |2019-11-30 22:40:49|![](/img/vk/iepVtmIixw8.jpg)||
 |2019-11-24 03:35:30|![](/img/vk/lvTdYlqcrB4.jpg)|Anime in real life|
 |2019-11-16 19:12:34|![](/img/vk/z7m1bhPoWxk.jpg)|Любая теорема о перестановке пределов|
+|2019-11-16 19:05:35|![](/img/vk/PYToX6FyxdI.jpg)||
 |2019-11-14 14:08:19|![](/img/vk/UDLRUrAnXEw.jpg)|ml meme|
 |2019-11-10 13:41:10|![](/img/vk/ilLt6gLUkKc.jpg)||
 |2019-11-06 12:20:43|![](/img/vk/eQQWmHQJVlo.jpg)|Как справиться с депрессией|

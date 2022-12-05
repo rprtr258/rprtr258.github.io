@@ -10,7 +10,7 @@ draft: false
 |2020-01-31 11:09:04|![](/img/vk/QN6cMVn_9yI.jpg)|Сиди не рыпайся|
 |2019-12-22 00:06:12|![](/img/vk/aG0ncGF8Au8.jpg)|???|
 |2019-12-15 01:55:04|![](/img/vk/2kDFuI17F4Y.jpg)|PS: lyat nadpis poehala|
-|2019-12-12 18:16:33|![](/img/vk/IK-Dx-Pg0yE.jpg)|Шутки от адмена с контрольной по теорверу TODO: ЗАМАЗАТЬ ИМЯ НА КАРТИНКЕ|
+|2019-12-12 18:16:33|![](/img/vk/IK-Dx-Pg0yE.png)|Шутки от адмена с контрольной по теорверу|
 |2019-12-08 01:15:59|![](/img/vk/OmfmWOxHvV0.jpg)||
 |2019-11-30 22:40:49|![](/img/vk/iepVtmIixw8.jpg)||
 |2019-11-24 03:35:30|![](/img/vk/lvTdYlqcrB4.jpg)|Anime in real life|

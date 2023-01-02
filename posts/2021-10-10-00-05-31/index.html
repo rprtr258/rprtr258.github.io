@@ -37,7 +37,7 @@ MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "none" } }
 });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<script src=/js/mathjax.js></script>
 <meta property="og:title" content="Abobus">
 <meta property="og:description" content="Краткое введение в кложуровские редьюсеры
 Семантика лиспа: (f a b c) === f(a, b, c), [x y z] === [x, y, z] - список Reduce: (reduce f x0 [x1 x2 x3 &mldr;]) = f(f(f(&mldr;f(x0, x1), x2), x3), &mldr;), формально: (reduce f x0 xs) = (if (nil? xs) x0 (reduce f (f x0 (first xs)) (rest xs)), где (if p a b) = p ? a : b (nil? x) = (x == []) (first [x0 x1 x2 &mldr;]) = x0 (rest [x0 x1 x2 &mldr;]) = [x1 x2 x3 &mldr;]">

@@ -36,7 +36,7 @@ MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "none" } }
 });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<script src=/js/mathjax.js></script>
 <meta property="og:title" content="Abobus">
 <meta property="og:description" content="Бывает у нас иногда ситуации, когда нужно выполнить javascript на странице из консоли, обновить страницу и продолжить выполнять скрипт. Но вот незадача, при обновлении страницы скрипт останавливается. Решение этой проблемы следующее: страницу можно поместить в элемент, например, div и загружать обновленную страницу в него! POW: for(i = 0; i < 1000; i++) { s = document.querySelector(&ldquo;div&rdquo;).textContent; s = s.substr(s.search(&ldquo;votes=\d+:\w+&#34;)); s = s.substr(0, s.search(&#34;\n&rdquo;)); console.log(s); document.cookie = s; s = await fetch(&ldquo;http://kslweb1.">
 <meta property="og:type" content="article">

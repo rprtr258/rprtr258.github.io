@@ -37,7 +37,7 @@ MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "none" } }
 });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<script src=/js/mathjax.js></script>
 <meta property="og:title" content="Abobus">
 <meta property="og:description" content="Автор начитался eo и придумал следующий бред
 Иммутабельные обьекты это хорошо, но иногда очень хочется иметь мутабельный обьект. Например, в паттерне Builder, чтобы делать что-то подобное: new StringBuilder() .add(&ldquo;a&rdquo;) .add(&ldquo;b&rdquo;) .add(&ldquo;c&rdquo;) или что-нибудь более осмысленное: new Graph() .vertices(10) .edges(edgesList) .directed(false) а так же в принципе Fluent interface, используемый не только для паттерна Builder: ids .map(getUserByID) .map(User.getName) .mapConcat(User.getFriends) .filter(me.isFriend) С мутабельными обьектами все просто. Сделаем пример на основе StringBuilder с одним методом add, для других случаев все аналогично: class StringBuilder { val text = &ldquo;&#34;; constructor() {} StringBuilder add(String value) { text += value; return this; } } Как сделать это мутабельным?">

@@ -22,22 +22,6 @@
 <style>#theme-toggle,.top-link{display:none}</style>
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript><style>.main{max-width:calc(var(--main-width) + var(--gap) * 14)!important}article.first-entry{justify-content:inherit;min-height:auto}</style>
-<script type=text/x-mathjax-config>
-MathJax.Hub.Config({
-  messageStyle: "none",
-  tex2jax: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
-    ignoreClass: "nostem|nolatexmath"
-  },
-  asciimath2jax: {
-    delimiters: [["\\$", "\\$"]],
-    ignoreClass: "nostem|noasciimath"
-  },
-  TeX: { equationNumbers: { autoNumber: "none" } }
-});
-</script>
-<script src=/js/mathjax.js></script>
 <meta property="og:title" content="Abobus">
 <meta property="og:description" content="Автор начитался eo и придумал следующий бред
 Иммутабельные обьекты это хорошо, но иногда очень хочется иметь мутабельный обьект. Например, в паттерне Builder, чтобы делать что-то подобное: new StringBuilder() .add(&ldquo;a&rdquo;) .add(&ldquo;b&rdquo;) .add(&ldquo;c&rdquo;) или что-нибудь более осмысленное: new Graph() .vertices(10) .edges(edgesList) .directed(false) а так же в принципе Fluent interface, используемый не только для паттерна Builder: ids .map(getUserByID) .map(User.getName) .mapConcat(User.getFriends) .filter(me.isFriend) С мутабельными обьектами все просто. Сделаем пример на основе StringBuilder с одним методом add, для других случаев все аналогично: class StringBuilder { val text = &ldquo;&#34;; constructor() {} StringBuilder add(String value) { text += value; return this; } } Как сделать это мутабельным?">

@@ -21,22 +21,6 @@
 <style>#theme-toggle,.top-link{display:none}</style>
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript><style>.main{max-width:calc(var(--main-width) + var(--gap) * 14)!important}article.first-entry{justify-content:inherit;min-height:auto}</style>
-<script type=text/x-mathjax-config>
-MathJax.Hub.Config({
-  messageStyle: "none",
-  tex2jax: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
-    ignoreClass: "nostem|nolatexmath"
-  },
-  asciimath2jax: {
-    delimiters: [["\\$", "\\$"]],
-    ignoreClass: "nostem|noasciimath"
-  },
-  TeX: { equationNumbers: { autoNumber: "none" } }
-});
-</script>
-<script src=/js/mathjax.js></script>
 <meta property="og:title" content="Utils">
 <meta property="og:description" content>
 <meta property="og:type" content="website">
@@ -92,7 +76,7 @@ MathJax.Hub.Config({
 </nav>
 </header>
 <main class=main>
-<style>img:hover{width:200px!important;height:200px!important}.main a{text-decoration:underline}li{margin-left:2em}</style>
+<style>ul>img{opacity:0%}.main a{text-decoration:underline}li{margin-left:2em}</style>
 <h2>Some notes and saved things</h2>
 <div><a href=/utils/new_tab/>Stylish new tab</a></div>
 <div><a href=/utils/any_case_pasta/>Пасты для споров в интернетах и не только</a> (18+)</div>
@@ -128,41 +112,13 @@ MathJax.Hub.Config({
 <span>Bookmarklets</span>
 <a href=javascript:(function()%7Bfunction%20triggerMouseEvent(node%2C%20eventType)%20%7Bvar%20clickEvent%20%3D%20document.createEvent(%22MouseEvents%22)%3BclickEvent.initEvent(eventType%2C%20true%2C%20true)%3Bnode.dispatchEvent(clickEvent)%3B%7Dfunction%20click(elem)%20%7Be%20%3D%20document.getElementById(elem)%3BtriggerMouseEvent(e%2C%20%22mouseover%22)%3BtriggerMouseEvent(e%2C%20%22mousedown%22)%3BtriggerMouseEvent(e%2C%20%22mouseup%22)%3BtriggerMouseEvent(e%2C%20%22click%22)%3B%7Dfunction%20getCell(cell)%20%7Bif%20(cell.classList)%20%7BclassList%20%3D%20Array.from(cell.classList)%3Bif%20(classList.includes(%22clear%22))return%20-1%3Bif%20(classList.includes(%22hd_closed%22))return%20%22x%22%3Bfor%20(let%20i%20%3D%200%3B%20i%20%3C%204%3B%20i%2B%2B)%20%7Bif%20(classList%5Bi%5D.startsWith(%22hd_type%22))%20%7Bif%20(classList%5Bi%5D.length%20%3D%3D%209)return%20%22X%22%3Breturn%20classList%5Bi%5D.charAt(7)%3B%7D%7D%7Dreturn%20%22%22%7Dfunction%20getBoard()%20%7Blet%20res%20%3D%20%5B%5D%3Blet%20row%20%3D%20%5B%5D%3Bfor%20(let%20el%20of%20document.getElementById(%22A43%22).children)%20%7Blet%20x%20%3D%20getCell(el)%3Bif%20(x%20!%3D%20-1)row.push(x)%3Belse%20%7Bres.push(row)%3Brow%20%3D%20%5B%5D%3B%7D%7Dreturn%20res%3B%7D(async()%20%3D%3E%20%7Blet%20pos%20%3D%20await%20fetch(%22http%3A%2F%2Flocalhost%3A5000%2Fset%2Fmines_count%3F%22%20%2B%20new%20URLSearchParams(%7Bmines_count%3A%20W9.m20%7D)%2C%20%7Bmethod%3A%20%22GET%22%7D).then(r%20%3D%3E%20r.text())%3Bfor%20(let%20i%20%3D%200%3B%20i%20%3C%20100%3Bi%2B%2B)%20%7Bwhile%20(true)%20%7Blet%20pos%20%3D%20await%20fetch(%22http%3A%2F%2Flocalhost%3A5000%2Fsolve%3F%22%20%2B%20new%20URLSearchParams(%7Bboard%3A%20JSON.stringify(getBoard())%7D)%2C%20%7Bmethod%3A%20%22GET%22%7D).then(r%20%3D%3E%20r.text())%3Bif%20(pos%20%3D%3D%20%22solved%22)break%3Bclick(%60cell_%24%7Bpos%7D%60)%3B%7D%7D%7D)()%7D)()>Solve board on https://minesweeper.online/</a>
 </p>
-<img src=/img/utils/-n4pjPX_h-Q.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/0V9YNDNi010.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/1OX4Q1gup8U.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/3x.gif style=width:100px;height:100px;display:inline>
-<img src=/img/utils/8mf3S_e_roE.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/9QMqUjW12fc.png style=width:100px;height:100px;display:inline>
-<img src=/img/utils/BBGUV67fpk4.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/Jm3PDDQL7QI.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/LJsXLOKR52U.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/O66fYxyFsuA.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/PauseFish.png style=width:100px;height:100px;display:inline>
-<img src=/img/utils/TTo75F36llw.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/UkZCEgsZKNE.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/YuM3m0JA-Mw.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/dontyou.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/eDEHTfUC8g0.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/gFS1C3O-dBw.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/malvine.png style=width:100px;height:100px;display:inline>
-<img src=/img/utils/qBjiNmDAYWk.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/r5QWKB0mJgw.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/shortlife.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/uYKiJV3x3Vo.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/ud40mX1khCM.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/w2HOjymdBTc.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/wasUSxAhP7k.jpg style=width:100px;height:100px;display:inline>
-<img src=/img/utils/x83-SMpy-_U.jpg style=width:100px;height:100px;display:inline>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.2/viewer.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.2/viewer.min.js></script>
+<script>window.addEventListener('DOMContentLoaded',function(){const a=new Viewer(document.getElementById('images'),{inline:!0,title:!1})})</script>
+<div>
+<ul id=images><img src=/img/utils/-n4pjPX_h-Q.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/0V9YNDNi010.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/1OX4Q1gup8U.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/3x.gif style=width:100px;height:100px;display:inline><img src=/img/utils/8mf3S_e_roE.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/9QMqUjW12fc.png style=width:100px;height:100px;display:inline><img src=/img/utils/BBGUV67fpk4.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/Jm3PDDQL7QI.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/LJsXLOKR52U.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/O66fYxyFsuA.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/PauseFish.png style=width:100px;height:100px;display:inline><img src=/img/utils/TTo75F36llw.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/UkZCEgsZKNE.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/YuM3m0JA-Mw.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/dontyou.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/eDEHTfUC8g0.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/gFS1C3O-dBw.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/malvine.png style=width:100px;height:100px;display:inline><img src=/img/utils/qBjiNmDAYWk.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/r5QWKB0mJgw.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/shortlife.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/uYKiJV3x3Vo.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/ud40mX1khCM.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/w2HOjymdBTc.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/wasUSxAhP7k.jpg style=width:100px;height:100px;display:inline><img src=/img/utils/x83-SMpy-_U.jpg style=width:100px;height:100px;display:inline></ul>
+</div>
+<div style=margin:10rem></div>
 </main>
 <a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
 </a>

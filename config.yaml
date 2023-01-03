@@ -21,6 +21,8 @@ params:
     Title: Hello, world!
     Content: >
       # rprtr258 here
+
+      ![](https://cdn.frankerfacez.com/emote/542006/2) Ищу достойную женщину, готовую брать на себя ответственность, следящая за своей внешностью, рост не менее 175 см, грудь не менее 2 размера, имеющая доход от 100 тыс. руб. в месяц.
   socialIcons:
     - name: Twitch
       url: https://www.twitch.tv/rprtr258
@@ -30,10 +32,6 @@ params:
       url: https://steamcommunity.com/id/rprtr258
     - name: Deviantart
       url: https://www.deviantart.com/rprtr258
-    - name: facebook
-      url: https://vk.com/rprtr258
-    - name: facebook
-      url: https://vk.com/id168715495
     - name: telegram
       url: https://t.me/rprtr258
     - name: spotify

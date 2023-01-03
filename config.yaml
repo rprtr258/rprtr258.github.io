@@ -34,6 +34,8 @@ params:
       url: https://www.deviantart.com/rprtr258
     - name: telegram
       url: https://t.me/rprtr258
+    - name: telegram channel
+      url: https://t.me/rprtr259
     - name: spotify
       url: https://open.spotify.com/user/21xgcujwwcwy3ak5xii4js6hy
     - name: kaggle

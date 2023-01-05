@@ -1,28 +1,12 @@
 ---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
 
-import '../styles/core/theme-vars.css';
-import '../styles/core/reset.css';
-import '../styles/core/zmedia.css';
-
-import '../styles/common/404.css';
-import '../styles/common/archive.css';
-import '../styles/common/footer.css';
-import '../styles/common/header.css';
-import '../styles/common/main.css';
-import '../styles/common/post-entry.css';
-import '../styles/common/post-single.css';
-import '../styles/common/profile-mode.css';
-import '../styles/common/search.css';
-import '../styles/common/terms.css';
-
-import '../styles/extended/blank.css';
-
-
 export interface Props {
-  title: string;
-  description: string;
-  image?: string;
+	title: string;
+	description: string;
+	image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -98,6 +82,7 @@ const route = new URL(Astro.request.url).pathname;
 <!-- Styles -->
 <!-- includes -->
 <!-- {{- $includes := slice }}
+{{- $includes = $includes | append (" " | resources.FromString "assets/css/includes-blank.css")}}
 
 {{- if not (eq site.Params.assets.disableScrollBarStyle true) }}
     {{- $ScrollStyle := (resources.Get "css/includes/scroll-bar.css") }}
@@ -105,6 +90,12 @@ const route = new URL(Astro.request.url).pathname;
 {{- end }}
 
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
+
+{{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
+{{- $reset := (resources.Get "css/core/reset.css") }}
+{{- $media := (resources.Get "css/core/zmedia.css") }}
+{{- $license_css := (resources.Get "css/core/license.css") }}
+{{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
 
 <!-- include `an-old-hope` if hljs is on -->
 <!-- {{- $isHLJSdisabled := (site.Params.assets.disableHLJS | default false) }}

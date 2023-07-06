@@ -15,7 +15,7 @@
         <link rel="next" href="../obzor-na-film-shazam/">
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -672,6 +672,102 @@
     <li class="md-nav__item">
       <a href="../../../2023/may/" class="md-nav__link">
         Month report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1_6" id="__nav_1_1_6_label" tabindex="0">
+          Jun
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Jun
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2023/jun/" class="md-nav__link">
+        Month Report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1_7" id="__nav_1_1_7_label" tabindex="0">
+          Jul
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Jul
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2023/jul/go-error-hanling/" class="md-nav__link">
+        Мысли про обработку ошибок и структурное логирование в Go
       </a>
     </li>
   
@@ -4987,7 +5083,7 @@
 
   <h1>Не просто корреляция</h1>
 
-<p><img align="right" alt="" src="/static/img/DsEOHTmQEsQ.jpg" width="200" /></p>
+<p><img align="right" alt="" src="/blog/static/img/DsEOHTmQEsQ.jpg" width="200" /></p>
 <p>Корреляция в статистике это способ измерить, насколько связаны два фактора. Например корреляция Пирсона — это число от -1 до 1, которое означает тесную степень связости при приближении этого числа к -1 или 1, но слабую, если корреляция близка к 0. Знак этой корреляции говорит, связаны ли величины положительно или отрицательно, то есть при увеличении одного фактора будет другой фактор увеличиваться или же уменьшаться.</p>
 <p>Однако проблема с корреляцией Пирсона в том, что она считается для двух количественных переменных, или как говорят дата саентисты(я) численных фич. Тем не менее, нам может быть интересно узнать, есть ли зависимость между фичами и целевой переменной если фича категориальная.</p>
 <h2 id="_1">Еще раз про корреляцию</h2>
@@ -4998,28 +5094,28 @@
 <p>По сути это нормализация ковариации, в том смысле, что ковариация делится на произведение (корней из) ковариаций внутри переменных, откуда из неравенства Коши-Буняковского корреляция по модулю меньше единицы. Получается мы меряем (линейную) связь между переменными с помощью ковариации и затем нормализуем ее. А именно, если cov(X, Y) — большое число, то связь между переменными сильная, так как E(XY) за вычетом E(X)E(Y) все еще большое число и значит в произведении есть еще часть от произведения X и Y, которая остается в ковариации. Если же переменные почти независимы, то cov(X, Y) становится приблизительно равной E(X-EX)E(Y-EY)=(EX-EX)(EY-EY)=0, и коэффициент корреляции близок к 0.</p>
 <h2 id="1">Случай 1. Связь между категориальной и численной фичами</h2>
 <p>Тут имеет смысл попробовать также посмотреть величину отклонений(дисперсий) относительно среднего всей выборки и нормализовать, чтобы учесть величины дисперсий в каждом классе. Формально это можно записать так:</p>
-<p><img alt="" src="/static/img/4YI2pHy8WkY.jpg" /></p>
+<p><img alt="" src="/blog/static/img/4YI2pHy8WkY.jpg" /></p>
 <p>где числитель — это взвешенная дисперсия средних в каждом классе относительно среднего всей выборки, а знаменатель — сумма дисперсий по каждому классу плюс числитель. Веса это просто количество обьектов каждого класса.</p>
 <p>Рассмотрим пример, есть оценки учеников по Анализу Данных по каждому полу(я хотел взять оценки по ЕГЭ, но этих данных не существует):</p>
-<p><img alt="" src="/static/img/Afhp6Lm7ilQ.jpg" /></p>
+<p><img alt="" src="/blog/static/img/Afhp6Lm7ilQ.jpg" /></p>
 <p>Всего в выборке 7 девушек и 18 мужчин. Посчитаем средние значения по каждому классу и для всей выборки:</p>
-<p><img alt="" src="/static/img/E5vVA_yMEDs.jpg" /></p>
+<p><img alt="" src="/blog/static/img/E5vVA_yMEDs.jpg" /></p>
 <p>Почему я вспомнил про условное матожидание лол</p>
 <p>Посчитаем дисперсии по каждому классу:</p>
-<p><img alt="" src="/static/img/HfagoPOlUWU.jpg" /></p>
+<p><img alt="" src="/blog/static/img/HfagoPOlUWU.jpg" /></p>
 <p>Омайгад, где поправка Бесселя, ты что крейзи?</p>
 <p>Сумма дисперсий по каждому классу называется внутригрупповой дисперсией.</p>
 <p>Найдем межгрупповую дисперсию:</p>
-<p><img alt="" src="/static/img/5ptGFiHweEE.jpg" /></p>
+<p><img alt="" src="/blog/static/img/5ptGFiHweEE.jpg" /></p>
 <p>И наконец значение коэффициента корреляции, который, кстати, называется отношением корреляции:</p>
-<p><img alt="" src="/static/img/BjyojGzbvwc.jpg" /></p>
+<p><img alt="" src="/blog/static/img/BjyojGzbvwc.jpg" /></p>
 <p>То есть связи слабая. Скорее всего у какого-то пола есть перекос в определенную сторону для оценки. Судя по приведенным выше данным(матожиданиям и дисперсиям) девушки склонны получать оценки меньше. Все еще можно проверить эту гипотезу на большей выборке, так как критерий p-значимости как считать я не знаю, как и не знаю достаточно ли приведенных данных. Плюс эти данные взяты из оценок по предмету в конце семестра, откуда и появилось много оценок 100, но возможно перекос в оценках также вызван этим.</p>
 <p>Само по себе отношение корреляции всегда находится в пределах от 0 до 1, что очевидно из определения, и ее значения можно расценивать по следующей таблице:</p>
-<p><img alt="" src="/static/img/nsaWzpMFCYQ.jpg" /></p>
+<p><img alt="" src="/blog/static/img/nsaWzpMFCYQ.jpg" /></p>
 <h2 id="2">Случай 2. Связь между категориальной и категориальной фичами</h2>
 <p>Теперь у нас нет даже единственной численной фичи, а есть только категории. Но мы все еще хотим узнать насколько они связаны, то есть насколько принадлежность разным классам влияет на различие принадлежности к другим классам.</p>
 <p>Сразу приведем формулу</p>
-<p><img alt="" src="/static/img/7IIfQU9bcQE.jpg" /></p>
+<p><img alt="" src="/blog/static/img/7IIfQU9bcQE.jpg" /></p>
 <p>Этот коэффициент также находится в пределах от 0 до 1 и называется коэффициентом Крамера. Разберемся что здесь к чему:</p>
 <p>n — количество всех обьектов в выборке</p>
 <p>кол-во строк/столбцов — количество различных классов первой и второй фичи, из них берется минимум и вычитается 1</p>
@@ -5028,23 +5124,23 @@
 <p>Для начала, количество обьектов каждой пары классов в нашей выборке, называется эмпирической частотой, потому что оно приближает реально распределение и получено с помощью эксперимента.
 Помимо этого, нам нужно найти количества обьектов каждой пары классов при условии независимости этих классов. Это количество называется теоретической частотой: какое в теории должно быть количество обьектов, чтобы связи не было.</p>
 <p>Теоретическая частота для каждой пары классов считается как вероятность получить первым классом класс A, а вторым — класс X, если эти классы независимы(нулевая гипотеза H_0) умножить на количество всех обьектов. Для каждой пары классов A первой категориальной фичи и X второй категориальной фичи теоретическая частота считается по следующей формуле:</p>
-<p><img alt="" src="/static/img/slKyLerjoHM.jpg" /></p>
+<p><img alt="" src="/blog/static/img/slKyLerjoHM.jpg" /></p>
 <p>Где N — количество всех обьектов.</p>
 <p>Затем для каждой пары классов считается число, которое затем в сумме по всем парам классов даст критерий хи-квадрат:</p>
-<p><img alt="" src="/static/img/tLEFgV96Yiw.jpg?size=557x67&amp;quality=96&amp;sign=462fd032d2b71c99bdee566de27f8297&amp;type=album" /></p>
+<p><img alt="" src="/blog/static/img/tLEFgV96Yiw.jpg?size=557x67&amp;quality=96&amp;sign=462fd032d2b71c99bdee566de27f8297&amp;type=album" /></p>
 <p>В итоге формула для критерия хи-квадрат следующая:</p>
-<p><img alt="" src="/static/img/QqmSQutjX_s.jpg?size=483x91&amp;quality=96&amp;sign=873d6948483484da165287a25a38a809&amp;type=album" /></p>
+<p><img alt="" src="/blog/static/img/QqmSQutjX_s.jpg?size=483x91&amp;quality=96&amp;sign=873d6948483484da165287a25a38a809&amp;type=album" /></p>
 <p>На всякий: n(…) это количество обьектов определенного класса(или классов) из нашей выборки, tf — теоретическая частота</p>
 <p>Затем это значение подставляется в исходную формулу, где остальные переменные известны.</p>
 <p>Приведем пример(из манги да): провели опрос среди читателей журнала с просьбой указать желаемый вид признания в любви из трех и свой пол. Получили следующие данные:</p>
-<p><img alt="" src="/static/img/YJUFPC0mLGY.jpg?size=807x231&amp;quality=96&amp;sign=464d1ee30584bd2a86ae206a0cc0a196&amp;type=album" /></p>
+<p><img alt="" src="/blog/static/img/YJUFPC0mLGY.jpg?size=807x231&amp;quality=96&amp;sign=464d1ee30584bd2a86ae206a0cc0a196&amp;type=album" /></p>
 <p>Выражения для теоретических частот для каждой пары классов. В каждом столбце внизу написано количество обьектов по способу признания, а справа для каждой строки количество обьектов для каждого пола.
 Формула для теоретической частоты в нашем случае: n(способ) * n(пол) / N, для каждой пары (способ, пол):</p>
-<p><img alt="" src="/static/img/lx1ADZfccP8.jpg?size=807x312&amp;quality=96&amp;sign=0fc2572e7e8cb20bb98fc86b83f06b2f&amp;type=album" /></p>
+<p><img alt="" src="/blog/static/img/lx1ADZfccP8.jpg?size=807x312&amp;quality=96&amp;sign=0fc2572e7e8cb20bb98fc86b83f06b2f&amp;type=album" /></p>
 <p>Находим коэффициент хи-квадрат:</p>
-<p><img alt="" src="/static/img/ZlCHKeq-k6A.jpg?size=807x410&amp;quality=96&amp;sign=07eb2db149ee0761f3335798d691aec8&amp;type=album" /></p>
+<p><img alt="" src="/blog/static/img/ZlCHKeq-k6A.jpg?size=807x410&amp;quality=96&amp;sign=07eb2db149ee0761f3335798d691aec8&amp;type=album" /></p>
 <p>Подставим это значение в формулу для коэффициента Крамера:</p>
-<p><img alt="" src="/static/img/bNX8UHcPQkY.jpg" /></p>
+<p><img alt="" src="/blog/static/img/bNX8UHcPQkY.jpg" /></p>
 <p>Получили значение, которое говорит об отстутствии связи. Другими словами не получится хорошо предсказывать желаемый способ признания для человека, зная только его пол. И наоборот, зная, какой способ признания нравится человеку(с которым вы например переписываетесь в интернете) определить его пол.</p>
 <p>Таблица, для интерпретации тесноты связи та же, что и для отношения корреляции. Здесь коэффициент меньше 0,25 так что связь слабая.
 Вывод</p>
@@ -5087,10 +5183,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../../../../static/js/mathjax.js"></script>

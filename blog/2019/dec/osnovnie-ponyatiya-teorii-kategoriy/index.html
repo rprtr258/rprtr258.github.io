@@ -15,7 +15,7 @@
         <link rel="next" href="../popitki-generit-anime-litsa-c-pomoschyu-kmeans/">
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -672,6 +672,102 @@
     <li class="md-nav__item">
       <a href="../../../2023/may/" class="md-nav__link">
         Month report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1_6" id="__nav_1_1_6_label" tabindex="0">
+          Jun
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Jun
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2023/jun/" class="md-nav__link">
+        Month Report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1_7" id="__nav_1_1_7_label" tabindex="0">
+          Jul
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Jul
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2023/jul/go-error-hanling/" class="md-nav__link">
+        Мысли про обработку ошибок и структурное логирование в Go
       </a>
     </li>
   
@@ -5099,9 +5195,9 @@
 
   <h1>Основные понятия теории категорий</h1>
 
-<p><img align="right" alt="" src="/static/img/6HLz8DTV3l8.jpg" width="200" /></p>
+<p><img align="right" alt="" src="/blog/static/img/6HLz8DTV3l8.jpg" width="200" /></p>
 <p>Как подготовка к другим статьям и как попытку понять теоркат я пишу это статью. Здесь будут базовые конструкции теории категорий. Также постараюсь в конце всяких определений приводить ссылку на ncatlab.org, своеобразная вики для теорката, чтобы можно было уточнить непонятные моменты и иметь ресурс авторитетнее автора. В конце будет определение функтора, так как это тоже главное понятие теорката, но, чтобы описать, как функтор обобщает все описанные в этой статье понятия, придется писать отдельную статью про пределы. Итак начнем.</p>
-<p><img alt="" src="/static/img/t_HKOgnRKNk.jpg" />
+<p><img alt="" src="/blog/static/img/t_HKOgnRKNk.jpg" />
 Предел(здесь его не будет), копроизведение и неправильный pushout</p>
 <p>Множество разделов математики работает с теми или иными обьектами и преобразованиями между ними. И множество вещей, связанных с ними так или иначе похожи. Теория категорий появилась, как способ обобщить все эти обьекты.</p>
 <p>Определим категорию. Категория <span class="arithmatex">\(\mathcal{C}\)</span> это два множества: <span class="arithmatex">\(\mathcal{Ob}(\mathcal{C})\)</span> — множество обьектов категории, Hom(A, B) — множество стрелочек(морфизмов, функций), возможно пустое, между двумя обьектами A и B для всех пар обьектов и способ соединять стрелочки естественным способом, называемый композицией. Стрелки и морфизмы я, возможно, буду называть по разному, но это абсолютно одно и то же. Проще было бы назвать теорию категорий archery(стрельбой из лука), как писал один автор учебника по теоркату.</p>
@@ -5143,9 +5239,9 @@
 <p>Все понятия будут описываться парами, так как одно понятие будет получаться из другого просто обращением стрелок, что дает нам такое понятие теорката, как дуальность. Причем первым понятием всегда будет в некотором смысле «предельным», а вторым — «копредельным».</p>
 <p>Также почти все понятия будут описываться с использованием какого-то универсального свойства или по другому UMP(universal mapping property), что означает, что у нас в том или ином виде будет появляться существование и единственность какой-то стрелки. Все стрелки, удовлетворяющие тому же свойству, что и стрелка из UMP, совпадают с ней в силу единственности, что дает еще один способ уравнивать стрелки.</p>
 <p>И, наконец, в теории категорий часто используются диаграммы, примеры которых можно увидеть в начале статьи. Они используются для формулировок, визуализации свойств и даже доказательств. Доказательство через диаграмму называется diagram chasing. Обьекты представляются в виде букв и стрелки в виде стрелок. Говорят что «диаграмма коммутирует» если любая композиция вдоль любого пути от одного обьекта до другого всегда будет одним и тем же.</p>
-<p><img alt="" src="/static/img/L489QOha2jA.jpg" /></p>
+<p><img alt="" src="/blog/static/img/L489QOha2jA.jpg" /></p>
 <p>Например на этой диаграмме есть два пути из <span class="arithmatex">\(A\)</span> в <span class="arithmatex">\(C\)</span>, а именно сначала через <span class="arithmatex">\(f\)</span>, потом через <span class="arithmatex">\(g\)</span> или же сразу через их композицию <span class="arithmatex">\(gf\)</span>. Понятно, что <span class="arithmatex">\(gf\)</span> это композиция <span class="arithmatex">\(f\)</span> и <span class="arithmatex">\(g\)</span>, поэтому эта диаграмма комутирует. Пример посложнее:</p>
-<p><img alt="" src="/static/img/JrP2YgVScag.jpg" /></p>
+<p><img alt="" src="/blog/static/img/JrP2YgVScag.jpg" /></p>
 <p>Если нам скажут, что эта диаграмма коммутирует(а она коммутирует), то мы из этого сможем понять, что <span class="arithmatex">\((f+g)i₁=f\)</span> как два пути из <span class="arithmatex">\(A\)</span> в <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\((f+g)i₂=g\)</span> как два пути из <span class="arithmatex">\(B\)</span> в X. f+g это название стрелки, не пугайтесь, мы не умеем их складывать.</p>
 <p>Также для облегчения восприятия определений я использую следующие обозначения в диаграммах:
 — обьекты и стрелки, на основе которых строится понятие, имеют синий цвет
@@ -5154,21 +5250,21 @@
 — и наконец стрелка из UMP свойства будет выделена пунктиром</p>
 <h2 id="_3">Терминальный, инициальный обьекты</h2>
 <p>Терминальным обьектом называется обьект 1, для которого выполняется следующее UMP: для любого обьекта X существует единственная стрелка в 1, обозначаемая, как !ₓ:X\to 1. Другими словами, это обьект в который можно попасть из любого обьекта. Этот обьект вместе с инициальным обозначается не заглавной латинской буквой а единицей, но не следует его путать с единичными стрелками.</p>
-<p><img alt="" src="/static/img/GNu_8l4rTNc.jpg" />
+<p><img alt="" src="/blog/static/img/GNu_8l4rTNc.jpg" />
 Начнем с простого</p>
 <p>Теперь инициальный обьект 0: им называется такой обьект, что для любого обьекта X есть стрелка ?ₓ:0\to X. Для этой стрелки я не нашел общепринятого обозначения поэтому обозначил ее как '?' в противоположность терминальному обьекту. По другому, это обьект из которого можно попасть в любой обьект.</p>
-<p><img alt="" src="/static/img/BmFIk9z5kKk.jpg" />
+<p><img alt="" src="/blog/static/img/BmFIk9z5kKk.jpg" />
 Обратили все(одну) стрелки</p>
 <p>В категории множеств 1 это множество с одним элементом, а 0 — пустое множество. Почему это так? Рассмотрим сначала любое одноэлементное множество 1. Для любого другого множества X мы сможем найти только одно отображение в 1, которое и дает этот единственный элемент. Единственная проблема возникает когда <span class="arithmatex">\(X\)</span> пусто. Но мы мало того, что утверждаем, что это отображение ∅\to 1 есть, но оно еще и есть для любого другого обьекта помимо 1. Это отображение это ничто иное, как пустое отображение! Если вспомнить формальное определение отображения из множества <span class="arithmatex">\(A\)</span> в <span class="arithmatex">\(B\)</span>, что это множество пар элементов из <span class="arithmatex">\(A\)</span> и <span class="arithmatex">\(B\)</span>, в котором для любого элемента <span class="arithmatex">\(A\)</span> существует единственная пара с его участием, тогда вполне можно утверждать, что пустое множество это отображение из пустого множества!</p>
-<p><img alt="" src="/static/img/mX5IXu26ePU.jpg" /></p>
+<p><img alt="" src="/blog/static/img/mX5IXu26ePU.jpg" /></p>
 <p>В категории любого poset-а 1 это, очевидно, максимальный обьект среди всех, в то время как 0 — минимальный среди всех, если они существуют. Это обьясняет их названия как 1 и 0, если считать, что у нас числа от 0 до 1. Пример poset-а в виде натуральных чисел. В категории этих чисел существует 0(терминальный обьект): это 0(число), если мы включаем его в натуральные числа, или 1(число), если не включаем. Максимального элемента в натуральных числах нет, если не включать бесконечность. Также можно рассматривать как poset множество подмножеств множества <span class="arithmatex">\(X\)</span> с отношением включения, тогда пустое множество снова будет 0, однако 1-ей будет все множество.</p>
-<p><img alt="" src="/static/img/1LP5OpLp51U.jpg" /></p>
+<p><img alt="" src="/blog/static/img/1LP5OpLp51U.jpg" /></p>
 <p>Внимательный читатель заметит, что одноэлементных множеств, минимальных и максимальных элементов может быть много, но, как несложно показать, они все изоморфны. Что это значит, далее.</p>
 <p>https://ncatlab.org/nlab/show/terminal%20object
 https://ncatlab.org/nlab/show/initial%20object</p>
 <h2 id="_4">Изоморфизм(дуален сам себе)</h2>
 <p>Стрелка <span class="arithmatex">\(f:A\to B\)</span> называется изоморфизмом, если существует(можно показать, что она сразу же и единственная) стрелка g:B\to A, такая что gf = 1ᴬ и fg = 1ᴮ. Два обьекта называются изоморфными, если между ними существует изоморфизм, и изоморфность(изоморфизм) есть отношение эквивалентности. Для изоморфных обьектов в таком случае пишут, что A≅B.</p>
-<p><img alt="" src="/static/img/6YQQSTdBbB0.jpg" />
+<p><img alt="" src="/blog/static/img/6YQQSTdBbB0.jpg" />
 Теперь стрелки две и если их обратить будет то же самое!</p>
 <p>Эта диаграмма коммутирует, хотя казалось бы коммутировать тут нечему. На самом деле для удобства на диаграммах не показывают единичные стрелки, которые как раз и дадут равенства для изоморфизма написанные выше.</p>
 <p>Изоморфизм это в каком-то смысле обратимое отображение, но сильнее. Суть в том, что имея в категории только обьекты и стрелки мы можем строить рассуждения используя только их. Но если мы что-то будем утверждать про какой-либо обьект, то мы сможем утверждать то же самое для любого изоморфного ему обьекта так как изоморфизм даст нам все что нужно для требуемых стрелок. Например, если мы скажем, что существует единственная стрелка с какими то свойствами из w:B\to X, и мы знаем, что A≅B, то и из A существует единственная стрелка с теми же свойствами. Строится она с помощью изоморфизма: wf:A\to X.</p>
@@ -5181,11 +5277,11 @@ https://ncatlab.org/nlab/show/initial%20object</p>
 <p>https://ncatlab.org/nlab/show/isomorphism</p>
 <h2 id="_5">Мономорфизм, эпиморфизм</h2>
 <p>Стрелка <span class="arithmatex">\(m:B\to C\)</span> называется мономорфизмом, если для любого обьекта A и пары стрелок f,g:A\to B из равенства mf = mg следует f = g. Другими словами, если диаграмма коммутирует, то f=g. Еще: на него можно сокращать слева.</p>
-<p><img alt="" src="/static/img/YPft01sqdgg.jpg" />
+<p><img alt="" src="/blog/static/img/YPft01sqdgg.jpg" />
 Увеличиваем количество стрелок</p>
 <p>Заметьте, что <span class="arithmatex">\(f\)</span> и <span class="arithmatex">\(g\)</span> в определении не фиксированы! UMP здесь нет, так как нет определяемого обьекта.</p>
 <p>Дуально: <span class="arithmatex">\(e:A\to B\)</span> называется эпиморфизмом, если для любого обьекта C и любой пары стрелок f,g:B\to C из равенства fe = ge следует f = g. То есть, если диаграмма коммутирует, то f = g. Еще: на него можно сокращать справа.</p>
-<p><img alt="" src="/static/img/cZnxvcNPu2s.jpg" />
+<p><img alt="" src="/blog/static/img/cZnxvcNPu2s.jpg" />
 Обращаем все стрелки</p>
 <p>В категории множеств мономорфизм есть иньекция, эпиморфизм — сюрьекция.</p>
 <p>Рассмотрим сначала мономорфизм. Чтобы понять, почему это иньекция, предположим, что это не так и возьмем в качестве A множество {x, y} из двух элементов множества B, для которых m(x) = m(y). Пусть f оставляет их на месте, т.е. f(x) = x, f(y) = y, а g меняет их местами, т.е. g(x) = y, g(y) = x. Так как
@@ -5199,10 +5295,10 @@ g(y) = 0. Имеем fe = ge = 1. Значит f = g, и g переводит в
 https://ncatlab.org/nlab/show/epimorphism</p>
 <h2 id="product-coproduct">Product, coproduct(произведение, копроизведение/сумма)</h2>
 <p>Для двух обьектов A и B их произведением называется обьект A×B вместе с парой стрелок-проекций: π₁:A×B\to A, π₂:A×B\to B. (само собой 1 и 2 в нижнем индексе). Причем такие(UMP), что для любого обьекта X с парой стрелок f:X\to A, g:X\to B существует единственная стрелка f×g:X\to A×B такая, что следующая диаграмма коммутирует.</p>
-<p><img alt="" src="/static/img/ems_M9BqxF0.jpg" />
+<p><img alt="" src="/blog/static/img/ems_M9BqxF0.jpg" />
 +2</p>
 <p>Суммой(аkа копроизведением) двух обьектов A и B называют обьект A+B с двумя стрелками-вложениями i₁:A\to A+B, i₂:B\to A+B, такими, что для любого обьекта X и пары стрелок f:X\to A, g:X\to B существует единственная стрелка f+g:X\to A+B такая, что диаграмма коммутирует.</p>
-<p><img alt="" src="/static/img/z2rn5-JbvKc.jpg" />
+<p><img alt="" src="/blog/static/img/z2rn5-JbvKc.jpg" />
 Вращаю стрелки</p>
 <p>В категории множеств произведение — декартово произведение. Проекции это проекции пар на первый и второй элемент соответственно:
 <span class="arithmatex">\(π₁(a, b) = a, π₂(a, b) = b, f×g(x) = (f(x), g(x))\)</span>
@@ -5221,10 +5317,10 @@ https://ncatlab.org/nlab/show/coproduct</p>
 <h2 id="equaliser-coequaliser">Equaliser, coequaliser(уравнитель, коуравнитель)</h2>
 <p>Здесь, хотя диаграммы и коммутируют, f не обязательно равно g.</p>
 <p>Для двух обьектов A, B и двух стрелок f, g между ними эквалайзером называется обьект E и стрелка <span class="arithmatex">\(e:E\to A\)</span> такие, что <span class="arithmatex">\(fe = ge\)</span> и для любого обьекта X и стрелки m:X\to A, для которой выполняется равенство fm = gm, существует единственная стрелка u:X\to E такая, что следующая диаграмма коммутирует.</p>
-<p><img alt="" src="/static/img/-koHNT-r-0w.jpg" />
+<p><img alt="" src="/blog/static/img/-koHNT-r-0w.jpg" />
 -1 D; <span class="arithmatex">\(m = eu\)</span>, то есть m раскладывается в композицию</p>
 <p>Для двух обьектов A, B и двух стрелок f, g между ними коэквалайзером называется обьект Q и стрелка <span class="arithmatex">\(q:B\to Q\)</span> такие, что <span class="arithmatex">\(qf=qg\)</span> и для любого обьекта X и стрелки m:B\to X существует единственная стрелка u:Q\to X такая, что следующая диаграмма коммутирует.</p>
-<p><img alt="" src="/static/img/181Cd7OLiOg.jpg" />
+<p><img alt="" src="/blog/static/img/181Cd7OLiOg.jpg" />
 Ну вы поняли, <span class="arithmatex">\(m=uq\)</span></p>
 <p>Можно показать, что эквалайзер(которая стрелка) это всегда моно, а коэквалайзер всегда эпи.</p>
 <p>Теперь обсуждение. Эти определения уже могут казаться сложными, хотя это опять таки обобщение уже известных понятий ядра и фактор-множества.</p>
@@ -5234,41 +5330,41 @@ https://ncatlab.org/nlab/show/coproduct</p>
 - <span class="arithmatex">\(f(a) = g(a)\)</span>, то есть «стандартизуем» x, а затем просто вкладываем его в A. Проще говоря, m = eu. Далее будет более конкретный пример с ядром.</p>
 <p>Теперь коэквалайзер. Он, к сожалению, строится сложнее. Нам нужно взять минимальное отношение эквивалентности, в котором для любого x из A имеем f(x) ~ g(x). Тогда Q = B/~ фактор множество по этому отношению, а q — сопоставление классов т.е. q(y) = [y] класс y в фактор-множестве. Аналогично для любого X из определения оказывается, что X это что-то похожее, на фактор по отношению эквивалентности побольше, и потому содержит меньше классов. Мы можем вложить наши классы в «классы» из X отображением u. Тогда получим, что m сначала дает класс эквивалентности из коэквалайзера(отображением q), а затем по этому классу дает элемент X. По другому: m = uq.</p>
 <p>«При чем же тут ядро?», спросит читатель. Все проще некуда. Возьмем категорию векторных пространств(или групп, или колец, или что вам больше нравится) и рассмотрим конструкцию эквалайзера еще раз. Если в качестве g взять константное отображение, дающее нулевой вектор, то эквалайзер это ничто иное, как ядро f!</p>
-<p><img alt="" src="/static/img/Or01pmL-o08.jpg" /></p>
+<p><img alt="" src="/blog/static/img/Or01pmL-o08.jpg" /></p>
 <p>Понятно, что тогда если <span class="arithmatex">\(fm = 0m = 0\)</span>(нулевой вектор), то <span class="arithmatex">\(m\)</span> всего-навсего выдает элементы ядра(эквалайзера) в зависимости от элемента X. Тогда мы можем это отображение перенести в само ядро, получая u. И получаем ядро f в чистом виде! Кстати необязательно ограничивать g, потому что можно получить эквалайзер как <span class="arithmatex">\(ker(f - g)!\)</span></p>
 <p>Имея более конкретный пример эквалайзера, попробуем разобраться и с коэквалайзером. Снова возьмем в качестве g тождественный нулевой вектор. Каким бы ни был эквалайзер имеем qf = q0 = 0, так как q — линейное отображение и должно переводить нулевой вектор в нулевой вектор. Значит для любого y из образа <span class="arithmatex">\(f (Im(f))\)</span> имеем <span class="arithmatex">\(f(y) = 0\)</span> нулевой вектор в <span class="arithmatex">\(Q\)</span>. Посмотрим, что у нас есть</p>
-<p><img alt="" src="/static/img/nOQBhJn7ugw.jpg" />
+<p><img alt="" src="/blog/static/img/nOQBhJn7ugw.jpg" />
 Очень грубое изображение векторных пространств</p>
 <p>Видим, что чем дальше, тем больше неизвестного: сначала элементы <span class="arithmatex">\(W\)</span>, которые не получаются с помощью <span class="arithmatex">\(f\)</span>, затем неизвестные классы в <span class="arithmatex">\(Q\)</span>. Но не все так плохо! Мы знаем, что в фактор-пространстве W/Im(f) образ f как раз и является нулевым вектором. Так как нам нужно максимальное количество классов, то именно эта конструкция и даст нам коэквалайзер, который также называют коядром:</p>
-<p><img alt="" src="/static/img/vk3Cu97V0ANu4.jpg" /></p>
+<p><img alt="" src="/blog/static/img/vk3Cu97V0ANu4.jpg" /></p>
 <p>Такая же конструкция коядра строится в теории групп, колец и т.д. и изучается в алгебре.</p>
 <p>В категории произвольного poset-а мы сможем построить не более одной стрелки между любыми двумя обьектами поэтому <span class="arithmatex">\(f = g = A ≤ B\)</span>. После переобозначений получаем эквалайзер:</p>
-<p><img alt="" src="/static/img/62EBUqU7hIk.jpg" /></p>
+<p><img alt="" src="/blog/static/img/62EBUqU7hIk.jpg" /></p>
 <p>Видим, что обьект b никак не влияет на эквалайзер, и эквалайзер обьекта a это наибольший обьект, меньше или равный a, то есть сам обьект a. Коэквалайзер строится аналогично, ничего интересного.</p>
 <p>https://ncatlab.org/nlab/show/equalizer
 https://ncatlab.org/nlab/show/coequalizer</p>
 <h2 id="pullback-pushout">Pullback, pushout(декартов квадрат и кодекартов квадрат)</h2>
 <p>Последний рывок.</p>
 <p>Pullback для уголка из обьектов <span class="arithmatex">\(A\)</span>,<span class="arithmatex">\(B\)</span>,<span class="arithmatex">\(C\)</span> и стрелок <span class="arithmatex">\(f:A\to C\)</span>, <span class="arithmatex">\(g:B\to C\)</span> это обьект <span class="arithmatex">\(A×ᶜB\)</span> с двумя стрелками <span class="arithmatex">\(p:A×ᶜB\to A\)</span>, <span class="arithmatex">\(q:A×ᶜB\to B\)</span>, такими, что <span class="arithmatex">\(fp = gq\)</span> и для любого обьекта претендента на трон pullback-a <span class="arithmatex">\(Q\)</span> с стрелками <span class="arithmatex">\(m:Q\to A, n:Q\to B\)</span>, такими, что <span class="arithmatex">\(fm = gn\)</span>, существует моно <span class="arithmatex">\(u:Q\to A×ᶜB\)</span>, такой, что m = pu, n = qu. Т.е. следующая диаграмма коммутирует</p>
-<p><img alt="" src="/static/img/2bsmO7xvw20.jpg" /></p>
+<p><img alt="" src="/blog/static/img/2bsmO7xvw20.jpg" /></p>
 <p>Другими словами, <span class="arithmatex">\(m\)</span> и <span class="arithmatex">\(n\)</span> раскладываются через <span class="arithmatex">\(p\)</span> и <span class="arithmatex">\(q\)</span> и один и тот же морфизм <span class="arithmatex">\(u\)</span> справа.</p>
 <p>Pushout для уголка из обьектов <span class="arithmatex">\(A\)</span>,<span class="arithmatex">\(B\)</span>,<span class="arithmatex">\(C\)</span> и стрелок <span class="arithmatex">\(f:C\to A\)</span>, <span class="arithmatex">\(g:C\to B\)</span> это обьект A+ᶜB с двумя стрелками p:A\to A+ᶜB, q:B\to A+ᶜB, такими, что pf = qg и для любого обьекта претендента на трон pushout-a Q с стрелками m:A\to Q, n:B\to Q, такими, что mf = ng, существует эпи u:A+ᶜB\to Q, такой, что m = up, n = uq. Т.е. следующая диаграмма коммутирует</p>
-<p><img alt="" src="/static/img/2CBVSANP5pY.jpg" />
+<p><img alt="" src="/blog/static/img/2CBVSANP5pY.jpg" />
 Это база данных</p>
 <p>Другими словами, <span class="arithmatex">\(m\)</span> и <span class="arithmatex">\(n\)</span> опять-таки раскладываются через <span class="arithmatex">\(p\)</span> и <span class="arithmatex">\(q\)</span> и один и тот же морфизм u, но теперь u слева.</p>
 <p>Если вы ничего не поняли из определений, то могу предположить, что это уже не первый раз, так что приступим к разбору. Pullback можно на самом деле разложить в два уже известных обьекта: произведение с эквалайзером.</p>
-<p><img alt="" src="/static/img/vNnO6EZLYVE.jpg" /></p>
+<p><img alt="" src="/blog/static/img/vNnO6EZLYVE.jpg" /></p>
 <p>Для того, чтобы построить pullback на уголке мы можем сначала построить произведение <span class="arithmatex">\(A×B\)</span>, а затем построить эквалайзер по обьектам A×B и C и двум стрелкам между ними <span class="arithmatex">\(fπ₁, gπ₂:A×B\to C\)</span>. Этот эквалайзер вместе со стрелками
 <span class="arithmatex">\(p = π₁e\)</span> и <span class="arithmatex">\(q = π₂e\)</span> и даст нам в точности pullback.</p>
 <p>Аналогично(дуально) можно построить pushout на уголке из суммы и коэквалайзера.</p>
-<p><img alt="" src="/static/img/2fwT6uaj_ho.jpg" /></p>
+<p><img alt="" src="/blog/static/img/2fwT6uaj_ho.jpg" /></p>
 <p>Сначала строим сумму A+B, затем коэквалайзер на стрелках <span class="arithmatex">\(i₁f\)</span>, <span class="arithmatex">\(i₂g:A+B\to C\)</span>. По аналогии получим pushout из стрелок <span class="arithmatex">\(p = hi₁\)</span>, <span class="arithmatex">\(q = hi₂\)</span>.</p>
 <p>Отлично, теперь можно найти pullback-и и pushout-ы в разных категориях. Начнем с <span class="arithmatex">\(Sets\)</span>. Произведение, как мы знаем, это просто множество пар элементов A и B. Соответствующие композиции для эквалайзера будут действовать так:</p>
 <div class="arithmatex">\[
 fπ₁(a, b) = f(π₁(a, b)) = f(a) \\\
 gπ₂(a, b) = g(π₂(a, b)) = g(b)
 \]</div>
-<p><img alt="" src="/static/img/A5lXfi-WElY.jpg" /></p>
+<p><img alt="" src="/blog/static/img/A5lXfi-WElY.jpg" /></p>
 <p>Далее, мы знаем, что эквалайзер это подмножество пар, на которых стрелки совпадают и вложение их в <span class="arithmatex">\(A×B\)</span>. Соответственно <span class="arithmatex">\(A×ᶜB = {(a, b)∈A×B | f(a) = g(b)}\)</span>. Осталось построить <span class="arithmatex">\(p(a, b) = a\)</span>, <span class="arithmatex">\(q(a, b) = b\)</span> и мы получили pullback! Это всего лишь способ решать уравнения вида <span class="arithmatex">\(f(x) = g(y)\)</span> на функциях из разных множеств. Мы видели, что эквалайзер мог делать похожую вещь, но на функциях из одного и того же множества, а pullback может еще больше! Суммируя все полученное: pullback в категории <span class="arithmatex">\(Sets\)</span> для уголка <span class="arithmatex">\(f:A\to C\)</span>, <span class="arithmatex">\(g:B\to C\)</span> это множество пар элементов из A и B, на которых f и g совпадают.</p>
 <p>Очередь pushout-а. Сумма это непересекающееся обьединение с стрелками, добавляющими метки.</p>
 <div class="arithmatex">\[
@@ -5276,9 +5372,9 @@ i₁f(x) = i₁(f(x)) = f(x):A \\\
 i₂g(x) = i₂(g(x)) = g(x):B
 \]</div>
 <p>Напомню, что <span class="arithmatex">\(:X\)</span> это просто добавление метки и ничего более.</p>
-<p><img alt="" src="/static/img/K3u-kDaKztk.jpg" /></p>
+<p><img alt="" src="/blog/static/img/K3u-kDaKztk.jpg" /></p>
 <p>Далее вспоминаем, что коэквалайзер это фактор множество которое строится с грустью и болью, но все таки строится. Для взятия фактор множества мы должны взять минимальное отношение эквивалентности, в котором для любого x из C имеем f(x):A ~ g(x):B. То есть мы должны сопоставить любые два элемента, у которых совпадают прообразы, но так как отображения всего два, то в любом классе эквивалентности будет не более двух элементов. Все оказалось проще, чем мы думали! Приведу еще картинку по аналогии с коэквалайзером для векторных пространств, чтобы возможно стало понятнее, что к чему:</p>
-<p><img alt="" src="/static/img/hH6RJB93auA.jpg" />
+<p><img alt="" src="/blog/static/img/hH6RJB93auA.jpg" />
 Это почти полная диаграмма pushout-а лол</p>
 <p>Видно, что образы f и g сопоставляются в силу эквивалентности, а остальные элементы A и B, которые не принадлежат образам f и g образуют свои классы. Получаем в итоге, что pushout в <span class="arithmatex">\(Sets\)</span> это способ «сопоставить» элементы в A и B с помощью отображений f и g. Время для тупого примера: пусть C — множество квадратов(фигур), A — множество прямоугольников, B — ромбов, f, g — вложения. Тогда pushout просто сопоставит квадраты среди прямоугольников с соответствующими квадратами среди ромбов.</p>
 <ul>
@@ -5337,10 +5433,10 @@ i₂g(x) = i₂(g(x)) = g(x):B
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../../../../static/js/mathjax.js"></script>

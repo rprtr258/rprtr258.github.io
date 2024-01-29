@@ -1,0 +1,7952 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../on_testing/">
+      
+      
+        <link rel="next" href="../pro-algebru-putey/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+    
+    
+      
+        <title>Основные понятия теории категорий - rprtr258</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="/blog/static/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="rprtr258" class="md-header__button md-logo" aria-label="rprtr258" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            rprtr258
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Основные понятия теории категорий
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Differential-operators-ring/" class="md-tabs__link">
+          
+  
+  Articles
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/reviews-random/obzor-na-go/" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cv/" class="md-tabs__link">
+          
+  
+  CV
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pastas/" class="md-tabs__link">
+          
+  
+  Pastas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../watch%20list/towatch/" class="md-tabs__link">
+          
+  
+  Watch list
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../memes/" class="md-tabs__link">
+          
+  
+  Memes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../utils/" class="md-tabs__link">
+          
+  
+  Utils
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mmheroes/index.html" class="md-tabs__link">
+        
+  
+    
+  
+  MMHeroes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../newtab" class="md-tabs__link">
+        
+  
+    
+  
+  New tab
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../menhera/" class="md-tabs__link">
+          
+  
+  Menhera
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="rprtr258" class="md-nav__button md-logo" aria-label="rprtr258" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    rprtr258
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Articles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Differential-operators-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Кольца операторов дифференцирования
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Trivial-barter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Тривиальный натуральный обмен
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avtor-nachitalsya-eo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Автор начитался eo и придумал следующий бред
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../go-error-hanling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Мысли про обработку ошибок и структурное логирование в Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../istoriya-pro-lyagushku/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    История про лягушку
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kak-pisat-retsepti/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Как писать рецепты
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ne-prosto-korrelyatsiya/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Не просто корреляция
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o-chistom-randome/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    О чистом рандоме
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../on_testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    On testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Основные понятия теории категорий
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Основные понятия теории категорий
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Примеры
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тизер
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Терминальный, инициальный обьекты
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Изоморфизм(дуален сам себе)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Мономорфизм, эпиморфизм
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-coproduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product, coproduct(произведение, копроизведение/сумма)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equaliser-coequaliser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equaliser, coequaliser(уравнитель, коуравнитель)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pullback-pushout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pullback, pushout(декартов квадрат и кодекартов квадрат)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Функтор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заключение
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Что почитать
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro-algebru-putey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про алгебру путей
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro-interfeysi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про интерфейсы
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro-jsonnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про jsonnet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro-mikromenedzhment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про микроменеджмент
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro-teoriyu-ogranicheniy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про теорию ограничений
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roflanPominki/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    roflanPominki
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shizoanalogii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Шизоаналогии
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soa-v-json/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SOA в JSON
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summa-tipov-v-oop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Сумма типов в ООП
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../viydi-iz-mashini/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Выйди из машины
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reviews random
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Reviews random
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-random/obzor-na-go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Рофлообзор на Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-random/obzor-na-pechene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на новое печенье Юбилейное с светлой глазурью.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-random/obzor-na-ts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на Typescript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reviews games
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reviews games
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-games/obzor-na-igru-the-black-watchmen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на игру The black watchmen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-games/obzor-na-umineko/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на Umineko
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reviews films
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Reviews films
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-films/blade-runner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blade runner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-films/color-from-other-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color from other world
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-films/karate-pacan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Karate pacan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-films/obzor-na-film-paraziti/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на фильм Паразиты
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-films/obzor-na-film-shazam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на фильм Шазам
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-films/ultraviolence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ultraviolence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reviews books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reviews books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/ekstremalniy-taym-menedzhment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Экстремальный тайм-менеджмент
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/kaneman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaneman
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-biografiyu-pera-simona-laplasa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на биографию Пьера-Симона Лапласа
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-anhels-navarro-pamyat-ne-izmenyaet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Анхельс Наварро - Память не изменяет
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-dim-i-zerkala/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Дым и зеркала
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-elliptic-shit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Elliptic tales. Curves, Counting and Number Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-filisofi-v-deystvii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Философы в действии. История философии в комиксе
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-gtd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Getting Things Done/GTD/Доведение дел до завершения
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-josh-kaufman-the-first-hours-to-learn-anything/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Josh Kaufman - The first 20 hours to learn anything
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-krasnaya-tabletka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Красная таблетка
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-pishi-sokraschay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Пиши, сокращай
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-santa-klaus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу The Indisputable Existence Of Santa Claus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-secrets-lies-and-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Do the Math: Secrets, Lies, and Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-seshte-lyagushku-21-sposob-nauchitsya-uspevat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Съешьте лягушку! 21 способ научиться успевать
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-stiven-kovi-sem-navikov-visokoeffektivnih-lyudey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Стивен Кови - Семь навыков высокоэффективных людей.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-strategiya-go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Стратегия Го
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-teoriya-veroyatnostey-i-matematicheskaya-statistika/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Теория вероятностей и математическая статистика
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-knigu-zagadochnoe-ubiystvo-sobaki/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на книгу Загадочное ночное убийство собаки
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/reviews-books/obzor-na-komiksi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор на комиксы из Humble indie bundle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer graphics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer graphics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer-graphics/izobrazhenie-beskonechnih-grafikov-na-konechnom-uchastke-ploskosti/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Изображение бесконечных графиков на конечном участке плоскости
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer-graphics/other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer-graphics/road-to-the-computer-graphics-dream/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to the computer graphics dream
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer-graphics/staratelno-pitayus-zapihat-funktsii-na-n-mernom-simplekse-v-nevipukliy-poligon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Старательно пытаюсь запихать функции на n-мерном симплексе в невыпуклый полигон
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer-graphics/tred-randomnih-kartinok-ot-moih-zanyatiy-komp-grafikoy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Тред рандомных картинок от моих занятий комп. графикой
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            2023
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jan
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Jan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2023/jan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Feb
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Feb
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2023/feb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2023/mar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2023/mar/go-exceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exceptions для тех, кому не хватало их в golang
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_4" id="__nav_2_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apr
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Apr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2023/apr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_5" id="__nav_2_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    May
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            May
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2023/may/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_6" id="__nav_2_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jun
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Jun
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2023/jun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_7" id="__nav_2_6_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jul
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Jul
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2023/jul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_8" id="__nav_2_6_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sep
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sep
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2023/sep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2022
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            2022
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_1" id="__nav_2_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jan
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Jan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/jan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/jan/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abobus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_2" id="__nav_2_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Feb
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Feb
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/feb/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abobus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_3" id="__nav_2_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/mar/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_4" id="__nav_2_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apr
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Apr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/apr/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_5" id="__nav_2_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    May
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            May
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/may/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/may/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_6" id="__nav_2_7_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jun
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            Jun
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/jun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/jun/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_7" id="__nav_2_7_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jul
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            Jul
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/jul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/jul/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_8" id="__nav_2_7_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aug
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            Aug
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/aug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/aug/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_9" id="__nav_2_7_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sep
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            Sep
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/sep/kod-v-kartinke/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Код в картинке
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_10" id="__nav_2_7_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Oct
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_10">
+            <span class="md-nav__icon md-icon"></span>
+            Oct
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/oct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/oct/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_11" id="__nav_2_7_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nov
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_11">
+            <span class="md-nav__icon md-icon"></span>
+            Nov
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/nov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/nov/korotkometrazhki-paket-mest-karandasha-i-okorok-madjonga/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Короткометражки "ПАКЕТ", "Месть карандаша" и "Окорок Маджонга"
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_12" id="__nav_2_7_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dec
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_12">
+            <span class="md-nav__icon md-icon"></span>
+            Dec
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/dec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Year report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2021
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            2021
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_1" id="__nav_2_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jan
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Jan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/jan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/jan/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2021-01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/jan/pro-logarifm-ot-matritsi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про логарифм от матрицы
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_2" id="__nav_2_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Feb
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Feb
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/feb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/feb/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_3" id="__nav_2_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/mar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/mar/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/mar/pro-svyazi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про связи между людьми
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_4" id="__nav_2_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apr
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Apr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/apr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/apr/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/apr/zagruzil-igri-na-github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Загрузил игры на гитхаб
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_5" id="__nav_2_8_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    May
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            May
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/may/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/may/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_6" id="__nav_2_8_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jun
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Jun
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/jun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/jun/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_7" id="__nav_2_8_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jul
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            Jul
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/jul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/jul/post-dlya-reklami-bloga/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Пост для рекламы блога
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/jul/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/jul/son-15-07-2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Окончание сна 15.07.2021
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_8" id="__nav_2_8_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aug
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            Aug
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/aug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/aug/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/aug/pro-devushek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про девушек
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/aug/pro-makrosi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про макросы
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/aug/recursed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recursed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_9" id="__nav_2_8_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sep
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_9">
+            <span class="md-nav__icon md-icon"></span>
+            Sep
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/sep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/sep/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/sep/pro-kofe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про кофе
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_10" id="__nav_2_8_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Oct
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_10">
+            <span class="md-nav__icon md-icon"></span>
+            Oct
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/oct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/oct/kratkoe-vvedenie-v-redyuceri/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Краткое введение в кложуровские редьюсеры
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/oct/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_11" id="__nav_2_8_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nov
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_11">
+            <span class="md-nav__icon md-icon"></span>
+            Nov
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/nov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/nov/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_12" id="__nav_2_8_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dec
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_12">
+            <span class="md-nav__icon md-icon"></span>
+            Dec
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/dec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/dec/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Year report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2020
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            2020
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_1" id="__nav_2_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jan
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Jan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jan/domashka-po-funkanu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Домашка по функану
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jan/js-hack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS hack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jan/limits-poll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Limits poll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jan/o-chem-dumaet-admin-poka-ne-mozhet-zasnut/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    О чем думает админ пока не может заснуть
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jan/post-obeschanie-na-2020-god/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Пост-обещание на 2020 год
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jan/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jan/random-facts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Random facts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jan/slabiy-komp-moment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Слабый ноут moment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_2" id="__nav_2_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Feb
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Feb
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/feb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/feb/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/feb/pro-proizvedenie-operatorov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про произведение операторов
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_3" id="__nav_2_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/mar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/mar/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/mar/pritcha-shmitcha/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Притча шмитча
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/mar/randomnie-novosti/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Рандомные новости
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/mar/sposobnosti-manipulyatsii-vremenem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Способности манипуляции временем
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_4" id="__nav_2_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apr
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Apr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/apr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/apr/cos-pi-n-revisited/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cos(πn) revisited
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/apr/pled/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Плед
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/apr/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/apr/witchhouse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Witchhouse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_5" id="__nav_2_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    May
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            May
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/may/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/may/mikrososiski-v-teste/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Микрососиски в тесте
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/may/opros-o-tselyah-polucheniya-vishego-obrazovaniya/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Опрос о целях получения высшего образования
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/may/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_6" id="__nav_2_9_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jun
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Jun
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jun/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jun/topologiya-cherno-belih-kvadratov-3x3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Топология черно-белых квадратов 3x3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_7" id="__nav_2_9_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jul
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_7">
+            <span class="md-nav__icon md-icon"></span>
+            Jul
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jul/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jul/pro-misli-pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про мысли про
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/jul/randomnie-novosti/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Рандомные новости
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_8" id="__nav_2_9_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aug
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_8">
+            <span class="md-nav__icon md-icon"></span>
+            Aug
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/aug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/aug/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/aug/privet-ya-podsyadu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Привет, я подсяду?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/aug/pro-falsifitsiruemost/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про фальсифицируемость
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_9" id="__nav_2_9_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sep
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_9">
+            <span class="md-nav__icon md-icon"></span>
+            Sep
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/sep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/sep/low-hanging-fruits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low-hanging fruits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/sep/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_10" id="__nav_2_9_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Oct
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_10">
+            <span class="md-nav__icon md-icon"></span>
+            Oct
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/oct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/oct/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_11" id="__nav_2_9_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nov
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            Nov
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/nov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/nov/admin-pitaetsya-poschitat-tsenu-komputera/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Админ пытается посчитать цену компьютера
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/nov/hairs-poset-and-dream/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Частично-упорядоченное множество причесок и сон
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/nov/izbitaya-istoriya-pro-poyavlenie-chisla-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Избитая стори про появление числа e
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/nov/kak-ivan-tsarevich-temu-diploma-iskal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Как Иван Царевич тему диплома искал
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/nov/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_12" id="__nav_2_9_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dec
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_12">
+            <span class="md-nav__icon md-icon"></span>
+            Dec
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/dec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Month report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/dec/pochemu-nekotorim-lyudyam-slozhno-schitat-do-treh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Почему некоторым людям сложно считать до трех
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/dec/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Year report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2019
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            2019
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10_1" id="__nav_2_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Oct
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Oct
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/oct/mediaticheskoe-obyasnenie-plohosti-bega-po-eskalatoru/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Медиатическое обьяснение плохости бега по эскалатору
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/oct/o-besproigrishnosti/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    О беспроигрышности
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/oct/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/oct/pro-veroyatnost-pozhara/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про вероятность пожара
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10_2" id="__nav_2_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nov
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Nov
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/nov/69-vipusk-plotnogo-derzhaniya-v-kurse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    69 выпуск плотного держания в курсе
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/nov/dva-plus-dva/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2+2=?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/nov/kak-znakomitsya-s-devushkoy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Как знакомиться с девушкой
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/nov/korometrazhki/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Короткометражки
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/nov/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Посты
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/nov/pro-fidbek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Про фидбэк
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10_3" id="__nav_2_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dec
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dec
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/dec/e-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    e^e
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/dec/popitki-generit-anime-litsa-c-pomoschyu-kmeans/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Попытки генерить аниме лица с помощью KMeans
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/dec/posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2019/dec/shiza/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Шиза
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    CV
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viktor Poletansky CV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Pastas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Pastas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pastas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Пасты для важных переговоров
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Watch list
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Watch list
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watch%20list/towatch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Запланировано
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watch%20list/watched/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Просмотренно
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Memes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Memes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../memes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Memes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Some notes and saved things
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mmheroes/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MMHeroes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../newtab" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New tab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Menhera
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Menhera
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../menhera/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Menhera chan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Примеры
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тизер
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Терминальный, инициальный обьекты
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Изоморфизм(дуален сам себе)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Мономорфизм, эпиморфизм
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-coproduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product, coproduct(произведение, копроизведение/сумма)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equaliser-coequaliser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equaliser, coequaliser(уравнитель, коуравнитель)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pullback-pushout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pullback, pushout(декартов квадрат и кодекартов квадрат)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Функтор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заключение
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Что почитать
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Основные понятия теории категорий</h1>
+
+<p><img align="right" alt="" src="/blog/static/img/6HLz8DTV3l8.jpg" width="200" /></p>
+<p>Как подготовка к другим статьям и как попытку понять теоркат я пишу это статью. Здесь будут базовые конструкции теории категорий. Также постараюсь в конце всяких определений приводить ссылку на ncatlab.org, своеобразная вики для теорката, чтобы можно было уточнить непонятные моменты и иметь ресурс авторитетнее автора. В конце будет определение функтора, так как это тоже главное понятие теорката, но, чтобы описать, как функтор обобщает все описанные в этой статье понятия, придется писать отдельную статью про пределы. Итак начнем.</p>
+<p><img alt="" src="/blog/static/img/t_HKOgnRKNk.jpg" />
+Предел(здесь его не будет), копроизведение и неправильный pushout</p>
+<p>Множество разделов математики работает с теми или иными обьектами и преобразованиями между ними. И множество вещей, связанных с ними так или иначе похожи. Теория категорий появилась, как способ обобщить все эти обьекты.</p>
+<p>Определим категорию. Категория <span class="arithmatex">\(\mathcal{C}\)</span> это два множества: <span class="arithmatex">\(\mathcal{Ob}(\mathcal{C})\)</span> — множество обьектов категории, Hom(A, B) — множество стрелочек(морфизмов, функций), возможно пустое, между двумя обьектами A и B для всех пар обьектов и способ соединять стрелочки естественным способом, называемый композицией. Стрелки и морфизмы я, возможно, буду называть по разному, но это абсолютно одно и то же. Проще было бы назвать теорию категорий archery(стрельбой из лука), как писал один автор учебника по теоркату.</p>
+<p>Категории, как и функторы, я буду обозначать жирным шрифтом, как вы уже могли заметить, Hom — это уже некий функтор. Обьекты будут обозначаться заглавными латинскими буквами, стрелки — строчными. Естественные преобразования греческими буквами, в общем все по дефолту.</p>
+<p>Также есть аксиомы, которым должна подчиняться любая категория:</p>
+<ol>
+<li>Существование композиции: для любых двух стрелок <span class="arithmatex">\(f:A\to B\)</span>, <span class="arithmatex">\(g:B\to C\)</span> определена их композиция <span class="arithmatex">\(g ∘ f:A\to C\)</span>, о котором можно думать, как о примененном сначала морфизма <span class="arithmatex">\(f\)</span>, а затем <span class="arithmatex">\(g\)</span>, хотя <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(g\)</span>, <span class="arithmatex">\(g ∘ f\)</span> это необязательно функции в привычном понимании. Также может вызвать вопрос о порядке стрелок в композиции, но он всегда был таким, стоит привыкнуть сразу.</li>
+<li>Ассоциативность композиции: для любых трех стрелок <span class="arithmatex">\(f:A\to B\)</span>, <span class="arithmatex">\(g:B\to C\)</span>, <span class="arithmatex">\(h:C\to D\)</span> две композиции совпадают: <span class="arithmatex">\((h ∘ g) ∘ f = h ∘ (g ∘ f)\)</span>. Совпадают означает, что это суть есть одна и та же стрелка.</li>
+<li>Существование единицы: для любого обьекта <span class="arithmatex">\(A\)</span> есть стрелка <span class="arithmatex">\(1ᴬ\)</span>(<span class="arithmatex">\(A\)</span> должна быть снизу, но тут проблемы с форматированием) такая, что для любой функции <span class="arithmatex">\(f:A\to B\)</span> выполняется <span class="arithmatex">\(f ∘ 1ᴬ = 1ᴮ ∘ f = f\)</span></li>
+</ol>
+<p>Начала стрелок называются domain(домен) а конец codomain(наверное кодомен) и обозначаются так: для <span class="arithmatex">\(f:A\to B\)</span> имеем <span class="arithmatex">\(dom(f) = A\)</span> и <span class="arithmatex">\(cod(f) = B\)</span>.</p>
+<p>https://ncatlab.org/nlab/show/category</p>
+<p>Далее композиция будет обозначаться без символа <span class="arithmatex">\(∘\)</span> по подобию произведения.</p>
+<h2 id="_1">Примеры</h2>
+<p>Видно, что для определения категории достаточно определить множество обьектов, стрелок между ними и композицию. Как доказательство применимости теории категорий и для наглядности, приведем примеры некоторых категорий, не указывая, как строится композиция:</p>
+<ol>
+<li>Категория 1: один обьект, одна его единичная стрелка.</li>
+<li>Категория 2: два обьекта, одна стрелка между ними.</li>
+<li>Категория 3: три обьекта, условно <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, $C; две стрелки — <span class="arithmatex">\(f:A\to B\)</span>, <span class="arithmatex">\(g:B\to C\)</span>, <span class="arithmatex">\(gf:A\to C\)</span>.</li>
+<li>Категория множеств <span class="arithmatex">\(\mathcal{Sets}\)</span>: обьекты — множества, стрелки — отображения.</li>
+<li>Категория отношений <span class="arithmatex">\(\mathcal{Rel}\)</span>: обьекты — множества, стрелки — отношения.</li>
+<li>Категория графа: обьекты — вершины, стрелки — пути(не ребра).</li>
+<li>Категория графов <span class="arithmatex">\(\mathcal{Graph}\)</span>: обьекты — графы, стрелки — гомоморфизмы графов.</li>
+<li>Категория топологических пространства Top(как уже заметно, категории называются по первым трем буквам, и топологии здесь повезло): обьекты — топологические пространства, стрелки — непрерывные отображения.</li>
+<li>Категория частично упорядоченного множества(по другому poset), обозначения нет, так как категория строится на основе конкретного множества с частичным порядком: обьекты — элементы множества, стрелка между A, B — отношение неравенства A ≤ B.</li>
+<li>Категория частично упорядоченных множеств <span class="arithmatex">\(\mathcal{Pos}\)</span>: обьекты — частично упорядоченные множества, стрелки — монотонные отображения.</li>
+<li>Категория категорий <span class="arithmatex">\(\mathcal{Cat}\)</span>: Обьекты — локально малые категории, стрелки — функторы.</li>
+<li>Категория банаховых пространств <span class="arithmatex">\(\mathcal{Ban}\)</span>: обьекты — банаховы пространства, стрелки — непрерывные линейные операторы.</li>
+<li>Категория гильбертовых пространств: обьекты — гильбертовы пространства, стрелки — непрерывные линейные операторы.</li>
+<li>Категория группы, строится на основе конкретной группы: обьект — один единственный, стрелки — элементы группы.</li>
+<li>Категория групп <span class="arithmatex">\(\mathcal{Grp}\)</span>: обьекты — группы, стрелки — гомоморфизмы.</li>
+<li>Категория абелевых групп <span class="arithmatex">\(\mathcal{Ab}\)</span>: обьекты — абелевы группы, стрелки — гомоморфизмы.</li>
+<li>Категория моноида, строится так же, как и категория группы.</li>
+<li>Категория моноидов <span class="arithmatex">\(\mathcal{Mon}\)</span>: обьекты — моноиды, стрелки — гомоморфизмы моноидов.</li>
+<li>Категория лямбда выражений: обьекты — типы, стрелки — функции.</li>
+</ol>
+<p>Можно добавить еще много-много примеров, включая производные категории и заинтересованному читателю(коих я не видел) предоставляется право доказать, что каждый пример удовлетворяет аксиомам категории. Приведенные примеры, во-первых, показывают насколько много охватывает понятие категории, и, во-вторых, позволяет читателю выбрать, о какой конкретно категории думать, когда он будет представлять какие-либо описанные далее понятия. Проще в качестве такой категории взять <span class="arithmatex">\(Sets\)</span> или категорию лямбда выражений, но также полезно думать о категории частично упорядоченного множества, так как конкретные примеры понятий там отличаются от тех же в <span class="arithmatex">\(Sets\)</span>. В этом и есть одна из «сил» теории категорий — описывать разные понятия одинаковым образом.</p>
+<h2 id="_2">Тизер</h2>
+<p>Все понятия будут описываться парами, так как одно понятие будет получаться из другого просто обращением стрелок, что дает нам такое понятие теорката, как дуальность. Причем первым понятием всегда будет в некотором смысле «предельным», а вторым — «копредельным».</p>
+<p>Также почти все понятия будут описываться с использованием какого-то универсального свойства или по другому UMP(universal mapping property), что означает, что у нас в том или ином виде будет появляться существование и единственность какой-то стрелки. Все стрелки, удовлетворяющие тому же свойству, что и стрелка из UMP, совпадают с ней в силу единственности, что дает еще один способ уравнивать стрелки.</p>
+<p>И, наконец, в теории категорий часто используются диаграммы, примеры которых можно увидеть в начале статьи. Они используются для формулировок, визуализации свойств и даже доказательств. Доказательство через диаграмму называется diagram chasing. Обьекты представляются в виде букв и стрелки в виде стрелок. Говорят что «диаграмма коммутирует» если любая композиция вдоль любого пути от одного обьекта до другого всегда будет одним и тем же.</p>
+<p><img alt="" src="/blog/static/img/L489QOha2jA.jpg" /></p>
+<p>Например на этой диаграмме есть два пути из <span class="arithmatex">\(A\)</span> в <span class="arithmatex">\(C\)</span>, а именно сначала через <span class="arithmatex">\(f\)</span>, потом через <span class="arithmatex">\(g\)</span> или же сразу через их композицию <span class="arithmatex">\(gf\)</span>. Понятно, что <span class="arithmatex">\(gf\)</span> это композиция <span class="arithmatex">\(f\)</span> и <span class="arithmatex">\(g\)</span>, поэтому эта диаграмма комутирует. Пример посложнее:</p>
+<p><img alt="" src="/blog/static/img/JrP2YgVScag.jpg" /></p>
+<p>Если нам скажут, что эта диаграмма коммутирует(а она коммутирует), то мы из этого сможем понять, что <span class="arithmatex">\((f+g)i₁=f\)</span> как два пути из <span class="arithmatex">\(A\)</span> в <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\((f+g)i₂=g\)</span> как два пути из <span class="arithmatex">\(B\)</span> в X. f+g это название стрелки, не пугайтесь, мы не умеем их складывать.</p>
+<p>Также для облегчения восприятия определений я использую следующие обозначения в диаграммах:
+— обьекты и стрелки, на основе которых строится понятие, имеют синий цвет
+— определяемые обьекты и стрелки имеют красный цвет
+— произвольные обьекты и стрелки для UMP имеют черный цвет
+— и наконец стрелка из UMP свойства будет выделена пунктиром</p>
+<h2 id="_3">Терминальный, инициальный обьекты</h2>
+<p>Терминальным обьектом называется обьект 1, для которого выполняется следующее UMP: для любого обьекта X существует единственная стрелка в 1, обозначаемая, как !ₓ:X\to 1. Другими словами, это обьект в который можно попасть из любого обьекта. Этот обьект вместе с инициальным обозначается не заглавной латинской буквой а единицей, но не следует его путать с единичными стрелками.</p>
+<p><img alt="" src="/blog/static/img/GNu_8l4rTNc.jpg" />
+Начнем с простого</p>
+<p>Теперь инициальный обьект 0: им называется такой обьект, что для любого обьекта X есть стрелка ?ₓ:0\to X. Для этой стрелки я не нашел общепринятого обозначения поэтому обозначил ее как '?' в противоположность терминальному обьекту. По другому, это обьект из которого можно попасть в любой обьект.</p>
+<p><img alt="" src="/blog/static/img/BmFIk9z5kKk.jpg" />
+Обратили все(одну) стрелки</p>
+<p>В категории множеств 1 это множество с одним элементом, а 0 — пустое множество. Почему это так? Рассмотрим сначала любое одноэлементное множество 1. Для любого другого множества X мы сможем найти только одно отображение в 1, которое и дает этот единственный элемент. Единственная проблема возникает когда <span class="arithmatex">\(X\)</span> пусто. Но мы мало того, что утверждаем, что это отображение ∅\to 1 есть, но оно еще и есть для любого другого обьекта помимо 1. Это отображение это ничто иное, как пустое отображение! Если вспомнить формальное определение отображения из множества <span class="arithmatex">\(A\)</span> в <span class="arithmatex">\(B\)</span>, что это множество пар элементов из <span class="arithmatex">\(A\)</span> и <span class="arithmatex">\(B\)</span>, в котором для любого элемента <span class="arithmatex">\(A\)</span> существует единственная пара с его участием, тогда вполне можно утверждать, что пустое множество это отображение из пустого множества!</p>
+<p><img alt="" src="/blog/static/img/mX5IXu26ePU.jpg" /></p>
+<p>В категории любого poset-а 1 это, очевидно, максимальный обьект среди всех, в то время как 0 — минимальный среди всех, если они существуют. Это обьясняет их названия как 1 и 0, если считать, что у нас числа от 0 до 1. Пример poset-а в виде натуральных чисел. В категории этих чисел существует 0(терминальный обьект): это 0(число), если мы включаем его в натуральные числа, или 1(число), если не включаем. Максимального элемента в натуральных числах нет, если не включать бесконечность. Также можно рассматривать как poset множество подмножеств множества <span class="arithmatex">\(X\)</span> с отношением включения, тогда пустое множество снова будет 0, однако 1-ей будет все множество.</p>
+<p><img alt="" src="/blog/static/img/1LP5OpLp51U.jpg" /></p>
+<p>Внимательный читатель заметит, что одноэлементных множеств, минимальных и максимальных элементов может быть много, но, как несложно показать, они все изоморфны. Что это значит, далее.</p>
+<p>https://ncatlab.org/nlab/show/terminal%20object
+https://ncatlab.org/nlab/show/initial%20object</p>
+<h2 id="_4">Изоморфизм(дуален сам себе)</h2>
+<p>Стрелка <span class="arithmatex">\(f:A\to B\)</span> называется изоморфизмом, если существует(можно показать, что она сразу же и единственная) стрелка g:B\to A, такая что gf = 1ᴬ и fg = 1ᴮ. Два обьекта называются изоморфными, если между ними существует изоморфизм, и изоморфность(изоморфизм) есть отношение эквивалентности. Для изоморфных обьектов в таком случае пишут, что A≅B.</p>
+<p><img alt="" src="/blog/static/img/6YQQSTdBbB0.jpg" />
+Теперь стрелки две и если их обратить будет то же самое!</p>
+<p>Эта диаграмма коммутирует, хотя казалось бы коммутировать тут нечему. На самом деле для удобства на диаграммах не показывают единичные стрелки, которые как раз и дадут равенства для изоморфизма написанные выше.</p>
+<p>Изоморфизм это в каком-то смысле обратимое отображение, но сильнее. Суть в том, что имея в категории только обьекты и стрелки мы можем строить рассуждения используя только их. Но если мы что-то будем утверждать про какой-либо обьект, то мы сможем утверждать то же самое для любого изоморфного ему обьекта так как изоморфизм даст нам все что нужно для требуемых стрелок. Например, если мы скажем, что существует единственная стрелка с какими то свойствами из w:B\to X, и мы знаем, что A≅B, то и из A существует единственная стрелка с теми же свойствами. Строится она с помощью изоморфизма: wf:A\to X.</p>
+<p>В случае множеств изоморфизм это биекция. Соответственно изоморфные множества это равномощные множества.</p>
+<p>В случае poset-а — изоморфные обьекты это эквивалентные обьекты, то есть такие обьекты x, y, что одновременно x ≤ y и y ≤ x. В простейшем случае это равные обьекты, но в общем случае это может быть не так.</p>
+<p>Например в теории принятия решений рассматривается задача нахождения оптимального результата. Приведу наитупейший пример. Вы хотите добавить сахар в чай, чтобы он был максимально вкусным. Понятно, что при увеличении сахара до некоторого момента чай будет вкуснее, но затем его будет слишком много. Мы можем утверждать, что 1000 грамм сахара ≤ 1 грамма сахара, в том смысле, что 1 грамм предпочтительнее 1000. Однако сложнее сравнить 4 и 5 грамм сахара, проще сказать, что нам безразличен выбор между ними, то есть
+4 ≤ 5 и 5 ≤ 4. То есть выбор 4 и 5 грамм сахара эквивалентны, по другому 4≅5 или 4~5.</p>
+<p>Если вы проходили алгебру или топологию, то можете попробовать вспомнить, что везде были понятия изоморфизма групп/векторных пространств/… или гомеоморфизм топологических пространств. Все это суть есть изоморфизмы в соответствующих категориях.</p>
+<p>Как и сказано выше, терминальные и инициальные обьекты в категории <span class="arithmatex">\(Sets\)</span> и в категории любого poset-а изоморфны. Тривиально можно показать, что это так в произвольной категории, поэтому без разницы, какой именно обьект обозначать за 1 и 0, все свойства будут выполняться вне зависимости от выбора.</p>
+<p>https://ncatlab.org/nlab/show/isomorphism</p>
+<h2 id="_5">Мономорфизм, эпиморфизм</h2>
+<p>Стрелка <span class="arithmatex">\(m:B\to C\)</span> называется мономорфизмом, если для любого обьекта A и пары стрелок f,g:A\to B из равенства mf = mg следует f = g. Другими словами, если диаграмма коммутирует, то f=g. Еще: на него можно сокращать слева.</p>
+<p><img alt="" src="/blog/static/img/YPft01sqdgg.jpg" />
+Увеличиваем количество стрелок</p>
+<p>Заметьте, что <span class="arithmatex">\(f\)</span> и <span class="arithmatex">\(g\)</span> в определении не фиксированы! UMP здесь нет, так как нет определяемого обьекта.</p>
+<p>Дуально: <span class="arithmatex">\(e:A\to B\)</span> называется эпиморфизмом, если для любого обьекта C и любой пары стрелок f,g:B\to C из равенства fe = ge следует f = g. То есть, если диаграмма коммутирует, то f = g. Еще: на него можно сокращать справа.</p>
+<p><img alt="" src="/blog/static/img/cZnxvcNPu2s.jpg" />
+Обращаем все стрелки</p>
+<p>В категории множеств мономорфизм есть иньекция, эпиморфизм — сюрьекция.</p>
+<p>Рассмотрим сначала мономорфизм. Чтобы понять, почему это иньекция, предположим, что это не так и возьмем в качестве A множество {x, y} из двух элементов множества B, для которых m(x) = m(y). Пусть f оставляет их на месте, т.е. f(x) = x, f(y) = y, а g меняет их местами, т.е. g(x) = y, g(y) = x. Так как
+<span class="arithmatex">\(mf = m(x) = m(y) = mg\)</span>, то по определению мономорфизма имеем <span class="arithmatex">\(f = g\)</span>, т.е. x и y обязаны быть одним и тем же элементом откуда получаем, что m — иньекция.</p>
+<p>Теперь эпиморфизм. Возьмем в качестве C множество {0, 1} и в качестве f константу 1, а g определим так: g(y) = 1, если y принадлежит образу e, иначе
+g(y) = 0. Имеем fe = ge = 1. Значит f = g, и g переводит все элементы B в 1, то есть e — сюрьекция.</p>
+<p>Мы знаем, что иньекция «вкладывает» одно множество в другое. Эту аналогию можно продолжить и ассоциировать мономорфизмы с «вложениями» их domain в codomain. Мономорфизмы в этом смысле характеризуют «подобьекты» других обьектов.</p>
+<p>Хотя из иньективности и сюрьективности отображения следует биективность, в произвольной категории из того, что стрелка является и мономорфизмом, и эпиморфизмом, не следует, что она является изоморфизмом. Однако любой изоморфизм есть и мономорфизм, и эпиморфизм.</p>
+<p>Также изоморфизмы, мономорфизмы и эпиморфизмы для краткости называются изо, моно и эпи соответственно.</p>
+<p>https://ncatlab.org/nlab/show/monomorphism
+https://ncatlab.org/nlab/show/epimorphism</p>
+<h2 id="product-coproduct">Product, coproduct(произведение, копроизведение/сумма)</h2>
+<p>Для двух обьектов A и B их произведением называется обьект A×B вместе с парой стрелок-проекций: π₁:A×B\to A, π₂:A×B\to B. (само собой 1 и 2 в нижнем индексе). Причем такие(UMP), что для любого обьекта X с парой стрелок f:X\to A, g:X\to B существует единственная стрелка f×g:X\to A×B такая, что следующая диаграмма коммутирует.</p>
+<p><img alt="" src="/blog/static/img/ems_M9BqxF0.jpg" />
++2</p>
+<p>Суммой(аkа копроизведением) двух обьектов A и B называют обьект A+B с двумя стрелками-вложениями i₁:A\to A+B, i₂:B\to A+B, такими, что для любого обьекта X и пары стрелок f:X\to A, g:X\to B существует единственная стрелка f+g:X\to A+B такая, что диаграмма коммутирует.</p>
+<p><img alt="" src="/blog/static/img/z2rn5-JbvKc.jpg" />
+Вращаю стрелки</p>
+<p>В категории множеств произведение — декартово произведение. Проекции это проекции пар на первый и второй элемент соответственно:
+<span class="arithmatex">\(π₁(a, b) = a, π₂(a, b) = b, f×g(x) = (f(x), g(x))\)</span>
+Коммутативность:</p>
+<div class="arithmatex">\[
+π₁(f×g)(x) = π₁(f×g(x)) = π₁(f(x), g(x)) = f(x) \\\
+π₂(f×g)(x) = π₂(f×g(x)) = π₂(f(x), g(x)) = g(x)
+\]</div>
+<p>Сумма же это непересекающееся обьединение, то есть обьединение множеств с добавлением метки из какого множества элемент пришел. Включения это добавления меток(обозначим метки, как :A и :B соответственно):
+<span class="arithmatex">\(i₁(a) = a:A, i₂(b) = b:B, f+g(x:X) = X == A ? f(x) : g(x)\)</span>
+f+g выбирает функцию на основе метки.</p>
+<p>Даже для этой конструкции можно придумать много примеров, приведу еще один из программирования. Допустим у нас есть текстовые данные, содержащие разнотиповые данные, например числа, строки, массивы того или другого. Примером таких данных может быть формат JSON. Мы хотим распарсить JSON строку и что-то сделать, но мы не умеем работать с произвольным обьектом внутри JSON-а, но умеем работать с числами, строками и списками. И тут как раз поможет сумма этих функций, которая после разбора метки(который обычно делают через if-else проверку типов) применит нужную функцию!</p>
+<p>В категории poset-а произведение — супремум двух элементов, а сумма — инфимум двух элементов. Напомню, что супремум это наименьший элемент, больший наших, и инфимум — наибольший элемент, меньший наших двух.</p>
+<p>https://ncatlab.org/nlab/show/product
+https://ncatlab.org/nlab/show/coproduct</p>
+<h2 id="equaliser-coequaliser">Equaliser, coequaliser(уравнитель, коуравнитель)</h2>
+<p>Здесь, хотя диаграммы и коммутируют, f не обязательно равно g.</p>
+<p>Для двух обьектов A, B и двух стрелок f, g между ними эквалайзером называется обьект E и стрелка <span class="arithmatex">\(e:E\to A\)</span> такие, что <span class="arithmatex">\(fe = ge\)</span> и для любого обьекта X и стрелки m:X\to A, для которой выполняется равенство fm = gm, существует единственная стрелка u:X\to E такая, что следующая диаграмма коммутирует.</p>
+<p><img alt="" src="/blog/static/img/-koHNT-r-0w.jpg" />
+-1 D; <span class="arithmatex">\(m = eu\)</span>, то есть m раскладывается в композицию</p>
+<p>Для двух обьектов A, B и двух стрелок f, g между ними коэквалайзером называется обьект Q и стрелка <span class="arithmatex">\(q:B\to Q\)</span> такие, что <span class="arithmatex">\(qf=qg\)</span> и для любого обьекта X и стрелки m:B\to X существует единственная стрелка u:Q\to X такая, что следующая диаграмма коммутирует.</p>
+<p><img alt="" src="/blog/static/img/181Cd7OLiOg.jpg" />
+Ну вы поняли, <span class="arithmatex">\(m=uq\)</span></p>
+<p>Можно показать, что эквалайзер(которая стрелка) это всегда моно, а коэквалайзер всегда эпи.</p>
+<p>Теперь обсуждение. Эти определения уже могут казаться сложными, хотя это опять таки обобщение уже известных понятий ядра и фактор-множества.</p>
+<p>Рассмотрим категорию множеств. Эквалайзером в этом случае является множество <span class="arithmatex">\(E = {x∈A | f(x) = g(x)}\)</span>, а e — вложение E в A, т.е. e(x) = x. Получается, что эквалайзер оправдывает свое название и просто заключает в себе все элементы, уравнивающие f и g. Если у вас вдруг найдется уравнение вида
+- <span class="arithmatex">\(f(x) = g(x)\)</span>, можете просто взять соответствующий эквалайзер, который будет содержать все решения. Теперь про единственность и существование u. Если вдруг найдется какой-то обьект X с отображением m:X\to A как в определении, то мы имеем fm = gm. То есть для любого обьекта x из образа m имеем
+- <span class="arithmatex">\(f(x) = g(x)\)</span>. Значит образ m есть подмножество нашего эквалайзера и мы можем вложить исходник этого образа(X) в эквалайзер с помощью отображения u. Теперь мы можем «описать» как действует m: сначала мы берем по элементу x множества X соответствующий элемент a = u(x) множества A, для которого
+- <span class="arithmatex">\(f(a) = g(a)\)</span>, то есть «стандартизуем» x, а затем просто вкладываем его в A. Проще говоря, m = eu. Далее будет более конкретный пример с ядром.</p>
+<p>Теперь коэквалайзер. Он, к сожалению, строится сложнее. Нам нужно взять минимальное отношение эквивалентности, в котором для любого x из A имеем f(x) ~ g(x). Тогда Q = B/~ фактор множество по этому отношению, а q — сопоставление классов т.е. q(y) = [y] класс y в фактор-множестве. Аналогично для любого X из определения оказывается, что X это что-то похожее, на фактор по отношению эквивалентности побольше, и потому содержит меньше классов. Мы можем вложить наши классы в «классы» из X отображением u. Тогда получим, что m сначала дает класс эквивалентности из коэквалайзера(отображением q), а затем по этому классу дает элемент X. По другому: m = uq.</p>
+<p>«При чем же тут ядро?», спросит читатель. Все проще некуда. Возьмем категорию векторных пространств(или групп, или колец, или что вам больше нравится) и рассмотрим конструкцию эквалайзера еще раз. Если в качестве g взять константное отображение, дающее нулевой вектор, то эквалайзер это ничто иное, как ядро f!</p>
+<p><img alt="" src="/blog/static/img/Or01pmL-o08.jpg" /></p>
+<p>Понятно, что тогда если <span class="arithmatex">\(fm = 0m = 0\)</span>(нулевой вектор), то <span class="arithmatex">\(m\)</span> всего-навсего выдает элементы ядра(эквалайзера) в зависимости от элемента X. Тогда мы можем это отображение перенести в само ядро, получая u. И получаем ядро f в чистом виде! Кстати необязательно ограничивать g, потому что можно получить эквалайзер как <span class="arithmatex">\(ker(f - g)!\)</span></p>
+<p>Имея более конкретный пример эквалайзера, попробуем разобраться и с коэквалайзером. Снова возьмем в качестве g тождественный нулевой вектор. Каким бы ни был эквалайзер имеем qf = q0 = 0, так как q — линейное отображение и должно переводить нулевой вектор в нулевой вектор. Значит для любого y из образа <span class="arithmatex">\(f (Im(f))\)</span> имеем <span class="arithmatex">\(f(y) = 0\)</span> нулевой вектор в <span class="arithmatex">\(Q\)</span>. Посмотрим, что у нас есть</p>
+<p><img alt="" src="/blog/static/img/nOQBhJn7ugw.jpg" />
+Очень грубое изображение векторных пространств</p>
+<p>Видим, что чем дальше, тем больше неизвестного: сначала элементы <span class="arithmatex">\(W\)</span>, которые не получаются с помощью <span class="arithmatex">\(f\)</span>, затем неизвестные классы в <span class="arithmatex">\(Q\)</span>. Но не все так плохо! Мы знаем, что в фактор-пространстве W/Im(f) образ f как раз и является нулевым вектором. Так как нам нужно максимальное количество классов, то именно эта конструкция и даст нам коэквалайзер, который также называют коядром:</p>
+<p><img alt="" src="/blog/static/img/vk3Cu97V0ANu4.jpg" /></p>
+<p>Такая же конструкция коядра строится в теории групп, колец и т.д. и изучается в алгебре.</p>
+<p>В категории произвольного poset-а мы сможем построить не более одной стрелки между любыми двумя обьектами поэтому <span class="arithmatex">\(f = g = A ≤ B\)</span>. После переобозначений получаем эквалайзер:</p>
+<p><img alt="" src="/blog/static/img/62EBUqU7hIk.jpg" /></p>
+<p>Видим, что обьект b никак не влияет на эквалайзер, и эквалайзер обьекта a это наибольший обьект, меньше или равный a, то есть сам обьект a. Коэквалайзер строится аналогично, ничего интересного.</p>
+<p>https://ncatlab.org/nlab/show/equalizer
+https://ncatlab.org/nlab/show/coequalizer</p>
+<h2 id="pullback-pushout">Pullback, pushout(декартов квадрат и кодекартов квадрат)</h2>
+<p>Последний рывок.</p>
+<p>Pullback для уголка из обьектов <span class="arithmatex">\(A\)</span>,<span class="arithmatex">\(B\)</span>,<span class="arithmatex">\(C\)</span> и стрелок <span class="arithmatex">\(f:A\to C\)</span>, <span class="arithmatex">\(g:B\to C\)</span> это обьект <span class="arithmatex">\(A×ᶜB\)</span> с двумя стрелками <span class="arithmatex">\(p:A×ᶜB\to A\)</span>, <span class="arithmatex">\(q:A×ᶜB\to B\)</span>, такими, что <span class="arithmatex">\(fp = gq\)</span> и для любого обьекта претендента на трон pullback-a <span class="arithmatex">\(Q\)</span> с стрелками <span class="arithmatex">\(m:Q\to A, n:Q\to B\)</span>, такими, что <span class="arithmatex">\(fm = gn\)</span>, существует моно <span class="arithmatex">\(u:Q\to A×ᶜB\)</span>, такой, что m = pu, n = qu. Т.е. следующая диаграмма коммутирует</p>
+<p><img alt="" src="/blog/static/img/2bsmO7xvw20.jpg" /></p>
+<p>Другими словами, <span class="arithmatex">\(m\)</span> и <span class="arithmatex">\(n\)</span> раскладываются через <span class="arithmatex">\(p\)</span> и <span class="arithmatex">\(q\)</span> и один и тот же морфизм <span class="arithmatex">\(u\)</span> справа.</p>
+<p>Pushout для уголка из обьектов <span class="arithmatex">\(A\)</span>,<span class="arithmatex">\(B\)</span>,<span class="arithmatex">\(C\)</span> и стрелок <span class="arithmatex">\(f:C\to A\)</span>, <span class="arithmatex">\(g:C\to B\)</span> это обьект A+ᶜB с двумя стрелками p:A\to A+ᶜB, q:B\to A+ᶜB, такими, что pf = qg и для любого обьекта претендента на трон pushout-a Q с стрелками m:A\to Q, n:B\to Q, такими, что mf = ng, существует эпи u:A+ᶜB\to Q, такой, что m = up, n = uq. Т.е. следующая диаграмма коммутирует</p>
+<p><img alt="" src="/blog/static/img/2CBVSANP5pY.jpg" />
+Это база данных</p>
+<p>Другими словами, <span class="arithmatex">\(m\)</span> и <span class="arithmatex">\(n\)</span> опять-таки раскладываются через <span class="arithmatex">\(p\)</span> и <span class="arithmatex">\(q\)</span> и один и тот же морфизм u, но теперь u слева.</p>
+<p>Если вы ничего не поняли из определений, то могу предположить, что это уже не первый раз, так что приступим к разбору. Pullback можно на самом деле разложить в два уже известных обьекта: произведение с эквалайзером.</p>
+<p><img alt="" src="/blog/static/img/vNnO6EZLYVE.jpg" /></p>
+<p>Для того, чтобы построить pullback на уголке мы можем сначала построить произведение <span class="arithmatex">\(A×B\)</span>, а затем построить эквалайзер по обьектам A×B и C и двум стрелкам между ними <span class="arithmatex">\(fπ₁, gπ₂:A×B\to C\)</span>. Этот эквалайзер вместе со стрелками
+<span class="arithmatex">\(p = π₁e\)</span> и <span class="arithmatex">\(q = π₂e\)</span> и даст нам в точности pullback.</p>
+<p>Аналогично(дуально) можно построить pushout на уголке из суммы и коэквалайзера.</p>
+<p><img alt="" src="/blog/static/img/2fwT6uaj_ho.jpg" /></p>
+<p>Сначала строим сумму A+B, затем коэквалайзер на стрелках <span class="arithmatex">\(i₁f\)</span>, <span class="arithmatex">\(i₂g:A+B\to C\)</span>. По аналогии получим pushout из стрелок <span class="arithmatex">\(p = hi₁\)</span>, <span class="arithmatex">\(q = hi₂\)</span>.</p>
+<p>Отлично, теперь можно найти pullback-и и pushout-ы в разных категориях. Начнем с <span class="arithmatex">\(Sets\)</span>. Произведение, как мы знаем, это просто множество пар элементов A и B. Соответствующие композиции для эквалайзера будут действовать так:</p>
+<div class="arithmatex">\[
+fπ₁(a, b) = f(π₁(a, b)) = f(a) \\\
+gπ₂(a, b) = g(π₂(a, b)) = g(b)
+\]</div>
+<p><img alt="" src="/blog/static/img/A5lXfi-WElY.jpg" /></p>
+<p>Далее, мы знаем, что эквалайзер это подмножество пар, на которых стрелки совпадают и вложение их в <span class="arithmatex">\(A×B\)</span>. Соответственно <span class="arithmatex">\(A×ᶜB = {(a, b)∈A×B | f(a) = g(b)}\)</span>. Осталось построить <span class="arithmatex">\(p(a, b) = a\)</span>, <span class="arithmatex">\(q(a, b) = b\)</span> и мы получили pullback! Это всего лишь способ решать уравнения вида <span class="arithmatex">\(f(x) = g(y)\)</span> на функциях из разных множеств. Мы видели, что эквалайзер мог делать похожую вещь, но на функциях из одного и того же множества, а pullback может еще больше! Суммируя все полученное: pullback в категории <span class="arithmatex">\(Sets\)</span> для уголка <span class="arithmatex">\(f:A\to C\)</span>, <span class="arithmatex">\(g:B\to C\)</span> это множество пар элементов из A и B, на которых f и g совпадают.</p>
+<p>Очередь pushout-а. Сумма это непересекающееся обьединение с стрелками, добавляющими метки.</p>
+<div class="arithmatex">\[
+i₁f(x) = i₁(f(x)) = f(x):A \\\
+i₂g(x) = i₂(g(x)) = g(x):B
+\]</div>
+<p>Напомню, что <span class="arithmatex">\(:X\)</span> это просто добавление метки и ничего более.</p>
+<p><img alt="" src="/blog/static/img/K3u-kDaKztk.jpg" /></p>
+<p>Далее вспоминаем, что коэквалайзер это фактор множество которое строится с грустью и болью, но все таки строится. Для взятия фактор множества мы должны взять минимальное отношение эквивалентности, в котором для любого x из C имеем f(x):A ~ g(x):B. То есть мы должны сопоставить любые два элемента, у которых совпадают прообразы, но так как отображения всего два, то в любом классе эквивалентности будет не более двух элементов. Все оказалось проще, чем мы думали! Приведу еще картинку по аналогии с коэквалайзером для векторных пространств, чтобы возможно стало понятнее, что к чему:</p>
+<p><img alt="" src="/blog/static/img/hH6RJB93auA.jpg" />
+Это почти полная диаграмма pushout-а лол</p>
+<p>Видно, что образы f и g сопоставляются в силу эквивалентности, а остальные элементы A и B, которые не принадлежат образам f и g образуют свои классы. Получаем в итоге, что pushout в <span class="arithmatex">\(Sets\)</span> это способ «сопоставить» элементы в A и B с помощью отображений f и g. Время для тупого примера: пусть C — множество квадратов(фигур), A — множество прямоугольников, B — ромбов, f, g — вложения. Тогда pushout просто сопоставит квадраты среди прямоугольников с соответствующими квадратами среди ромбов.</p>
+<ul>
+<li><a href="https://ncatlab.org/nlab/show/pullback">/ncatlab/pullback</a></li>
+<li><a href="https://ncatlab.org/nlab/show/pushout">/ncatlab/pushout</a></li>
+</ul>
+<h2 id="_6">Функтор</h2>
+<p>Теперь понятие, которое так или иначе проскальзывало раньше, а именно Hom и произведение на и сумма с фиксированным обьектом являются частными примерами функторов.</p>
+<p>Функтором <span class="arithmatex">\(F:A\to B\)</span> между двумя категориями A и B называется отображение обьектов и стрелок A, такое, что все, что нужно, сохраняется. А именно стрелки вида <span class="arithmatex">\(f:A\to B\)</span> переводится в стрелку <span class="arithmatex">\(F(f):F(A)\to F(B)\)</span>. Также сохраняются композиции и единичные стрелки.</p>
+<p>Теперь если мы возьмем категорию всех категорий <span class="arithmatex">\(\mathcal{Cat}\)</span>, то категории составят в ней обьекты, а функторы — стрелки. Однако, как предостерегает нас Кантор, не все так просто и не все категории могут быть обьектами в <span class="arithmatex">\(\mathcal{Cat}\)</span>, а только локально малые, то есть те, в которых стрелки между любыми двумя обьектами составляют множество. В любом случае мы не будем углубляться в формализм так как все используемые категории(кроме может быть самого <span class="arithmatex">\(\mathcal{Cat}\)</span>) локально малые и потому они есть в <span class="arithmatex">\(\mathcal{Cat}\)</span>.</p>
+<p>https://ncatlab.org/nlab/show/functor</p>
+<h2 id="_7">Заключение</h2>
+<p>На этом пока что все. В качестве дз(хаха) можете подумать, про все приведенные понятия в разных категориях.</p>
+<h2 id="_8">Что почитать</h2>
+<p>Невероятно, но до меня и так написано множество материалов по теоркату, так что не вижу смысла приводить их. Они легко гуглятся. Приведу некоторые ссылки, которые могут быть полезными:</p>
+<ul>
+<li><a href="https://habr.com/ru/company/cit/blog/313254/">Теория категорий на JavaScript. Часть 1. Категория множеств. Второй части этой статьи не существует</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Category_theory">Куда же без википедии</a></li>
+<li><a href="https://github.com/hmemcpy/milewski-ctfp-pdf">Category Theory for Programmers. Теория категорий в приложении к Haskell</a></li>
+<li><a href="https://ncatlab.org/">заметки о разном, по большинству о теоркате</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      
+        <script src="/blog/static/js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../watch list/static/js/tablesort.js"></script>
+      
+    
+  </body>
+</html>

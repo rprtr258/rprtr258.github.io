@@ -6,6 +6,6 @@ title: Month report
 Вроде всё.
 
 <audio controls>
-  <source src="/static/audio/Убийцы - Сериалы.mp3" type="audio/mpeg">
+  <source src="/blog/static/audio/Убийцы - Сериалы.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio> 

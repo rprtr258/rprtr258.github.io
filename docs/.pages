@@ -1,4 +1,5 @@
 nav:
+  - articles
   - blog
   - CV: cv
   - pastas

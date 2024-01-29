@@ -14,7 +14,7 @@ Let\ I(f)=\int\limits^x_0f(t)dt \Rightarrow I\left(\frac{t^n}{n!}\right)=\frac{x
 Since\ 1=\frac{t^0}{0!},\ then \\\
 \sum\limits_{n=0}^\infty I^n(1)=\sum\limits_{n=0}^\infty\frac{x^n}{n!}=e^x \\\
 On\ the\ other\ side: \\\
-\sum_{n=0}^\infty I^n(1)=\left(\sum\limits_{n=0}^\infty\right)(1)=\frac{I^0}{I^0-I}(1)=(I^0-I)^{-1}(1) \\\
+\sum_{n=0}^\infty I^n(1)=\left(\sum\limits_{n=0}^\infty I^n\right)(1)=\frac{I^0}{I^0-I}(1)=(I^0-I)^{-1}(1) \\\
 Since (I^0-I)(y)=y-\int\limits^x_0y(t)dt,\ then\ (I^0-I)^{-1}(f) \\\
 is\ equivalent\ to\ solving\ following\ equation: \\\
 y-\int\limits^x_0y(t)dt=f \\\

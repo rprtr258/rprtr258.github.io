@@ -1,6 +1,3 @@
-date: 2021-10-29 17:49:48
-![](/blog/static/img/ZaO3F_HdEIA.jpg)
-
 date: 2021-10-28 09:44:56
 ![](/blog/static/img/kKaQtwUp1YA.jpg)
 

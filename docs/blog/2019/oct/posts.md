@@ -34,9 +34,3 @@ date: 2019-10-30 01:39:02
 Напряжение все время матча
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0J_xwo-0rHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-date: 2019-10-30 21:55:18
-
-Ееее, я смог отрендерить более-менее нормально шарик с ray marching-ом
-
-![](/blog/static/img/jnTWecu4tYE.jpg)

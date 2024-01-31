@@ -19,9 +19,6 @@ knight distance на хачкеле
 
 ![](/blog/static/img/j7Iq2q_WhM4.jpg)
 
-date: 2021-05-15 01:10:48
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SIuv3P6LKCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 date: 2021-05-14 00:07:24
 Ура я дописав деплом
 
@@ -41,9 +38,6 @@ date: 2021-05-05 15:33:22
 Кратко про мои отношения с линуксом
 
 ![](/blog/static/img/Mz1I827ptkc.jpg)
-
-date: 2021-05-05 00:00:36
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ACPz6tM8Pfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 date: 2021-05-04 23:59:15
 ![](/blog/static/img/_tLlpi_9IgM.jpg)

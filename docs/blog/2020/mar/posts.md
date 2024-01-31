@@ -33,9 +33,6 @@ date: 2020-03-22 21:52:04
 
 ![](/blog/static/img/t6r-JLT6k14.jpg)
 
-date: 2020-03-18 01:53:03
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vEUF1N7Onr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 title: F
 date: 2020-03-13 12:06:02
 ![](/blog/static/img/Av8daqKarTE.jpg)

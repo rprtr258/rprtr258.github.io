@@ -79,11 +79,6 @@ date: 2020-04-04 23:58:39
 
 ![](/blog/static/img/Xchf-A-ROW8.jpg)
 
-date: 2020-04-04 13:13:04
-PEPELEPSY
-
-https://www.youtube.com/watch?v=0RxAa8a8tUE
-
 date: 2020-04-04 09:11:00
 ![](/blog/static/img/0psPeWqTFlM.jpg)
 

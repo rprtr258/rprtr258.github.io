@@ -21,12 +21,6 @@ date: 2022-02-17 01:48:19
 
 ![](/blog/static/img/NG5Xgc0j0UU.jpg)
 
-date: 2022-02-15 08:24:47
-https://www.youtube.com/playlist?list=PL2a2Fxh1je2oQEs9g-HG2LBair3Rxk3g7
-
-![](/blog/static/img/3U7ls8YXopY.jpg)
-![](/blog/static/img/Q1m8rwZYcaQ.jpg)
-
 date: 2022-02-08 14:41:00
 ![](/blog/static/img/QP6ZL54OEcA.jpg)
 

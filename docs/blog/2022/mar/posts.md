@@ -6,8 +6,6 @@ PogT
 
 ![](/blog/static/img/UMyiZL0tu4Q.jpg)
 
-[Юзя - Призма](https://www.youtube.com/playlist?list=OLAK5uy_mOnSLsnj7A5ik_V5tOTuL91PvP8hg2h5Y)
-
 date: 2022-03-18 13:05:37
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/54NrlYSdEdE0n0kEjV2ESs?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 

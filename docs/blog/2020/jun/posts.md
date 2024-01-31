@@ -9,11 +9,6 @@ date: 2020-06-29 22:26:20
 
 ![](/blog/static/img/E8VSE2HIyR4.jpg)
 
-date: 2020-06-25 23:20:16
-Кто бы что ни говорил, есть только две версии Черного Бумера
-https://www.youtube.com/watch?v=UZ3Q6lwDIdE
-https://www.youtube.com/watch?v=lzgmAAAvj4o
-
 date: 2020-06-23 22:09:58
 🤔👇🏻
 

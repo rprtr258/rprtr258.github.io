@@ -78,9 +78,3 @@ date: 2020-07-05 19:40:59
 Коллекция аниме фигурок админа
 
 ![](/blog/static/img/UFOeVdltNx4.jpg)
-
-date: 2020-07-04 00:18:26
-![](/blog/static/img/4Pfhfv69siY.jpg)
-
-date: 2020-07-03 11:16:40
-![](/blog/static/img/L4tTyXzUoa4.jpg)

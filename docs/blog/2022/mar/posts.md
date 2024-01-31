@@ -6,10 +6,10 @@ PogT
 
 ![](/blog/static/img/UMyiZL0tu4Q.jpg)
 
-https://vk.com/music/album/-2000139387_15139387_74540857df6eef6a9b
+[Юзя - Призма](https://www.youtube.com/playlist?list=OLAK5uy_mOnSLsnj7A5ik_V5tOTuL91PvP8hg2h5Y)
 
 date: 2022-03-18 13:05:37
-https://vk.com/music/playlist/346230726_6_13c982a33600801ef4
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/54NrlYSdEdE0n0kEjV2ESs?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 date: 2022-03-15 02:38:42
 хорошая новость

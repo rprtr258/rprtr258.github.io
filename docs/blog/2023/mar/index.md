@@ -1,10 +1,5 @@
 # Month report
 
-Сделал пару либ для себя для гованга:
-
-- [rprtr258/simpdb](https://github.com/rprtr258/simpdb)
-- [rprtr258/xerr](https://github.com/rprtr258/xerr)
-
 Жеско девопсил.
 
 - сломал днс на впс

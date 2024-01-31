@@ -1,3 +1,3 @@
-date: 2022-05-02 15:20:29
+[github](https://github.com/rprtr258/fimgs/)
+
 штука чтобы применять всякие фильтры к картинкам
-https://github.com/rprtr258/fimgs/

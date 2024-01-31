@@ -29,13 +29,6 @@ date: 2021-06-22 01:58:51
 
 ![](/blog/static/img/TeyqbyiCQ2w.jpg)
 
-date: 2021-06-16 23:31:32
-Он отказал мне, сказал, что убьет тебя! Думает, что убьет тебя!
-Да он не может убить меня!
-Да я убью тебя!
-
-![](/blog/static/img/gIRF-cv5yU4.jpg)
-
 date: 2021-06-07 15:48:37
 ![](/blog/static/img/kkocO6gVrGw.jpg)
 

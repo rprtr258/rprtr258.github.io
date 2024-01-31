@@ -32,3 +32,9 @@ https://www.shadertoy.com/view/st2yW1
 Ееее, я смог отрендерить более-менее нормально шарик с ray marching-ом
 
 ![](/blog/static/img/jnTWecu4tYE.jpg)
+
+date: 2020-12-06 14:46:51
+![](/blog/static/img/uWBigieK04A.jpg)
+
+date: 2020-12-05 19:52:52
+![](/blog/static/img/nPMIwql1ak0.jpg)

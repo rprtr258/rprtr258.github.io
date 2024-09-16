@@ -2,7 +2,7 @@
 title: О статических генераторах сайтов
 ---
 
-![](/articles/static/img/ssg.jpg){align=right width=20}
+![](/articles/static/img/ssg.jpg){align=right width=200}
 
 
 ## Задача статической генерации

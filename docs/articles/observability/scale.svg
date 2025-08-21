@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="DejaVu Sans, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/>
+    </marker>
+    <marker id="arrowtick" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Заголовок -->
+  <text x="450" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Шкала рафинирования сигналов</text>
+
+  <!-- Ось -->
+  <line x1="50" y1="200" x2="870" y2="200" stroke="#555" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+  <!-- Подпись оси справа -->
+  <text x="880" y="204" font-size="12" fill="#555" font-weight="bold">Обработка →</text>
+
+  <!-- Зоны над осью (полупрозрачные полосы с подписями) -->
+  <!-- Зона 1: самый сырой -->
+  <rect x="50" y="50" width="180" height="130" rx="4" fill="#d4e8f0" opacity="0.6"/>
+  <text x="100" y="72" font-size="9" fill="#2a6f8a" font-weight="bold">Сырые</text>
+  <text x="100" y="84" font-size="9" fill="#2a6f8a" font-weight="bold">сигналы</text>
+
+  <!-- Зона 2: wide events -->
+  <rect x="230" y="50" width="230" height="130" rx="4" fill="#e8f0d4" opacity="0.6"/>
+  <text x="285" y="72" font-size="9" fill="#6a7a2a" font-weight="bold">Структурированные</text>
+  <text x="285" y="84" font-size="9" fill="#6a7a2a" font-weight="bold">события</text>
+
+  <!-- Зона 3: обработанные -->
+  <rect x="460" y="50" width="410" height="130" rx="4" fill="#f0d4e8" opacity="0.6"/>
+  <text x="570" y="72" font-size="9" fill="#8a2a6f" font-weight="bold">Агрегированные / обработанные сигналы</text>
+
+  <!-- Маркеры на оси (треугольники) -->
+  <!-- Левый край оси - без метки -->
+
+  <!-- 1: Состояние системы -->
+  <polygon points="110,200 105,192 110,194 115,192" fill="#555"/>
+  <line x1="110" y1="200" x2="110" y2="208" stroke="#555" stroke-width="1"/>
+  <text x="110" y="224" text-anchor="middle" font-size="10.5" fill="#333">
+    <tspan x="110" dy="0">Состояние</tspan>
+    <tspan x="110" dy="13">системы</tspan>
+  </text>
+
+  <!-- 2: Вызовы уровня ОС -->
+  <polygon points="230,200 225,192 230,194 235,192" fill="#555"/>
+  <line x1="230" y1="200" x2="230" y2="208" stroke="#555" stroke-width="1"/>
+  <text x="230" y="224" text-anchor="middle" font-size="10.5" fill="#333">
+    <tspan x="230" dy="0">Вызовы уровня</tspan>
+    <tspan x="230" dy="13">ОС (syscalls)</tspan>
+  </text>
+
+  <!-- 3: Wide events -->
+  <polygon points="380,200 375,192 380,194 385,192" fill="#555"/>
+  <line x1="380" y1="200" x2="380" y2="208" stroke="#555" stroke-width="1"/>
+  <text x="380" y="224" text-anchor="middle" font-size="10.5" fill="#333">
+    <tspan x="380" dy="0">Wide events</tspan>
+    <tspan x="380" dy="13">(структур. события)</tspan>
+  </text>
+  <circle cx="380" cy="193" r="4" fill="#c33"/>
+
+  <!-- 4: Метрики -->
+  <polygon points="530,200 525,192 530,194 535,192" fill="#555"/>
+  <line x1="530" y1="200" x2="530" y2="208" stroke="#555" stroke-width="1"/>
+  <text x="530" y="224" text-anchor="middle" font-size="10.5" fill="#333">
+    <tspan x="530" dy="0">Метрики</tspan>
+  </text>
+
+  <!-- 5: Дашборды / алерты -->
+  <polygon points="670,200 665,192 670,194 675,192" fill="#555"/>
+  <line x1="670" y1="200" x2="670" y2="208" stroke="#555" stroke-width="1"/>
+  <text x="670" y="224" text-anchor="middle" font-size="10.5" fill="#333">
+    <tspan x="670" dy="0">Дашборды /</tspan>
+    <tspan x="670" dy="13">алерты</tspan>
+  </text>
+
+  <!-- Конец оси -->
+  <circle cx="860" cy="200" r="3" fill="#555"/>
+
+  <!-- Стрелки "может быть выведено" -->
+  <!-- Стрелка зон -->
+  <text x="160" y="100" text-anchor="middle" font-size="9" fill="#888" font-style="italic">больше информации</text>
+  <text x="160" y="112" text-anchor="middle" font-size="9" fill="#888" font-style="italic">больше стоимость</text>
+
+  <text x="700" y="100" text-anchor="middle" font-size="9" fill="#888" font-style="italic">меньше информации</text>
+  <text x="700" y="112" text-anchor="middle" font-size="9" fill="#888" font-style="italic">меньше стоимость</text>
+
+  <!-- Легенда: красный кружок у wide events -->
+  <circle cx="80" cy="270" r="4" fill="#c33"/>
+  <text x="92" y="273" font-size="10.5" fill="#555">— широкое событие: ключевая точка перехода</text>
+</svg>

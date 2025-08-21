@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="DejaVu Sans, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Заголовок -->
+  <text x="360" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Граф выводимости сигналов</text>
+  <text x="360" y="46" text-anchor="middle" font-size="11" fill="#666">Стрелки — направление выводимости: из wide events → производные</text>
+
+  <!-- Уровень 1: Wide events -->
+  <rect x="285" y="70" width="150" height="44" rx="8" fill="#4472C4" stroke="#2f5496" stroke-width="2"/>
+  <text x="360" y="97" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">Wide Events</text>
+
+  <!-- Стрелки от Wide events к трём столпам -->
+  <line x1="340" y1="114" x2="190" y2="210" stroke="#888" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <line x1="360" y1="114" x2="360" y2="210" stroke="#888" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <line x1="380" y1="114" x2="530" y2="210" stroke="#888" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+
+  <!-- Подписи на стрелках -->
+  <text x="265" y="165" text-anchor="end" font-size="9.5" fill="#888" font-style="italic">trace_id filter</text>
+  <text x="350" y="165" text-anchor="end" font-size="9.5" fill="#888" font-style="italic">aggregation</text>
+  <text x="450" y="165" font-size="9.5" fill="#888" font-style="italic">predicate filter</text>
+
+  <!-- Уровень 2: Traces -->
+  <rect x="115" y="218" width="140" height="40" rx="6" fill="#70AD47" stroke="#4e7d2a" stroke-width="1.5"/>
+  <text x="185" y="243" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">Traces</text>
+
+  <!-- Уровень 2: Metrics -->
+  <rect x="290" y="218" width="140" height="40" rx="6" fill="#ED7D31" stroke="#b85e1a" stroke-width="1.5"/>
+  <text x="360" y="243" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">Metrics</text>
+
+  <!-- Уровень 2: Logs -->
+  <rect x="465" y="218" width="140" height="40" rx="6" fill="#FFC000" stroke="#b88a00" stroke-width="1.5"/>
+  <text x="535" y="243" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">Logs</text>
+
+  <!-- Стрелка от Metrics к Aggregated Metrics -->
+  <line x1="360" y1="258" x2="360" y2="310" stroke="#888" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <text x="370" y="290" font-size="9.5" fill="#888" font-style="italic">sum by code, route</text>
+
+  <!-- Уровень 3: Aggregated Metrics -->
+  <rect x="280" y="318" width="160" height="40" rx="6" fill="#F4B183" stroke="#d4824a" stroke-width="1.5"/>
+  <text x="360" y="343" text-anchor="middle" font-size="11" fill="#333" font-weight="bold">Aggregated Metrics</text>
+
+  <!-- Стрелка от Aggregated Metrics к Total Count -->
+  <line x1="360" y1="358" x2="360" y2="380" stroke="#888" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <text x="372" y="373" font-size="9.5" fill="#888" font-style="italic">count total</text>
+
+  <!-- Уровень 4: Total Count -->
+  <rect x="310" y="388" width="100" height="35" rx="6" fill="#D6DCE4" stroke="#9aa4b2" stroke-width="1.5"/>
+  <text x="360" y="410" text-anchor="middle" font-size="11" fill="#333" font-weight="bold">Total Count</text>
+
+  <!-- Примечание -->
+  <text x="360" y="435" text-anchor="middle" font-size="10" fill="#999" font-style="italic">Каждое ребро — потеря атрибутов или семплирование</text>
+</svg>

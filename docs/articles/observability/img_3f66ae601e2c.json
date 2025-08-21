@@ -1,0 +1,10 @@
+{
+  "id": "img_3f66ae601e2c",
+  "path": "/home/rprtr258/.nanobot/media/generated/2026-06-15/img_3f66ae601e2c.png",
+  "mime": "image/png",
+  "prompt": "Create a precise directed acyclic graph diagram. It has a single root node at the top labeled \"Wide Events\" (in English). From it, three downward arrows lead to three nodes on the middle row: \"Traces\" (trace_id filter), \"Metrics\" (aggregation), and \"Logs\" (predicate filter). From the \"Metrics\" node, a downward arrow leads to \"Aggregated Metrics\" (e.g. sum by code, route). From \"Aggregated Metrics\", a downward arrow leads to \"Total Count\" (e.g. count of all requests). \n\nUse small rectangular nodes with rounded corners. The diagram has arrows pointing downward (directed). Keep it clean, minimal, with blue/gray tones on a white background. Label edges or nodes with short clarifying notes in Russian in parentheses. The style should be suitable for a technical article — precise, not decorative.\n\nImportant: position the \"Traces\" node on the left, \"Metrics\" in the center, \"Logs\" on the right of the middle row. Text: Russian for explanatory notes, English for the signal type names. Use a clean sans-serif font.",
+  "model": "openai/gpt-5.4-image-2",
+  "provider": "openrouter",
+  "source_images": [],
+  "created_at": "2026-06-15T00:11:05.113809+03:00"
+}

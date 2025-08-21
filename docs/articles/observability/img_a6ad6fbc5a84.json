@@ -1,0 +1,10 @@
+{
+  "id": "img_a6ad6fbc5a84",
+  "path": "/home/rprtr258/.nanobot/media/generated/2026-06-15/img_a6ad6fbc5a84.png",
+  "mime": "image/png",
+  "prompt": "Create a clean, professional scientific diagram showing a horizontal axis representing \"signal rawness\" (сырость сигнала) from left to right. The axis is labeled \"Рафинирование →\" (meaning refinement/processing increases to the right). Below the axis, place labeled markers at different positions:\n\nLeftmost: \"Состояние системы\" (machine state - registers, memory, disk blocks)\nThen slightly right: \"Вызовы/события уровня ОС\" (syscalls, eBPF, strace)\nThen: \"Структурированные события\" (wide events with many attributes)\nThen: \"Метрики\" (aggregated numerical time series)\nThen: \"Дашборды/алерты\" (pre-computed aggregates, known-questions)\n\nAbove the axis, add three brackets/labels spanning different regions:\n- Left region: \"Наибольшая информативность, наибольшая стоимость\" \n- Middle region: \"Сырые сигналы → Wide events\"\n- Right region: \"Обработанные сигналы\"\n\nUse a clean minimalist style with a white/light gray background, dark text, and subtle blue/gray color coding. No icons or decorative elements — pure structural diagram. Text in Russian.",
+  "model": "openai/gpt-5.4-image-2",
+  "provider": "openrouter",
+  "source_images": [],
+  "created_at": "2026-06-15T00:09:06.890888+03:00"
+}
